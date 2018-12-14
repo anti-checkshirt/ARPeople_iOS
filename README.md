@@ -16,7 +16,7 @@ Carthageを入れてない場合はインストールしましょう。
 $ brew install carthage
 ```
 
-Carthageのビルド
+- Carthageのビルド
 
 ```bash
 $ carthage bootstrap --platform iOS
