@@ -12,9 +12,8 @@ import SceneKit
 
 class HomeViewController: UIViewController {
     
-    var faceTracker: FaceTracker? = nil
     @IBOutlet var sceneView: ARSCNView!
-    var rectView = UIView()
+    private var hogeView = SCNNode()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +26,22 @@ class HomeViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        getFaceImage()
+//        getFaceImage()
+        displayNode()
+    }
+    
+    private func displayNode() {
+        hogeView.removeFromParentNode()
+        let baseView = UserView(frame: view.bounds)
+        guard let image = createImage(view: baseView) else { return }
+        let node = BaseNode(image: image, width: 0.6)
+        
+        let position = SCNVector3(x: 0, y: 0, z: -1) // ノードの位置は、左右：0m 上下：0m　奥に100cm
+        if let camera = sceneView.pointOfView {
+            node.position = camera.convertPosition(position, to: nil) // カメラ位置からの偏差で求めた位置
+        }
+        sceneView.scene.rootNode.addChildNode(node) // 生成したノードをシーンに追加する
+        hogeView = node
     }
     
     private func getFaceImage() {
@@ -51,5 +65,19 @@ class HomeViewController: UIViewController {
     private func setLayout() {
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
+    }
+    
+    
+    private func createImage(view:UIView) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+        view.isHidden = false // 画像を取得する間だけ表示
+        view.layer.render(in: context)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        view.isHidden = true // 再び非表示
+        return image
     }
 }
