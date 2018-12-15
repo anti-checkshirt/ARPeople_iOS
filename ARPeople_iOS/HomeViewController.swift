@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     var faceTracker: FaceTracker? = nil
     @IBOutlet var sceneView: ARSCNView!
     var rectView = UIView()
+    var count: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,24 +27,13 @@ class HomeViewController: UIViewController {
         setLayout()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        getFaceImage()
+    }
+    
     private func getFaceImage() {
         let image = sceneView.snapshot()
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-        self.rectView.layer.borderWidth = 3
-        rectView.layer.borderColor = UIColor.yellow.cgColor
-        self.view.addSubview(self.rectView)
-        faceTracker = FaceTracker(view: self.sceneView, findface:{arr in
-            //一番の顔だけ使う
-            let rect = arr[0]
-            
-            //四角い枠を顔の位置に移動する
-            self.rectView.frame = rect
-        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
