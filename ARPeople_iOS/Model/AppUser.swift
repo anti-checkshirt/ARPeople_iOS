@@ -7,23 +7,38 @@
 //
 
 import Foundation
+import SwiftyUserDefaults
 
-//struct AppUser {
-//
-//    /// ユーザーのメールアドレス
-//    static var email: String {
-//        return Defaults[.email]
-//    }
-//}
-//
-//extension AppUser {
-//
-//    /// メールアドレスの保存
-//    static func saveEmail(email: String) {
-//        Defaults[.email] = email
-//    }
-//}
-//
-//private extension DefaultsKeys {
-//    static let email = DefaultsKey<String>("email")
-//}
+struct AppUser {
+    
+    /// 名前
+    static var name: String {
+        return Defaults[.name]
+    }
+
+    /// メールアドレス
+    static var email: String {
+        return Defaults[.email]
+    }
+    
+    /// パスワード
+    static var password: String {
+        return Defaults[.password]
+    }
+}
+
+extension AppUser {
+
+    /// 仮保存
+    static func saveEmail(name: String, email: String, password: String) {
+        Defaults[.name] = name
+        Defaults[.email] = email
+        Defaults[.password] = password
+    }
+}
+
+private extension DefaultsKeys {
+    static let email = DefaultsKey<String>("email")
+    static let password = DefaultsKey<String>("password")
+    static let name = DefaultsKey<String>("name")
+}
