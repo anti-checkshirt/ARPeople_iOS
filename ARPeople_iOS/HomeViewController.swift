@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import ARKit
+import SceneKit
 
 class HomeViewController: UIViewController {
+    
+    @IBOutlet var sceneView: ARSCNView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setLayout()
+    }
+    
+    private func setLayout() {
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
     }
     
 
