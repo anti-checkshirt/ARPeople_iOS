@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SettingUserViewController: UIViewController {
 
@@ -36,8 +37,29 @@ class SettingUserViewController: UIViewController {
     }
     
     @IBAction private func register() {
+        guard let name = nameInputField.text else { return }
+        guard let mail = mailInputField.text else { return }
+        guard let pass1 = pass1InputField.text else { return }
+        guard let pass2 = pass2InputField.text else { return }
         
+        if name.isEmpty {
+            return
+        }
+        if mail.isEmpty {
+            return
+        }
+        if pass1.isEmpty {
+            return
+        }
+        if pass2.isEmpty {
+            return
+        }
+        
+        if pass1 != pass2 {
+            return
+        }
     }
+    
 }
 
 extension SettingUserViewController: UITextFieldDelegate {

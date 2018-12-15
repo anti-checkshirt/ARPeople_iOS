@@ -86,11 +86,20 @@
                         <outlet property="pass1InputField" destination="GcH-sS-vUY" id="hzE-JQ-dgt"/>
                         <outlet property="pass2InputField" destination="d0g-K8-8XK" id="Jrs-lc-S9j"/>
                         <outlet property="registerButton" destination="s0Y-MZ-fmh" id="AyC-4c-ffk"/>
+                        <segue destination="ez8-3Q-aZt" kind="show" identifier="toRegister" id="5F2-Xm-GYL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Khv-zd-PEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030.4347826086957" y="-264.50892857142856"/>
+            <point key="canvasLocation" x="1142" y="-265"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="kJ4-pg-UmR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Register" id="ez8-3Q-aZt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1V-Aa-gcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866" y="-254"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ng8-Wf-RFx">

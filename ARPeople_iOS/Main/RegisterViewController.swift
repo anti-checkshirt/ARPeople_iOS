@@ -31,9 +31,7 @@ class RegisterViewController: UIViewController {
         chooseButton.layer.cornerRadius = chooseButton.frame.height / 2
     }
     
-    
-    
-    @IBAction func uploadimg(_ sender: Any) {
+    @IBAction private func uploadimg(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             
             let pickerView = UIImagePickerController()

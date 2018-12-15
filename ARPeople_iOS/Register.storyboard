@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TSE-L0-hpa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g6U-bt-N6M">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -131,24 +131,6 @@
                 <tapGestureRecognizer id="gr6-d5-Q6K"/>
             </objects>
             <point key="canvasLocation" x="1076.8115942028987" y="-3453.3482142857142"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="S1P-IU-h0t">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TSE-L0-hpa" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F90-jf-6Ao">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="g6U-bt-N6M" kind="relationship" relationship="rootViewController" id="GEu-cJ-ZPe"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cll-Sz-HVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="166.66666666666669" y="-3453.3482142857142"/>
         </scene>
     </scenes>
 </document>
