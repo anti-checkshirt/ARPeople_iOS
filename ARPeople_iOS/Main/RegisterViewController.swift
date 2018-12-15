@@ -10,21 +10,55 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet private weak var nameInputField: UITextField!
+    @IBOutlet private weak var ageInputField: UITextField!
+    @IBOutlet private weak var gitidInputField: UITextField!
+    @IBOutlet private weak var twitteridInputField: UITextField!
+    @IBOutlet private weak var chooseButton:  UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        nameInputField.delegate = self
+        ageInputField.delegate = self
+        gitidInputField.delegate = self
+        twitteridInputField.delegate = self
+        
+        setLayout()
+        
+    }
+    private func setLayout() {
+        chooseButton.layer.cornerRadius = chooseButton.frame.height / 2
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func uploadimg(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            
+            let pickerView = UIImagePickerController()
+            pickerView.sourceType = .photoLibrary
+            pickerView.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            self.present(pickerView, animated: true)
     }
-    */
-
+    
+    }
 }
+    extension RegisterViewController: UITextFieldDelegate {
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            switch textField {
+            case nameInputField:
+                ageInputField.becomeFirstResponder()
+            case ageInputField:
+                gitidInputField.becomeFirstResponder()
+            case gitidInputField:
+                twitteridInputField.becomeFirstResponder()
+            case twitteridInputField:
+                textField.resignFirstResponder()
+            default:
+                break
+            }
+            return true
+        }
+}
+
