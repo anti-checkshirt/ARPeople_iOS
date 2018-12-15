@@ -30,7 +30,7 @@ struct AppUser {
 extension AppUser {
 
     /// 仮保存
-    static func saveEmail(name: String, email: String, password: String) {
+    static func saveUser(name: String, email: String, password: String) {
         Defaults[.name] = name
         Defaults[.email] = email
         Defaults[.password] = password

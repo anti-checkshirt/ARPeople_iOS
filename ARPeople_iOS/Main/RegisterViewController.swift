@@ -26,7 +26,6 @@ class RegisterViewController: UIViewController {
         twitteridInputField.delegate = self
         
         setLayout()
-        showRequest()
         
     }
     private func setLayout() {
@@ -34,25 +33,22 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction private func uploadimg(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            
-            let pickerView = UIImagePickerController()
-            pickerView.sourceType = .photoLibrary
-            pickerView.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-            self.present(pickerView, animated: true)
-        }
+        let twitter = twitteridInputField.text
+        let github = gitidInputField.text
+        let age = ageInputField.text
         
+        showRequest(twitter!, github!, age!)
     }
     
-    private func showRequest() {
-        let url = "http://localhost:3001/api/v1/search"
+    private func showRequest(_ twitter: String, _ github: String, _ age: String) {
+        let url = "http://localhost:3001/api/v1/user"
         let parameters: Parameters = [
-            "name": "ともき",
-            "email": "hoge@example.com",
-            "password": "abc123abc",
-            "twitterID": "tomoki_sun",
-            "githubID": "tomoki69386",
-            "age": "12"
+            "name": AppUser.name,
+            "email": AppUser.email,
+            "password": AppUser.password,
+            "twitterID": twitter,
+            "githubID": github,
+            "age": age
         ]
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
             guard let data = response.data else { return }

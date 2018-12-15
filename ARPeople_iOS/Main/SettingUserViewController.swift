@@ -56,6 +56,7 @@ class SettingUserViewController: UIViewController {
         if pass1 != pass2 {
             return
         }
+        AppUser.saveUser(name: name, email: mail, password: pass1)
         let VC = RegisterViewController()
         self.navigationController?.pushViewController(VC, animated: true)
     }
