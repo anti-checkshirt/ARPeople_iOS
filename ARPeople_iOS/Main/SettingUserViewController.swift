@@ -31,12 +31,33 @@ class SettingUserViewController: UIViewController {
     
     private func setLayout() {
         registerButton.layer.cornerRadius = registerButton.frame.height / 2
-        pass1InputField.isSecureTextEntry = true
-        pass2InputField.isSecureTextEntry = true
     }
     
     @IBAction private func register() {
+        guard let name = nameInputField.text else { return }
+        guard let mail = mailInputField.text else { return }
+        guard let pass1 = pass1InputField.text else { return }
+        guard let pass2 = pass2InputField.text else { return }
         
+        if name.isEmpty {
+            print("hgoe")
+            return
+        }
+        if mail.isEmpty {
+            return
+        }
+        if pass1.isEmpty {
+            return
+        }
+        if pass2.isEmpty {
+            return
+        }
+        
+        if pass1 != pass2 {
+            return
+        }
+        let VC = RegisterViewController()
+        self.navigationController?.pushViewController(VC, animated: true)
     }
 }
 
