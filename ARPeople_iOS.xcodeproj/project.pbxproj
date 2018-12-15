@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		931582D1BFAC496BCDD1D5F1 /* Pods_ARPeople_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A84348CEC2DF5EF25D656A /* Pods_ARPeople_iOS.framework */; };
-		B74301F021C4AC97006572F1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74301E921C4AC97006572F1 /* Alamofire.framework */; };
-		B74301F121C4AC97006572F1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74301EA21C4AC97006572F1 /* SDWebImage.framework */; };
-		B74301F221C4AC97006572F1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74301EB21C4AC97006572F1 /* RxSwift.framework */; };
-		B74301F321C4AC97006572F1 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74301EC21C4AC97006572F1 /* SnapKit.framework */; };
-		B74301F421C4AC97006572F1 /* AMScrollingNavbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74301ED21C4AC97006572F1 /* AMScrollingNavbar.framework */; };
-		B74301F521C4AC97006572F1 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74301EE21C4AC97006572F1 /* RxCocoa.framework */; };
-		B74301F621C4AC97006572F1 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74301EF21C4AC97006572F1 /* SwiftyUserDefaults.framework */; };
 		B74301F921C4AD71006572F1 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301F821C4AD71006572F1 /* Register.storyboard */; };
 		B74301FB21C4AD77006572F1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FA21C4AD77006572F1 /* Login.storyboard */; };
 		B74301FD21C4AD8B006572F1 /* SettingUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FC21C4AD8B006572F1 /* SettingUser.storyboard */; };
@@ -65,13 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B74301F021C4AC97006572F1 /* Alamofire.framework in Frameworks */,
-				B74301F121C4AC97006572F1 /* SDWebImage.framework in Frameworks */,
-				B74301F221C4AC97006572F1 /* RxSwift.framework in Frameworks */,
-				B74301F321C4AC97006572F1 /* SnapKit.framework in Frameworks */,
-				B74301F421C4AC97006572F1 /* AMScrollingNavbar.framework in Frameworks */,
-				B74301F521C4AC97006572F1 /* RxCocoa.framework in Frameworks */,
-				B74301F621C4AC97006572F1 /* SwiftyUserDefaults.framework in Frameworks */,
 				931582D1BFAC496BCDD1D5F1 /* Pods_ARPeople_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,7 +212,6 @@
 				B74EA2E721C3A24000224050 /* Sources */,
 				B74EA2E821C3A24000224050 /* Frameworks */,
 				B74EA2E921C3A24000224050 /* Resources */,
-				B74301F721C4AC9D006572F1 /* ShellScript */,
 				35FF467DEE834C8C6CE9C550 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -343,30 +328,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		B74301F721C4AC9D006572F1 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AMScrollingNavbar.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -522,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FJMPLD4D4X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -545,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FJMPLD4D4X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
