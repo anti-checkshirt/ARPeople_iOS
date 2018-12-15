@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		25C9D66321C4CF4800FD2EDB /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C9D66221C4CF4800FD2EDB /* Register.storyboard */; };
 		931582D1BFAC496BCDD1D5F1 /* Pods_ARPeople_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A84348CEC2DF5EF25D656A /* Pods_ARPeople_iOS.framework */; };
+		B730FF4D21C5904C00768A6F /* UserShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730FF4C21C5904C00768A6F /* UserShowViewController.swift */; };
+		B730FF4F21C5906300768A6F /* UserShow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B730FF4E21C5906300768A6F /* UserShow.storyboard */; };
 		B73B4FB221C56408009C13E5 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB121C56408009C13E5 /* UserView.swift */; };
 		B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB321C5641C009C13E5 /* BaseNode.swift */; };
 		B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		25C9D66221C4CF4800FD2EDB /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		74A84348CEC2DF5EF25D656A /* Pods_ARPeople_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARPeople_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B730FF4C21C5904C00768A6F /* UserShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserShowViewController.swift; sourceTree = "<group>"; };
+		B730FF4E21C5906300768A6F /* UserShow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserShow.storyboard; sourceTree = "<group>"; };
 		B73B4FB121C56408009C13E5 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		B73B4FB321C5641C009C13E5 /* BaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
 		B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				B743020621C4ADBD006572F1 /* Home.storyboard */,
+				B730FF4E21C5906300768A6F /* UserShow.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B743020821C4ADCA006572F1 /* HomeViewController.swift */,
+				B730FF4C21C5904C00768A6F /* UserShowViewController.swift */,
 				B73B4FB121C56408009C13E5 /* UserView.swift */,
 				B73B4FB321C5641C009C13E5 /* BaseNode.swift */,
 			);
@@ -281,6 +287,7 @@
 			files = (
 				B74301FB21C4AD77006572F1 /* Login.storyboard in Resources */,
 				B7AA0F5221C58243008E28B6 /* ImageUpload.storyboard in Resources */,
+				B730FF4F21C5906300768A6F /* UserShow.storyboard in Resources */,
 				B74EA2F921C3A24200224050 /* LaunchScreen.storyboard in Resources */,
 				B74EA2F621C3A24200224050 /* Assets.xcassets in Resources */,
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
@@ -369,6 +376,7 @@
 				B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */,
 				B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */,
 				B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */,
+				B730FF4D21C5904C00768A6F /* UserShowViewController.swift in Sources */,
 				B74EA30C21C3A2C800224050 /* AppUser.swift in Sources */,
 				B74301FF21C4AD95006572F1 /* RegisterViewController.swift in Sources */,
 				B743020921C4ADCA006572F1 /* HomeViewController.swift in Sources */,
