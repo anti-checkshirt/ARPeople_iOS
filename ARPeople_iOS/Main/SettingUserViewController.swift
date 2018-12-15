@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class SettingUserViewController: UIViewController {
 
@@ -32,8 +31,6 @@ class SettingUserViewController: UIViewController {
     
     private func setLayout() {
         registerButton.layer.cornerRadius = registerButton.frame.height / 2
-        pass1InputField.isSecureTextEntry = true
-        pass2InputField.isSecureTextEntry = true
     }
     
     @IBAction private func register() {
@@ -43,6 +40,7 @@ class SettingUserViewController: UIViewController {
         guard let pass2 = pass2InputField.text else { return }
         
         if name.isEmpty {
+            print("hgoe")
             return
         }
         if mail.isEmpty {
@@ -58,8 +56,9 @@ class SettingUserViewController: UIViewController {
         if pass1 != pass2 {
             return
         }
+        let VC = RegisterViewController()
+        self.navigationController?.pushViewController(VC, animated: true)
     }
-    
 }
 
 extension SettingUserViewController: UITextFieldDelegate {
