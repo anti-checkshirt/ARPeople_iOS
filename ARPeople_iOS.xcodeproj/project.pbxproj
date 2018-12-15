@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		931582D1BFAC496BCDD1D5F1 /* Pods_ARPeople_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A84348CEC2DF5EF25D656A /* Pods_ARPeople_iOS.framework */; };
 		B7239D0721C4C5EA00A79CA4 /* WebNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7239D0621C4C5EA00A79CA4 /* WebNode.swift */; };
+		B7239D0921C4C70D00A79CA4 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7239D0821C4C70D00A79CA4 /* UserView.swift */; };
+		B7239D0B21C4D27900A79CA4 /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7239D0A21C4D27900A79CA4 /* UserView.xib */; };
 		B74301F921C4AD71006572F1 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301F821C4AD71006572F1 /* Register.storyboard */; };
 		B74301FB21C4AD77006572F1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FA21C4AD77006572F1 /* Login.storyboard */; };
 		B74301FD21C4AD8B006572F1 /* SettingUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FC21C4AD8B006572F1 /* SettingUser.storyboard */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		74A84348CEC2DF5EF25D656A /* Pods_ARPeople_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARPeople_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7239D0621C4C5EA00A79CA4 /* WebNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebNode.swift; sourceTree = "<group>"; };
+		B7239D0821C4C70D00A79CA4 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		B7239D0A21C4D27900A79CA4 /* UserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
 		B74301E921C4AC97006572F1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		B74301EA21C4AC97006572F1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		B74301EB21C4AC97006572F1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				B743020621C4ADBD006572F1 /* Home.storyboard */,
+				B7239D0A21C4D27900A79CA4 /* UserView.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				B743020821C4ADCA006572F1 /* HomeViewController.swift */,
+				B7239D0821C4C70D00A79CA4 /* UserView.swift */,
 				B7239D0621C4C5EA00A79CA4 /* WebNode.swift */,
 			);
 			name = Home;
@@ -270,6 +276,7 @@
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
 				B74301FD21C4AD8B006572F1 /* SettingUser.storyboard in Resources */,
 				B74301F921C4AD71006572F1 /* Register.storyboard in Resources */,
+				B7239D0B21C4D27900A79CA4 /* UserView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +353,7 @@
 				B7239D0721C4C5EA00A79CA4 /* WebNode.swift in Sources */,
 				B74EA2EF21C3A24000224050 /* AppDelegate.swift in Sources */,
 				B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */,
+				B7239D0921C4C70D00A79CA4 /* UserView.swift in Sources */,
 				B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */,
 				B743020321C4ADAA006572F1 /* SettingUserViewController.swift in Sources */,
 			);
