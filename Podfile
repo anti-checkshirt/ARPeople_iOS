@@ -13,6 +13,6 @@ target 'ARPeople_iOS' do
   pod 'SDWebImage'
   pod 'RxSwift'
   pod 'RxCocoa'
-
+  pod 'DKImagePickerController'
 
 end

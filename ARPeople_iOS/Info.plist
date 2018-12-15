@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>カメラ使うよ😍</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>保存するよ</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>使うよ😍</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -33,10 +27,18 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>カメラ使うよ😍</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>使うよ😍</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>保存するよ</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>君のカメラFolderを見たい😍</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Home</string>
+	<string>ImageUpload</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

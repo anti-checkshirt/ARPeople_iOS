@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DKImagePickerController
 
 class ImageUploadViewController: UIViewController {
 
@@ -17,6 +18,23 @@ class ImageUploadViewController: UIViewController {
     }
     
 
+    @IBAction func uplode(_ sender: Any) {
+        let pickerController = DKImagePickerController()
+        // 選択可能上限の設定もできます
+        pickerController.maxSelectableCount = 5
+        pickerController.didSelectAssets = { [unowned self] (assets: [DKAsset]) in
+            
+            // 選択された画像はassetsに入れて返却されますのでfetchして取り出すとよいでしょう
+            for asset in assets {
+                asset.fetchFullScreenImage(completeBlock: { (image, info) in
+                    guard let image = image else { return }
+                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                })
+            }
+        }
+        
+        self.present(pickerController, animated: true)
+    }
     /*
     // MARK: - Navigation
 
