@@ -1,0 +1,6 @@
+framework module Pods_ARPeople_iOS {
+  umbrella header "Pods-ARPeople_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
