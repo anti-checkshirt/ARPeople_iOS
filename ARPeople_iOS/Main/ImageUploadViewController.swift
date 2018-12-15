@@ -7,39 +7,61 @@
 //
 
 import UIKit
+import Alamofire
 import DKImagePickerController
 
 class ImageUploadViewController: UIViewController {
+    
+    private var images = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
     @IBAction func uplode(_ sender: Any) {
         let pickerController = DKImagePickerController()
         // 選択可能上限の設定もできます
-        pickerController.maxSelectableCount = 5
+        pickerController.maxSelectableCount = 10
         pickerController.didSelectAssets = { [unowned self] (assets: [DKAsset]) in
+            // 必ず10枚を選択
+            if assets.count == 10 { return }
             for asset in assets {
                 asset.fetchFullScreenImage(completeBlock: { (image, info) in
                     guard let image = image else { return }
-                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                    self.images.append(image)
                 })
             }
         }
         self.present(pickerController, animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func showRequest() {
+        let url = "http://localhost:3000/"
+        let parameters: Parameters = [
+            "image1": images[0],
+            "image2": images[1],
+            "image3": images[2],
+            "image4": images[3],
+            "image5": images[4],
+            "image6": images[5],
+            "image7": images[6],
+            "image8": images[7],
+            "image9": images[8],
+            "image10": images[9]
+        ]
+        
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
+            guard let data = response.data else { return }
+            switch response.result {
+            case .success:
+                let decoder = JSONDecoder()
+                let result = try! decoder.decode(User.self, from: data)
+                print(result)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
-    */
-
 }
