@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g6U-bt-N6M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TSE-L0-hpa">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Register View Controller-->
+        <!--新規登録-->
         <scene sceneID="n9p-rU-WeY">
             <objects>
                 <viewController id="g6U-bt-N6M" customClass="RegisterViewController" customModule="ARPeople_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,6 +88,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmp-Cq-qW6">
+                                <rect key="frame" x="153" y="557" width="108" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="画像の選択">
+                                    <color key="titleColor" red="0.99989503622055054" green="1" blue="0.99987143278121948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadimg:" destination="g6U-bt-N6M" eventType="touchUpInside" id="Et0-EL-aHz"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="プロフィール画像のアップロード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAr-yK-DYm">
                                 <rect key="frame" x="77" y="528" width="260" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -95,26 +106,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmp-Cq-qW6">
-                                <rect key="frame" x="169" y="557" width="77" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4X-Bb-dxA">
+                                <rect key="frame" x="86" y="812" width="242" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="画像の選択"/>
-                                <connections>
-                                    <action selector="uploadimg:" destination="g6U-bt-N6M" eventType="touchUpInside" id="Et0-EL-aHz"/>
-                                </connections>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="官僚">
+                                    <color key="titleColor" red="0.99989503622055054" green="1" blue="0.99987143278121948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lZ1-l1-s0w"/>
                     </view>
+                    <navigationItem key="navigationItem" title="新規登録" id="aYB-Ni-6B5"/>
                     <connections>
-                        <outlet property="age" destination="Obz-Cg-8kR" id="MbE-wf-C7o"/>
-                        <outlet property="gitid" destination="4xA-C7-cye" id="YhH-fp-hjx"/>
-                        <outlet property="name" destination="5b5-ey-7Lh" id="bXc-PK-CSy"/>
-                        <outlet property="twitterid" destination="eI6-Up-Pct" id="ihz-N7-W5h"/>
+                        <outlet property="ageInputField" destination="5b5-ey-7Lh" id="eQA-nR-b0y"/>
+                        <outlet property="chooseButton" destination="xmp-Cq-qW6" id="iLB-99-bsI"/>
+                        <outlet property="gitidInputField" destination="4xA-C7-cye" id="d8y-vA-fRJ"/>
+                        <outlet property="nameInputField" destination="5b5-ey-7Lh" id="lLf-sD-Tq9"/>
+                        <outlet property="twitteridInputField" destination="eI6-Up-Pct" id="Xlt-e7-mGe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLL-fJ-gVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gr6-d5-Q6K"/>
+            </objects>
+            <point key="canvasLocation" x="1076.8115942028987" y="-3453.3482142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S1P-IU-h0t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TSE-L0-hpa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F90-jf-6Ao">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g6U-bt-N6M" kind="relationship" relationship="rootViewController" id="GEu-cJ-ZPe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cll-Sz-HVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="166.66666666666669" y="-3453.3482142857142"/>
         </scene>

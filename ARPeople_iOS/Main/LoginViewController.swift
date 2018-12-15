@@ -9,28 +9,41 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var pass: UITextField!
-    @IBOutlet weak var mail: UITextField!
+    
+    @IBOutlet private weak var passInputField: UITextField!
+    @IBOutlet private weak var mailInputField: UITextField!
+    
+    @IBOutlet private var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        pass.isSecureTextEntry = true
-
-        // Do any additional setup after loading the view.
+        
+        passInputField.delegate = self
+        mailInputField.delegate = self
+        
+        setLayout()
+    }
+    private func setLayout() {
+        button.layer.cornerRadius = button.frame.height / 2
+        
     }
     
     
+    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case passInputField:
+            passInputField.becomeFirstResponder()
+        case mailInputField:
+            mailInputField.becomeFirstResponder()
+            textField.resignFirstResponder()
+        default:
+            break
+        }
+        return true
     }
-    */
-
+    
 }

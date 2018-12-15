@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rCH-kc-1q7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z6D-Ie-5ti">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Setting User View Controller-->
+        <!--新規登録-->
         <scene sceneID="fIl-as-U2F">
             <objects>
                 <viewController id="rCH-kc-1q7" customClass="SettingUserViewController" customModule="ARPeople_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,18 +67,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0Y-MZ-fmh">
+                                <rect key="frame" x="102" y="812" width="203" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="登録">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iti-q3-oZk"/>
                     </view>
+                    <navigationItem key="navigationItem" title="新規登録" id="pTr-fr-6EM"/>
                     <connections>
-                        <outlet property="mailtextfield" destination="9Ww-Jg-3iQ" id="oWE-P2-bi6"/>
-                        <outlet property="nametextfield" destination="mEF-Wi-cBn" id="uVA-1i-wIb"/>
-                        <outlet property="pass1" destination="GcH-sS-vUY" id="zvU-09-rIj"/>
-                        <outlet property="pass2" destination="d0g-K8-8XK" id="Ts1-2C-hVR"/>
+                        <outlet property="mailInputField" destination="9Ww-Jg-3iQ" id="L2b-8M-Qr3"/>
+                        <outlet property="nameInputField" destination="mEF-Wi-cBn" id="5nc-7f-FfH"/>
+                        <outlet property="pass1InputField" destination="GcH-sS-vUY" id="hzE-JQ-dgt"/>
+                        <outlet property="pass2InputField" destination="d0g-K8-8XK" id="Jrs-lc-S9j"/>
+                        <outlet property="registerButton" destination="s0Y-MZ-fmh" id="AyC-4c-ffk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Khv-zd-PEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030.4347826086957" y="-264.50892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ng8-Wf-RFx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z6D-Ie-5ti" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eHs-bG-kfe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rCH-kc-1q7" kind="relationship" relationship="rootViewController" id="p0J-xw-WWQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wA-Xw-T7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120.28985507246378" y="-264.50892857142856"/>
         </scene>
