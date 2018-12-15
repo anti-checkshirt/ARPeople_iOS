@@ -88,31 +88,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmp-Cq-qW6">
-                                <rect key="frame" x="153" y="557" width="108" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="画像の選択">
-                                    <color key="titleColor" red="0.99989503622055054" green="1" blue="0.99987143278121948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="uploadimg:" destination="g6U-bt-N6M" eventType="touchUpInside" id="Et0-EL-aHz"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="プロフィール画像のアップロード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAr-yK-DYm">
-                                <rect key="frame" x="77" y="528" width="260" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4X-Bb-dxA">
                                 <rect key="frame" x="86" y="812" width="242" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="官僚">
+                                <state key="normal" title="登録">
                                     <color key="titleColor" red="0.99989503622055054" green="1" blue="0.99987143278121948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="register" destination="g6U-bt-N6M" eventType="touchUpInside" id="Om8-Ss-8ej"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,7 +106,6 @@
                     <navigationItem key="navigationItem" title="新規登録" id="aYB-Ni-6B5"/>
                     <connections>
                         <outlet property="ageInputField" destination="5b5-ey-7Lh" id="eQA-nR-b0y"/>
-                        <outlet property="chooseButton" destination="xmp-Cq-qW6" id="iLB-99-bsI"/>
                         <outlet property="gitidInputField" destination="4xA-C7-cye" id="d8y-vA-fRJ"/>
                         <outlet property="nameInputField" destination="5b5-ey-7Lh" id="lLf-sD-Tq9"/>
                         <outlet property="twitteridInputField" destination="eI6-Up-Pct" id="Xlt-e7-mGe"/>

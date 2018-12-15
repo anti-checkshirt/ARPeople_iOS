@@ -15,7 +15,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var ageInputField: UITextField!
     @IBOutlet private weak var gitidInputField: UITextField!
     @IBOutlet private weak var twitteridInputField: UITextField!
-    @IBOutlet private weak var chooseButton:  UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +23,9 @@ class RegisterViewController: UIViewController {
         ageInputField.delegate = self
         gitidInputField.delegate = self
         twitteridInputField.delegate = self
-        
-        setLayout()
-        
-    }
-    private func setLayout() {
-        chooseButton.layer.cornerRadius = chooseButton.frame.height / 2
     }
     
-    @IBAction private func uploadimg(_ sender: Any) {
+    @IBAction private func register() {
         let twitter = twitteridInputField.text
         let github = gitidInputField.text
         let age = ageInputField.text
