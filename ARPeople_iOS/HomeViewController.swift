@@ -16,8 +16,30 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sceneView.showsStatistics = true
+        sceneView.scene = SCNScene()
+        sceneView.autoenablesDefaultLighting = true
 
         setLayout()
+    }
+    
+    private func getFaceImage() {
+        let image = sceneView.snapshot()
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let configuration = ARWorldTrackingConfiguration()
+        sceneView.session.run(configuration)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        sceneView.session.pause()
     }
     
     private func setLayout() {
