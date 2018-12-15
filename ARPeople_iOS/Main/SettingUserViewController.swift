@@ -10,11 +10,21 @@ import UIKit
 
 class SettingUserViewController: UIViewController {
 
+    @IBOutlet weak var mail: UITextField!
+    @IBOutlet weak var name: UITextField!
+    
+    @IBOutlet weak var pass1: UITextField!
+    @IBOutlet weak var pass2: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        pass1.isSecureTextEntry = true
+        pass2.isSecureTextEntry = true
+
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*

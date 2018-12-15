@@ -10,8 +10,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var pass: UITextField!
+    @IBOutlet weak var mail: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        pass.isSecureTextEntry = true
 
         // Do any additional setup after loading the view.
     }

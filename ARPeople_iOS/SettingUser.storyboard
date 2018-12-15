@@ -71,6 +71,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iti-q3-oZk"/>
                     </view>
+                    <connections>
+                        <outlet property="mailtextfield" destination="9Ww-Jg-3iQ" id="oWE-P2-bi6"/>
+                        <outlet property="nametextfield" destination="mEF-Wi-cBn" id="uVA-1i-wIb"/>
+                        <outlet property="pass1" destination="GcH-sS-vUY" id="zvU-09-rIj"/>
+                        <outlet property="pass2" destination="d0g-K8-8XK" id="Ts1-2C-hVR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Khv-zd-PEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

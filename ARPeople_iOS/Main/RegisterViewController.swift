@@ -10,13 +10,27 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var age: UITextField!
+    @IBOutlet weak var gitid: UITextField!
+    @IBOutlet weak var twitterid: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func uploadimg(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            
+            let pickerView = UIImagePickerController()
+            pickerView.sourceType = .photoLibrary
+            pickerView.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            self.present(pickerView, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -27,4 +41,5 @@ class RegisterViewController: UIViewController {
     }
     */
 
+    }
 }
