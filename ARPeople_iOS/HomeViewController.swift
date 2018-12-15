@@ -15,7 +15,6 @@ class HomeViewController: UIViewController {
     var faceTracker: FaceTracker? = nil
     @IBOutlet var sceneView: ARSCNView!
     var rectView = UIView()
-    var count: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
