@@ -105,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				B743020821C4ADCA006572F1 /* HomeViewController.swift */,
+				B771B5D021C5473A00890C72 /* FaceTracking.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -173,7 +174,6 @@
 				B74EA30921C3A2B700224050 /* AppColor.swift */,
 				B74EA30B21C3A2C800224050 /* AppUser.swift */,
 				B7E562E421C505A400F86BDC /* User.swift */,
-				B771B5D021C5473A00890C72 /* FaceTracking.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

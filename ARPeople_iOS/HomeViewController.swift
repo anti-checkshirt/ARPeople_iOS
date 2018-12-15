@@ -12,7 +12,9 @@ import SceneKit
 
 class HomeViewController: UIViewController {
     
+    var faceTracker: FaceTracker? = nil
     @IBOutlet var sceneView: ARSCNView!
+    var rectView = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,21 @@ class HomeViewController: UIViewController {
     private func getFaceImage() {
         let image = sceneView.snapshot()
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        self.rectView.layer.borderWidth = 3
+        rectView.layer.borderColor = UIColor.yellow.cgColor
+        self.view.addSubview(self.rectView)
+        faceTracker = FaceTracker(view: self.sceneView, findface:{arr in
+            //一番の顔だけ使う
+            let rect = arr[0]
+            
+            //四角い枠を顔の位置に移動する
+            self.rectView.frame = rect
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {

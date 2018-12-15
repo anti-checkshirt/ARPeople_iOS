@@ -6,6 +6,8 @@
 	<string>カメラ使うよ😍</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>保存するよ</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>使うよ😍</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
