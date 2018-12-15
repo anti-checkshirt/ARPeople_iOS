@@ -46,10 +46,10 @@ class UserView: UIView {
     }()
     
     func setUp() {
-        nameLabel.text = "tomoki"
-        ageLabel.text = "11歳"
-        twitterLabel.text = "tomoki_sun"
-        githubLabel.text = "tomoki69386"
+        nameLabel.text = "hibino"
+        ageLabel.text = "16歳"
+        twitterLabel.text = "_hibinokota_"
+        githubLabel.text = "hibino"
     }
     
     required override init(frame: CGRect) {

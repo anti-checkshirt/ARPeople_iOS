@@ -34,11 +34,20 @@
                     <navigationItem key="navigationItem" id="Xec-kp-kFI"/>
                     <connections>
                         <outlet property="sceneView" destination="wga-au-fqY" id="nAU-Qg-XAQ"/>
+                        <segue destination="zNv-jZ-pAS" kind="show" identifier="toUserShow" id="LUX-Fc-GpV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmn-Qh-Avk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1364" y="-165.06746626686657"/>
+        </scene>
+        <!--UserShow-->
+        <scene sceneID="lB0-xD-WfX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserShow" id="zNv-jZ-pAS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rBd-yj-fNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2018" y="-159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1ui-Gw-e7p">

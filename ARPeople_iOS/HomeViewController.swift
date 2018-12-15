@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var sceneView: ARSCNView!
     private var hogeView = SCNNode()
+    private var isView: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,11 @@ class HomeViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        getFaceImage()
-        displayNode()
+        if isView {
+            performSegue(withIdentifier: "toUserShow",sender: nil)
+        } else {
+            displayNode()
+        }
     }
     
     private func displayNode() {
@@ -43,6 +47,7 @@ class HomeViewController: UIViewController {
         }
         sceneView.scene.rootNode.addChildNode(node) // 生成したノードをシーンに追加する
         hogeView = node
+        isView = true
     }
     
     private func getFaceImage() {
@@ -52,6 +57,8 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        isView = false
         
         let configuration = ARWorldTrackingConfiguration()
         sceneView.session.run(configuration)

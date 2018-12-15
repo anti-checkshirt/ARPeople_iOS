@@ -18,11 +18,15 @@ class UserShowViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        nameLabel.text = "ともき"
-        ageLabel.text = "17歳"
-        emailLabel.text = "tomoki@tomoki.com"
-        twitterLabel.text = "tomoki_sun"
-        githubLabel.text = "github"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+//        nameLabel.text = "ひびの"
+//        ageLabel.text = "16歳"
+//        emailLabel.text = "hibino@g.com"
+//        twitterLabel.text = "hibino"
+//        githubLabel.text = "hibino"
     }
 }
