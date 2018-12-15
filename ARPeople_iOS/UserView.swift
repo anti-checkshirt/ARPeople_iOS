@@ -7,33 +7,68 @@
 //
 
 import UIKit
-import SnapKit
 
 class UserView: UIView {
     
-    private let nameLabel = UILabel()
+    private let baseView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
+    }()
+    
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 50)
+        label.textAlignment = .left
+        label.backgroundColor = .red
+        return label
+    }()
+    
+    private let ageLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 40)
+        return label
+    }()
+    
+    private let twitterLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 40)
+        return label
+    }()
+    
+    private let githubLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 40)
+        return label
+    }()
+    
+    func setUp() {
+        nameLabel.text = "tomoki"
+        ageLabel.text = "11歳"
+        twitterLabel.text = "tomoki_sun"
+        githubLabel.text = "tomoki69386"
+    }
     
     required override init(frame: CGRect) {
         super.init(frame: frame)
         
-        nameLabel.text = "ともき"
-        nameLabel.font = .boldSystemFont(ofSize: 120)
-        nameLabel.textAlignment = .left
-        nameLabel.backgroundColor = .white
-        nameLabel.frame = self.bounds
-        self.addSubview(nameLabel)
+        baseView.frame = self.bounds
+        nameLabel.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height / 4)
+        ageLabel.frame = CGRect(x: 0, y: nameLabel.frame.maxY, width: frame.width, height: frame.height / 4)
+        twitterLabel.frame = CGRect(x: 0, y: ageLabel.frame.maxY, width: frame.width, height: frame.height / 4)
+        githubLabel.frame = CGRect(x: 0, y: twitterLabel.frame.maxY, width: frame.width, height: frame.height / 4)
+        
+        self.addSubview(baseView)
+        baseView.addSubview(nameLabel)
+        baseView.addSubview(ageLabel)
+        baseView.addSubview(twitterLabel)
+        baseView.addSubview(githubLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-//        nameLabel.snp.makeConstraints { make in
-//            make.left.top.size.equalToSuperview()
-//        }
-    }
-    
 }

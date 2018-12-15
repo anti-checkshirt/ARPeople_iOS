@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
     private func displayNode() {
         hogeView.removeFromParentNode()
         let baseView = UserView(frame: view.bounds)
+        baseView.setUp()
         guard let image = createImage(view: baseView) else { return }
         let node = BaseNode(image: image, width: 0.6)
         
