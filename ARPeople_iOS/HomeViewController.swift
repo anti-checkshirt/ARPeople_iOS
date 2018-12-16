@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
         let baseView = UserView(frame: view.bounds)
         baseView.setUp()
         guard let image = createImage(view: baseView) else { return }
-        let node = BaseNode(image: image, width: 0.6)
+        let node = BaseNode(image: image, width: 0.3)
         
         let position = SCNVector3(x: 0, y: 0, z: -1) // ノードの位置は、左右：0m 上下：0m　奥に100cm
         if let camera = sceneView.pointOfView {
@@ -43,6 +43,23 @@ class HomeViewController: UIViewController {
         }
         sceneView.scene.rootNode.addChildNode(node) // 生成したノードをシーンに追加する
         hogeView = node
+    }
+    
+    func resize(image: UIImage, width: Double) -> UIImage {
+        
+        // オリジナル画像のサイズからアスペクト比を計算
+        let aspectScale = image.size.height / image.size.width
+        
+        // widthからアスペクト比を元にリサイズ後のサイズを取得
+        let resizedSize = CGSize(width: width, height: width * Double(aspectScale))
+        
+        // リサイズ後のUIImageを生成して返却
+        UIGraphicsBeginImageContext(resizedSize)
+        image.draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return resizedImage!
     }
     
     private func getFaceImage() {

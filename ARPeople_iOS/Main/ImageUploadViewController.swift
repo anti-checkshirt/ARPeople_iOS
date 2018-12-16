@@ -41,8 +41,8 @@ class ImageUploadViewController: UIViewController {
     
     private func showRequest() {
         print("showRequest")
-        let url = "http://192.168.11.8:3000/api/v1/setting"
-        
+        let url = "http://10.27.155.190:3000/api/v1/setting"
+        //curl -X POST -H "Content-Type: application/json" -d '{"name":"test_user", "age":"100", "email":"aaagehogehoe@example.com", "password":"Abcd1234", "twitterID":"@tomoki_sun", "githubID":"tomoki69386"}' http://10.27.155.190:3000/api/v1/user
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 for image in self.images {
@@ -54,8 +54,12 @@ class ImageUploadViewController: UIViewController {
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
+                    print(encodingResult)
                     upload.responseJSON { response in
                         print(response)
+                    }
+                    upload.uploadProgress { progress in
+                        print(progress.fractionCompleted)
                     }
                 case .failure(let error):
                     print(error)

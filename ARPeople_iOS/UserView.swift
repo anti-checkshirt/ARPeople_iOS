@@ -13,6 +13,8 @@ class UserView: UIView {
     private let baseView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
+        s
+        view.layer.cornerRadius = 10
         return view
     }()
     
@@ -20,7 +22,6 @@ class UserView: UIView {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 50)
         label.textAlignment = .left
-        label.backgroundColor = .red
         return label
     }()
     
@@ -48,8 +49,8 @@ class UserView: UIView {
     func setUp() {
         nameLabel.text = "tomoki"
         ageLabel.text = "11歳"
-        twitterLabel.text = "tomoki_sun"
-        githubLabel.text = "tomoki69386"
+        twitterLabel.text = "TwitterID: tomoki_sun"
+        githubLabel.text = "GithubID: tomoki69386"
     }
     
     required override init(frame: CGRect) {
