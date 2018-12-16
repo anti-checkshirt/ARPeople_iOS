@@ -13,7 +13,6 @@ class UserView: UIView {
     private let baseView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
-        s
         view.layer.cornerRadius = 10
         return view
     }()

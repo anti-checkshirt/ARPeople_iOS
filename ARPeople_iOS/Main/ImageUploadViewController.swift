@@ -41,13 +41,16 @@ class ImageUploadViewController: UIViewController {
     
     private func showRequest() {
         print("showRequest")
-        let url = "http://10.27.155.190:3000/api/v1/setting"
+        let url = "http://172.20.10.12:3000/api/v1/setting"
         //curl -X POST -H "Content-Type: application/json" -d '{"name":"test_user", "age":"100", "email":"aaagehogehoe@example.com", "password":"Abcd1234", "twitterID":"@tomoki_sun", "githubID":"tomoki69386"}' http://10.27.155.190:3000/api/v1/user
+
         Alamofire.upload(
             multipartFormData: { multipartFormData in
+                var number: Int = 1
                 for image in self.images {
                     guard let imageData = image.jpegData(compressionQuality: 0.75) else { return }
-                    multipartFormData.append(imageData, withName: "image1", fileName: "test.jpeg", mimeType: "image/jpeg")
+                    multipartFormData.append(imageData, withName: "image\(number)", fileName: "image\(number).jpeg", mimeType: "image/jpeg")
+                    number += 1
                 }
         },
             to: url,
