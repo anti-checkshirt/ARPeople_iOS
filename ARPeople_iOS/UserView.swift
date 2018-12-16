@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class UserView: UIView {
     
@@ -18,52 +19,56 @@ class UserView: UIView {
         return view
     }()
     
+    private let image = UIImageView()
+    
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 50)
+        label.font = .boldSystemFont(ofSize: 40)
         label.textAlignment = .left
-        label.backgroundColor = .red
         return label
     }()
     
     private let ageLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.font = .systemFont(ofSize: 40)
+        label.font = .systemFont(ofSize: 30)
         return label
     }()
     
     private let twitterLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.font = .systemFont(ofSize: 40)
+        label.font = .systemFont(ofSize: 30)
         return label
     }()
     
     private let githubLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.font = .systemFont(ofSize: 40)
+        label.font = .systemFont(ofSize: 30)
         return label
     }()
     
     func setUp() {
-        nameLabel.text = "hibino"
+        nameLabel.text = "日比野"
         ageLabel.text = "16歳"
-        twitterLabel.text = "_hibinokota_"
-        githubLabel.text = "hibino"
+        twitterLabel.text = "Twitter: _hibinokota_"
+        githubLabel.text = "Github: hibino"
+        image.image = UIImage(named: "ooUVH5FH_400x400")
     }
     
     required override init(frame: CGRect) {
         super.init(frame: frame)
         
         baseView.frame = self.bounds
-        nameLabel.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height / 4)
+        image.frame = CGRect(x: 0, y: 0, width: frame.width / 4, height: frame.height / 4)
+        nameLabel.frame = CGRect(x: image.frame.maxX, y: 0, width: frame.width / 4 * 3, height: frame.height / 4)
         ageLabel.frame = CGRect(x: 0, y: nameLabel.frame.maxY, width: frame.width, height: frame.height / 4)
         twitterLabel.frame = CGRect(x: 0, y: ageLabel.frame.maxY, width: frame.width, height: frame.height / 4)
         githubLabel.frame = CGRect(x: 0, y: twitterLabel.frame.maxY, width: frame.width, height: frame.height / 4)
         
         self.addSubview(baseView)
+        baseView.addSubview(image)
         baseView.addSubview(nameLabel)
         baseView.addSubview(ageLabel)
         baseView.addSubview(twitterLabel)
