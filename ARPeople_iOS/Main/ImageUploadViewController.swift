@@ -13,6 +13,7 @@ import DKImagePickerController
 class ImageUploadViewController: UIViewController {
     
     private var images = [UIImage]()
+    private var count: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +24,15 @@ class ImageUploadViewController: UIViewController {
         let pickerController = DKImagePickerController()
         // 選択可能上限の設定もできます
         pickerController.maxSelectableCount = 10
-        pickerController.didSelectAssets = { [unowned self] (assets: [DKAsset]) in
-            // 必ず10枚を選択
-            if assets.count == 10 { return }
+        pickerController.didSelectAssets = { [self] (assets: [DKAsset]) in
             for asset in assets {
                 asset.fetchFullScreenImage(completeBlock: { (image, info) in
                     guard let image = image else { return }
                     self.images.append(image)
+                    self.count += 1
+                    if self.count == 10 {
+                        self.showRequest()
+                    }
                 })
             }
         }
@@ -37,30 +40,26 @@ class ImageUploadViewController: UIViewController {
     }
     
     private func showRequest() {
-        let url = "http://localhost:3000/"
-        let parameters: Parameters = [
-            "image1": images[0],
-            "image2": images[1],
-            "image3": images[2],
-            "image4": images[3],
-            "image5": images[4],
-            "image6": images[5],
-            "image7": images[6],
-            "image8": images[7],
-            "image9": images[8],
-            "image10": images[9]
-        ]
+        print("showRequest")
+        let url = "http://192.168.11.8:3000/api/v1/setting"
         
-        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
-            guard let data = response.data else { return }
-            switch response.result {
-            case .success:
-                let decoder = JSONDecoder()
-                let result = try! decoder.decode(User.self, from: data)
-                print(result)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        Alamofire.upload(
+            multipartFormData: { multipartFormData in
+                for image in self.images {
+                    guard let imageData = image.jpegData(compressionQuality: 0.75) else { return }
+                    multipartFormData.append(imageData, withName: "image1", fileName: "test.jpeg", mimeType: "image/jpeg")
+                }
+        },
+            to: url,
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.responseJSON { response in
+                        print(response)
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+        })
     }
 }
