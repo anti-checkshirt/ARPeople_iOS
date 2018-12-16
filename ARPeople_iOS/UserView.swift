@@ -13,6 +13,8 @@ class UserView: UIView {
     private let baseView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
+        view.layer.borderWidth = 5
+        view.layer.borderColor = UIColor.yellow.cgColor
         return view
     }()
     
