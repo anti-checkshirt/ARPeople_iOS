@@ -41,7 +41,7 @@ class ImageUploadViewController: UIViewController {
     
     private func showRequest() {
         print("showRequest")
-        let url = "http://172.20.10.12:3000/api/v1/setting"
+        let url = "http://192.168.100.19:3000/api/v1/setting"
         //curl -X POST -H "Content-Type: application/json" -d '{"name":"test_user", "age":"100", "email":"aaagehogehoe@example.com", "password":"Abcd1234", "twitterID":"@tomoki_sun", "githubID":"tomoki69386"}' http://10.27.155.190:3000/api/v1/user
 
         Alamofire.upload(
