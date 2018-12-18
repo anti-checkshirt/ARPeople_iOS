@@ -11,9 +11,18 @@ import Alamofire
 
 class RegisterViewController: UIViewController {
     
+    @IBOutlet private weak var nameInputField: InputFiled!
+    @IBOutlet private weak var emailInputField: InputFiled!
+    @IBOutlet private weak var passwordInputField: InputFiled!
+    @IBOutlet private weak var ageInputField: InputFiled!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameInputField.delegate = self
+        emailInputField.delegate = self
+        passwordInputField.delegate = self
+        ageInputField.delegate = self
     }
     
     private func showRequest(_ twitter: String, _ github: String, _ age: String) {
@@ -37,6 +46,23 @@ class RegisterViewController: UIViewController {
                 print(error)
             }
         }
-        
+    }
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameInputField:
+            emailInputField.becomeFirstResponder
+        case emailInputField:
+            passwordInputField.becomeFirstResponder
+        case passwordInputField:
+            ageInputField.becomeFirstResponder
+        case ageInputField:
+            textField.resignFirstResponder()
+        default:
+            break
+        }
+        return true
     }
 }
