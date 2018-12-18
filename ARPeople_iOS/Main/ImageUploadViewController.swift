@@ -22,7 +22,6 @@ class ImageUploadViewController: UIViewController {
     
     @IBAction func uplode(_ sender: Any) {
         let pickerController = DKImagePickerController()
-        // 選択可能上限の設定もできます
         pickerController.maxSelectableCount = 10
         pickerController.didSelectAssets = { [self] (assets: [DKAsset]) in
             for asset in assets {

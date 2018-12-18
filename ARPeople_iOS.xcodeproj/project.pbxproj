@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25C9D66321C4CF4800FD2EDB /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C9D66221C4CF4800FD2EDB /* Register.storyboard */; };
+		25C9D66321C4CF4800FD2EDB /* SettingUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C9D66221C4CF4800FD2EDB /* SettingUser.storyboard */; };
 		931582D1BFAC496BCDD1D5F1 /* Pods_ARPeople_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A84348CEC2DF5EF25D656A /* Pods_ARPeople_iOS.framework */; };
 		B730FF4D21C5904C00768A6F /* UserShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730FF4C21C5904C00768A6F /* UserShowViewController.swift */; };
 		B730FF4F21C5906300768A6F /* UserShow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B730FF4E21C5906300768A6F /* UserShow.storyboard */; };
@@ -15,7 +15,7 @@
 		B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB321C5641C009C13E5 /* BaseNode.swift */; };
 		B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */; };
 		B74301FB21C4AD77006572F1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FA21C4AD77006572F1 /* Login.storyboard */; };
-		B74301FD21C4AD8B006572F1 /* SettingUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FC21C4AD8B006572F1 /* SettingUser.storyboard */; };
+		B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FC21C4AD8B006572F1 /* Register.storyboard */; };
 		B74301FF21C4AD95006572F1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74301FE21C4AD95006572F1 /* RegisterViewController.swift */; };
 		B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743020021C4AD9A006572F1 /* LoginViewController.swift */; };
 		B743020321C4ADAA006572F1 /* SettingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743020221C4ADAA006572F1 /* SettingUserViewController.swift */; };
@@ -33,7 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		25C9D66221C4CF4800FD2EDB /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		25C9D66221C4CF4800FD2EDB /* SettingUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingUser.storyboard; sourceTree = "<group>"; };
 		74A84348CEC2DF5EF25D656A /* Pods_ARPeople_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARPeople_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B730FF4C21C5904C00768A6F /* UserShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserShowViewController.swift; sourceTree = "<group>"; };
 		B730FF4E21C5906300768A6F /* UserShow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserShow.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		B74301EE21C4AC97006572F1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		B74301EF21C4AC97006572F1 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		B74301FA21C4AD77006572F1 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		B74301FC21C4AD8B006572F1 /* SettingUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingUser.storyboard; sourceTree = "<group>"; };
+		B74301FC21C4AD8B006572F1 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		B74301FE21C4AD95006572F1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B743020021C4AD9A006572F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B743020221C4ADAA006572F1 /* SettingUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUserViewController.swift; sourceTree = "<group>"; };
@@ -209,8 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				B74301FA21C4AD77006572F1 /* Login.storyboard */,
-				B74301FC21C4AD8B006572F1 /* SettingUser.storyboard */,
-				25C9D66221C4CF4800FD2EDB /* Register.storyboard */,
+				B74301FC21C4AD8B006572F1 /* Register.storyboard */,
+				25C9D66221C4CF4800FD2EDB /* SettingUser.storyboard */,
 				B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */,
 			);
 			name = Main;
@@ -298,8 +298,8 @@
 				B74EA2F921C3A24200224050 /* LaunchScreen.storyboard in Resources */,
 				B74EA2F621C3A24200224050 /* Assets.xcassets in Resources */,
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
-				B74301FD21C4AD8B006572F1 /* SettingUser.storyboard in Resources */,
-				25C9D66321C4CF4800FD2EDB /* Register.storyboard in Resources */,
+				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
+				25C9D66321C4CF4800FD2EDB /* SettingUser.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
