@@ -56,18 +56,18 @@ PODS:
   - SDWebImage/GIF (4.4.3):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
-  - SnapKit (4.2.0)
-  - SwiftyUserDefaults (3.0.1)
+  - SnapKit (4.0.1)
+  - SwiftyUserDefaults (4.0.0-alpha.1)
   - TOCropViewController (2.4.0)
 
 DEPENDENCIES:
   - Alamofire
   - DKImagePickerController
-  - RxCocoa
-  - RxSwift
-  - SDWebImage
-  - SnapKit
-  - SwiftyUserDefaults
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - SDWebImage (~> 4.0)
+  - SnapKit (~> 4.0.0)
+  - SwiftyUserDefaults (= 4.0.0-alpha.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -94,10 +94,10 @@ SPEC CHECKSUMS:
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   TOCropViewController: 368d8df3ea43b62c3dc5a61f11b9048274d240bd
 
-PODFILE CHECKSUM: 21d7be4a7bbc02753b9ccfd0fb0d1a3ff245eef2
+PODFILE CHECKSUM: b61b1a520de836b43a758a89d6076d92e5bf009f
 
 COCOAPODS: 1.5.3
