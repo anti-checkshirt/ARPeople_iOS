@@ -28,6 +28,8 @@
 		B74EA30C21C3A2C800224050 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EA30B21C3A2C800224050 /* AppUser.swift */; };
 		B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */; };
 		B780945621C93CB9007B063F /* InputFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* InputFiled.swift */; };
+		B780945821C94384007B063F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B780945721C94384007B063F /* User.storyboard */; };
+		B780945A21C945E1007B063F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945921C945E1007B063F /* UserViewController.swift */; };
 		B7AA0F5221C58243008E28B6 /* ImageUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */; };
 		B7AA0F5421C58253008E28B6 /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */; };
 		B7E562E521C505A400F86BDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* User.swift */; };
@@ -64,6 +66,8 @@
 		B74EA30B21C3A2C800224050 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* InputFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFiled.swift; sourceTree = "<group>"; };
+		B780945721C94384007B063F /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		B780945921C945E1007B063F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B78C507721C5DFB000869546 /* ARPeople_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARPeople_iOS.entitlements; sourceTree = "<group>"; };
 		B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageUpload.storyboard; sourceTree = "<group>"; };
 		B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				B743020621C4ADBD006572F1 /* Home.storyboard */,
+				B780945721C94384007B063F /* User.storyboard */,
 				B730FF4E21C5906300768A6F /* UserShow.storyboard */,
 			);
 			path = Home;
@@ -121,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				B743020821C4ADCA006572F1 /* HomeViewController.swift */,
+				B780945921C945E1007B063F /* UserViewController.swift */,
 				B730FF4C21C5904C00768A6F /* UserShowViewController.swift */,
 				B73B4FB121C56408009C13E5 /* UserView.swift */,
 				B73B4FB321C5641C009C13E5 /* BaseNode.swift */,
@@ -303,6 +309,7 @@
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
 				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
 				25C9D66321C4CF4800FD2EDB /* SettingUser.storyboard in Resources */,
+				B780945821C94384007B063F /* User.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73B4FB221C56408009C13E5 /* UserView.swift in Sources */,
+				B780945A21C945E1007B063F /* UserViewController.swift in Sources */,
 				B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */,
 				B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */,
 				B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */,

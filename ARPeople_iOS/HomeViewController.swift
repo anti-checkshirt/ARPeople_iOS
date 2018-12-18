@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sceneView.showsStatistics = true
         sceneView.scene = SCNScene()
         sceneView.autoenablesDefaultLighting = true
 
