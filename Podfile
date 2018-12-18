@@ -8,11 +8,11 @@ target 'ARPeople_iOS' do
   # Pods for ARPeople_iOS
 
   pod 'Alamofire'
-  pod 'SnapKit'
-  pod 'SwiftyUserDefaults'
-  pod 'SDWebImage'
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'SnapKit', '~> 4.0.0'
+  pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
+  pod 'SDWebImage', '~> 4.0'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
   pod 'DKImagePickerController'
 
 end
