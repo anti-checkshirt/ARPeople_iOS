@@ -25,6 +25,11 @@ struct AppUser {
     static var password: String {
         return Defaults[.password]
     }
+    
+    /// stagingのURL
+    static var stagingURL: String {
+        return Defaults[.staging]
+    }
 }
 
 extension AppUser {
