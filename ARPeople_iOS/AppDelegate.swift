@@ -15,7 +15,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // .envの読み込み
+        guard let path = Bundle.main.path(forResource: ".env", ofType: nil) else {
+            fatalError(".envファイルがプロジェクトファイルに存在しません。")
+        }
+        let url = URL(fileURLWithPath: path)
+        do {
+            let data = try Data(contentsOf: url)
+            let str = String(data: data, encoding: .utf8) ?? "Empty File"
+            let clean = str.replacingOccurrences(of: "\"", with: "").replacingOccurrences(of: "'", with: "")
+            let envVars = clean.components(separatedBy:"\n")
+            for envVar in envVars {
+                let keyVal = envVar.components(separatedBy:"=")
+                if keyVal.count == 2 {
+                    setenv(keyVal[0], keyVal[1], 1)
+                }
+            }
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+        
+        guard let stagingURL = ProcessInfo.processInfo.environment["staging_url"] else {
+            fatalError("staging_urlが.envファイルに記載されていません。")
+        }
+        
+        AppUser.saveEnv(staging: stagingURL)
+
         return true
     }
 

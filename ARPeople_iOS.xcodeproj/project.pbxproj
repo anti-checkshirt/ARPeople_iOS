@@ -33,6 +33,8 @@
 		B7AA0F5221C58243008E28B6 /* ImageUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */; };
 		B7AA0F5421C58253008E28B6 /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */; };
 		B7E562E521C505A400F86BDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* User.swift */; };
+		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
+		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageUpload.storyboard; sourceTree = "<group>"; };
 		B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
 		BC961E217F437BE30CBD5419 /* Pods-ARPeople_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARPeople_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARPeople_iOS/Pods-ARPeople_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C910CF4850881AF08677983D /* Pods-ARPeople_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARPeople_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARPeople_iOS/Pods-ARPeople_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +168,8 @@
 				B74EA2F521C3A24200224050 /* Assets.xcassets */,
 				B74EA2F721C3A24200224050 /* LaunchScreen.storyboard */,
 				B74EA2FA21C3A24200224050 /* Info.plist */,
+				B7E67F6521CFF2A700527DC5 /* .env */,
+				B7E67F6921CFF41800527DC5 /* .env.sample */,
 			);
 			path = ARPeople_iOS;
 			sourceTree = "<group>";
@@ -306,6 +312,8 @@
 				B730FF4F21C5906300768A6F /* UserShow.storyboard in Resources */,
 				B74EA2F921C3A24200224050 /* LaunchScreen.storyboard in Resources */,
 				B74EA2F621C3A24200224050 /* Assets.xcassets in Resources */,
+				B7E67F6621CFF2A700527DC5 /* .env in Resources */,
+				B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */,
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
 				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
 				25C9D66321C4CF4800FD2EDB /* SettingUser.storyboard in Resources */,

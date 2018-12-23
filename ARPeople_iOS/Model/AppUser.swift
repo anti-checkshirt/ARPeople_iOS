@@ -35,10 +35,16 @@ extension AppUser {
         Defaults[.email] = email
         Defaults[.password] = password
     }
+    
+    static func saveEnv(staging: String) {
+        Defaults[.staging] = staging
+    }
 }
 
 private extension DefaultsKeys {
     static let email = DefaultsKey<String>("email")
     static let password = DefaultsKey<String>("password")
     static let name = DefaultsKey<String>("name")
+    
+    static let staging = DefaultsKey<String>("staging_url", defaultValue: "")
 }
