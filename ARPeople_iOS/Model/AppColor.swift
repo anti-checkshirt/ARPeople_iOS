@@ -22,4 +22,7 @@ struct AppColor {
     
     /// #E9E9E9
     static var bgGlay: UIColor { return #colorLiteral(red: 0.9137254902, green: 0.9137254902, blue: 0.9137254902, alpha: 1) }
+    
+    /// #64BBFF
+    static var main: UIColor { return UIColor(hex: "64BBFF") }
 }

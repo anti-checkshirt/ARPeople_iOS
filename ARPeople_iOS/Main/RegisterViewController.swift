@@ -11,26 +11,18 @@ import Alamofire
 
 class RegisterViewController: UIViewController {
     
-    @IBOutlet private weak var nameInputField: UITextField!
-    @IBOutlet private weak var ageInputField: UITextField!
-    @IBOutlet private weak var gitidInputField: UITextField!
-    @IBOutlet private weak var twitteridInputField: UITextField!
+    @IBOutlet private weak var nameInputField: InputFiled!
+    @IBOutlet private weak var emailInputField: InputFiled!
+    @IBOutlet private weak var passwordInputField: InputFiled!
+    @IBOutlet private weak var ageInputField: InputFiled!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nameInputField.delegate = self
+        emailInputField.delegate = self
+        passwordInputField.delegate = self
         ageInputField.delegate = self
-        gitidInputField.delegate = self
-        twitteridInputField.delegate = self
-    }
-    
-    @IBAction private func register() {
-        let twitter = twitteridInputField.text
-        let github = gitidInputField.text
-        let age = ageInputField.text
-        
-        showRequest(twitter!, github!, age!)
     }
     
     private func showRequest(_ twitter: String, _ github: String, _ age: String) {
@@ -54,19 +46,19 @@ class RegisterViewController: UIViewController {
                 print(error)
             }
         }
-        
     }
 }
+
 extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case nameInputField:
-            ageInputField.becomeFirstResponder()
+            emailInputField.becomeFirstResponder
+        case emailInputField:
+            passwordInputField.becomeFirstResponder
+        case passwordInputField:
+            ageInputField.becomeFirstResponder
         case ageInputField:
-            gitidInputField.becomeFirstResponder()
-        case gitidInputField:
-            twitteridInputField.becomeFirstResponder()
-        case twitteridInputField:
             textField.resignFirstResponder()
         default:
             break
@@ -74,4 +66,3 @@ extension RegisterViewController: UITextFieldDelegate {
         return true
     }
 }
-

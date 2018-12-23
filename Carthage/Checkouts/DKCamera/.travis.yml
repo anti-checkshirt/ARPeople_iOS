@@ -1,0 +1,7 @@
+language: swift
+
+osx_image: xcode10
+xcode_sdk: iphonesimulator11.0
+
+script:
+- xcodebuild clean build test -project DKCameraDemo.xcodeproj -scheme DKCameraDemo -destination "platform=iOS Simulator,name=iPhone 7"

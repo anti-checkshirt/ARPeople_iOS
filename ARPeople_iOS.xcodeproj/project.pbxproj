@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25C9D66321C4CF4800FD2EDB /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C9D66221C4CF4800FD2EDB /* Register.storyboard */; };
+		25C9D66321C4CF4800FD2EDB /* SettingUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C9D66221C4CF4800FD2EDB /* SettingUser.storyboard */; };
 		931582D1BFAC496BCDD1D5F1 /* Pods_ARPeople_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A84348CEC2DF5EF25D656A /* Pods_ARPeople_iOS.framework */; };
 		B730FF4D21C5904C00768A6F /* UserShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730FF4C21C5904C00768A6F /* UserShowViewController.swift */; };
 		B730FF4F21C5906300768A6F /* UserShow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B730FF4E21C5906300768A6F /* UserShow.storyboard */; };
@@ -15,7 +15,7 @@
 		B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB321C5641C009C13E5 /* BaseNode.swift */; };
 		B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */; };
 		B74301FB21C4AD77006572F1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FA21C4AD77006572F1 /* Login.storyboard */; };
-		B74301FD21C4AD8B006572F1 /* SettingUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FC21C4AD8B006572F1 /* SettingUser.storyboard */; };
+		B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FC21C4AD8B006572F1 /* Register.storyboard */; };
 		B74301FF21C4AD95006572F1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74301FE21C4AD95006572F1 /* RegisterViewController.swift */; };
 		B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743020021C4AD9A006572F1 /* LoginViewController.swift */; };
 		B743020321C4ADAA006572F1 /* SettingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743020221C4ADAA006572F1 /* SettingUserViewController.swift */; };
@@ -27,13 +27,18 @@
 		B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EA30921C3A2B700224050 /* AppColor.swift */; };
 		B74EA30C21C3A2C800224050 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EA30B21C3A2C800224050 /* AppUser.swift */; };
 		B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */; };
+		B780945621C93CB9007B063F /* InputFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* InputFiled.swift */; };
+		B780945821C94384007B063F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B780945721C94384007B063F /* User.storyboard */; };
+		B780945A21C945E1007B063F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945921C945E1007B063F /* UserViewController.swift */; };
 		B7AA0F5221C58243008E28B6 /* ImageUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */; };
 		B7AA0F5421C58253008E28B6 /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */; };
 		B7E562E521C505A400F86BDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* User.swift */; };
+		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
+		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		25C9D66221C4CF4800FD2EDB /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		25C9D66221C4CF4800FD2EDB /* SettingUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingUser.storyboard; sourceTree = "<group>"; };
 		74A84348CEC2DF5EF25D656A /* Pods_ARPeople_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARPeople_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B730FF4C21C5904C00768A6F /* UserShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserShowViewController.swift; sourceTree = "<group>"; };
 		B730FF4E21C5906300768A6F /* UserShow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserShow.storyboard; sourceTree = "<group>"; };
@@ -48,7 +53,7 @@
 		B74301EE21C4AC97006572F1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		B74301EF21C4AC97006572F1 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		B74301FA21C4AD77006572F1 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		B74301FC21C4AD8B006572F1 /* SettingUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingUser.storyboard; sourceTree = "<group>"; };
+		B74301FC21C4AD8B006572F1 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		B74301FE21C4AD95006572F1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B743020021C4AD9A006572F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B743020221C4ADAA006572F1 /* SettingUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUserViewController.swift; sourceTree = "<group>"; };
@@ -62,10 +67,15 @@
 		B74EA30921C3A2B700224050 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		B74EA30B21C3A2C800224050 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		B780945521C93CB9007B063F /* InputFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFiled.swift; sourceTree = "<group>"; };
+		B780945721C94384007B063F /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		B780945921C945E1007B063F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B78C507721C5DFB000869546 /* ARPeople_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARPeople_iOS.entitlements; sourceTree = "<group>"; };
 		B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageUpload.storyboard; sourceTree = "<group>"; };
 		B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
 		BC961E217F437BE30CBD5419 /* Pods-ARPeople_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARPeople_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARPeople_iOS/Pods-ARPeople_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C910CF4850881AF08677983D /* Pods-ARPeople_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARPeople_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARPeople_iOS/Pods-ARPeople_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B743020621C4ADBD006572F1 /* Home.storyboard */,
+				B780945721C94384007B063F /* User.storyboard */,
 				B730FF4E21C5906300768A6F /* UserShow.storyboard */,
 			);
 			path = Home;
@@ -119,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				B743020821C4ADCA006572F1 /* HomeViewController.swift */,
+				B780945921C945E1007B063F /* UserViewController.swift */,
 				B730FF4C21C5904C00768A6F /* UserShowViewController.swift */,
 				B73B4FB121C56408009C13E5 /* UserView.swift */,
 				B73B4FB321C5641C009C13E5 /* BaseNode.swift */,
@@ -156,6 +168,8 @@
 				B74EA2F521C3A24200224050 /* Assets.xcassets */,
 				B74EA2F721C3A24200224050 /* LaunchScreen.storyboard */,
 				B74EA2FA21C3A24200224050 /* Info.plist */,
+				B7E67F6521CFF2A700527DC5 /* .env */,
+				B7E67F6921CFF41800527DC5 /* .env.sample */,
 			);
 			path = ARPeople_iOS;
 			sourceTree = "<group>";
@@ -172,6 +186,7 @@
 			children = (
 				B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */,
 				B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */,
+				B780945521C93CB9007B063F /* InputFiled.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -209,8 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				B74301FA21C4AD77006572F1 /* Login.storyboard */,
-				B74301FC21C4AD8B006572F1 /* SettingUser.storyboard */,
-				25C9D66221C4CF4800FD2EDB /* Register.storyboard */,
+				B74301FC21C4AD8B006572F1 /* Register.storyboard */,
+				25C9D66221C4CF4800FD2EDB /* SettingUser.storyboard */,
 				B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */,
 			);
 			name = Main;
@@ -219,8 +234,8 @@
 		B74EA30621C3A29500224050 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B74301FE21C4AD95006572F1 /* RegisterViewController.swift */,
 				B743020021C4AD9A006572F1 /* LoginViewController.swift */,
+				B74301FE21C4AD95006572F1 /* RegisterViewController.swift */,
 				B743020221C4ADAA006572F1 /* SettingUserViewController.swift */,
 				B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */,
 			);
@@ -297,9 +312,12 @@
 				B730FF4F21C5906300768A6F /* UserShow.storyboard in Resources */,
 				B74EA2F921C3A24200224050 /* LaunchScreen.storyboard in Resources */,
 				B74EA2F621C3A24200224050 /* Assets.xcassets in Resources */,
+				B7E67F6621CFF2A700527DC5 /* .env in Resources */,
+				B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */,
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
-				B74301FD21C4AD8B006572F1 /* SettingUser.storyboard in Resources */,
-				25C9D66321C4CF4800FD2EDB /* Register.storyboard in Resources */,
+				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
+				25C9D66321C4CF4800FD2EDB /* SettingUser.storyboard in Resources */,
+				B780945821C94384007B063F /* User.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73B4FB221C56408009C13E5 /* UserView.swift in Sources */,
+				B780945A21C945E1007B063F /* UserViewController.swift in Sources */,
 				B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */,
 				B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */,
 				B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */,
@@ -392,6 +411,7 @@
 				B7E562E521C505A400F86BDC /* User.swift in Sources */,
 				B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */,
 				B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */,
+				B780945621C93CB9007B063F /* InputFiled.swift in Sources */,
 				B743020321C4ADAA006572F1 /* SettingUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
