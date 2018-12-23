@@ -47,7 +47,7 @@ class ImageUploadViewController: UIViewController {
             multipartFormData: { multipartFormData in
                 var number: Int = 1
                 for image in self.images {
-                    guard let imageData = image.jpegData(compressionQuality: 0.75) else { return }
+                    guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
                     multipartFormData.append(imageData, withName: "image\(number)", fileName: "image\(number).jpeg", mimeType: "image/jpeg")
                     number += 1
                 }
