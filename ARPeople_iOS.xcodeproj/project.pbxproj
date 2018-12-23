@@ -35,6 +35,9 @@
 		B7E562E521C505A400F86BDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* User.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
+		B7E67F6F21D0072C00527DC5 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E67F6E21D0072C00527DC5 /* APIRequest.swift */; };
+		B7E67F7121D00A3B00527DC5 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E67F7021D00A3B00527DC5 /* APIResult.swift */; };
+		B7E67F7321D00A5800527DC5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E67F7221D00A5800527DC5 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		B7E562E421C505A400F86BDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
+		B7E67F6E21D0072C00527DC5 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		B7E67F7021D00A3B00527DC5 /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		B7E67F7221D00A5800527DC5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		BC961E217F437BE30CBD5419 /* Pods-ARPeople_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARPeople_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARPeople_iOS/Pods-ARPeople_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C910CF4850881AF08677983D /* Pods-ARPeople_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARPeople_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARPeople_iOS/Pods-ARPeople_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +183,9 @@
 		B74EA30021C3A25C00224050 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				B7E67F6C21D0070D00527DC5 /* Request */,
+				B7E67F7021D00A3B00527DC5 /* APIResult.swift */,
+				B7E67F7221D00A5800527DC5 /* APIClient.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -240,6 +249,14 @@
 				B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		B7E67F6C21D0070D00527DC5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B7E67F6E21D0072C00527DC5 /* APIRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,14 +420,17 @@
 				B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */,
 				B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */,
 				B730FF4D21C5904C00768A6F /* UserShowViewController.swift in Sources */,
+				B7E67F7321D00A5800527DC5 /* APIClient.swift in Sources */,
 				B74EA30C21C3A2C800224050 /* AppUser.swift in Sources */,
 				B74301FF21C4AD95006572F1 /* RegisterViewController.swift in Sources */,
 				B743020921C4ADCA006572F1 /* HomeViewController.swift in Sources */,
+				B7E67F7121D00A3B00527DC5 /* APIResult.swift in Sources */,
 				B74EA2EF21C3A24000224050 /* AppDelegate.swift in Sources */,
 				B7AA0F5421C58253008E28B6 /* ImageUploadViewController.swift in Sources */,
 				B7E562E521C505A400F86BDC /* User.swift in Sources */,
 				B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */,
 				B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */,
+				B7E67F6F21D0072C00527DC5 /* APIRequest.swift in Sources */,
 				B780945621C93CB9007B063F /* InputFiled.swift in Sources */,
 				B743020321C4ADAA006572F1 /* SettingUserViewController.swift in Sources */,
 			);
