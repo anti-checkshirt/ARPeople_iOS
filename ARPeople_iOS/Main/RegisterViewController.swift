@@ -11,10 +11,16 @@ import Alamofire
 
 class RegisterViewController: UIViewController {
     
-    @IBOutlet private weak var nameInputField: InputFiled!
-    @IBOutlet private weak var emailInputField: InputFiled!
-    @IBOutlet private weak var passwordInputField: InputFiled!
-    @IBOutlet private weak var ageInputField: InputFiled!
+    @IBOutlet private weak var baseScrollView: UIScrollView!
+    @IBOutlet private weak var nameInputField: UITextField!
+    @IBOutlet private weak var emailInputField: UITextField!
+    @IBOutlet private weak var passwordInputField: UITextField!
+    @IBOutlet private weak var errorNotice: UILabel!
+    @IBOutlet private weak var nameView: UIView!
+    @IBOutlet private weak var emailView: UIView!
+    @IBOutlet private weak var passwordView: UIView!
+    
+    private var activeView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,28 +28,44 @@ class RegisterViewController: UIViewController {
         nameInputField.delegate = self
         emailInputField.delegate = self
         passwordInputField.delegate = self
-        ageInputField.delegate = self
+        configureObserver()
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.tappend))
+        self.view.addGestureRecognizer(tapGesture)
     }
     
-    private func showRequest(_ twitter: String, _ github: String, _ age: String) {
-        let url = "http://localhost:3001/api/v1/user"
-        let parameters: Parameters = [
-            "name": AppUser.name,
-            "email": AppUser.email,
-            "password": AppUser.password,
-            "twitterID": twitter,
-            "githubID": github,
-            "age": age
-        ]
-        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
-            guard let data = response.data else { return }
-            switch response.result {
-            case .success:
-                let decoder = JSONDecoder()
-                let result = try! decoder.decode(User.self, from: data)
-                print(result)
-            case .failure(let error):
-                print(error)
+    @objc private func tappend(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction private func createUser() {
+        let name = nameInputField.text!
+        if name.isEmpty { return errorNotice.text = "名前を入力してください" }
+        let email = emailInputField.text!
+        let password = passwordInputField.text!
+        let emailValidator = ValidatorFactory.sharedInstance.emailValidator()
+        let passwordVaildator = ValidatorFactory.sharedInstance.passwordValidator()
+        
+        switch emailValidator.validate(email) {
+        case .valid:
+            switch passwordVaildator.validate(password) {
+            case .valid:
+                errorNotice.text = ""
+            case .invalid(let errors):
+                errorNotice.text = errors.first
+                return
+            }
+        case .invalid(let errors):
+            errorNotice.text = errors.first
+            return
+        }
+        
+        UserAPI.fetchRegister(name, email, password) { (result) in
+            switch result {
+            case .success(let decoded):
+                print(decoded)
+            case .failure(let error, let statusCode):
+                print(error); print(statusCode)
             }
         }
     }
@@ -53,16 +75,56 @@ extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case nameInputField:
-            emailInputField.becomeFirstResponder
+            emailInputField.becomeFirstResponder()
         case emailInputField:
-            passwordInputField.becomeFirstResponder
-        case passwordInputField:
-            ageInputField.becomeFirstResponder
-        case ageInputField:
-            textField.resignFirstResponder()
+            passwordInputField.becomeFirstResponder()
         default:
             break
         }
         return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        activeView = nil
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case nameInputField:
+            activeView = nameView
+        case emailInputField:
+            activeView = emailView
+        case passwordInputField:
+            activeView = passwordView
+        default:
+            break
+        }
+    }
+    
+    private func configureObserver() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardDidHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        
+    }
+    
+    @objc private func keyboardWillShow(notification: Notification) {
+        guard let keyboardHeight = notification.keyboardFrameEnd?.height else { return }
+        guard  let navHeight = self.navigationController?.navigationBar.frame.height else { return }
+        guard let activeView = self.activeView else { return }
+        let myBoundHeight = UIScreen.main.bounds.height
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        
+        let txtLimit = activeView.frame.maxY + statusBarHeight + navHeight
+        let kbdLimit = myBoundHeight - keyboardHeight
+        
+        if txtLimit >= kbdLimit {
+            baseScrollView.contentOffset.y = txtLimit - kbdLimit
+        }
+    }
+    
+    @objc private func keyboardWillHide(notification: Notification) {
+        baseScrollView.contentOffset.y = 0
     }
 }

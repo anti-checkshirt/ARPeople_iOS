@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User: Codable {
+struct UserModel: Codable {
     
     /// name
     let name: String
@@ -35,26 +35,15 @@ struct User: Codable {
     let id: String
 }
 
-extension User {
-    
-//    "Github_ID" = tomoki69386;
-//    "Twitter_ID" = "<null>";
-//    age = 12;
-//    "created_at" = "2018-12-15T09:56:22.578Z";
-//    email = "aaaaa@example.com";
-//    id = 2;
-//    name = "\U3068\U3082\U304d";
-//    "password_digest" = abc123abc;
-//    "updated_at" = "2018-12-15T09:56:22.578Z";
-//    "user_image_url" = "<null>";
+extension UserModel {
 
     enum CodingKeys: String, CodingKey {
         case name = "name"
         case password = "password_digest"
         case age = "age"
         case mail = "email"
-        case twitter = "Twitter_ID"
-        case github = "Github_ID"
+        case twitter = "twitter_id"
+        case github = "github_id"
         case imageURL = "user_image_url"
         case id = "id"
     }

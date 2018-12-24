@@ -26,6 +26,11 @@ struct AppUser {
         return Defaults[.password]
     }
     
+    /// UUID
+    static var uuid: String {
+        return Defaults[.uuid]
+    }
+    
     /// stagingのURL
     static var stagingURL: String {
         return Defaults[.staging]
@@ -47,9 +52,10 @@ extension AppUser {
 }
 
 private extension DefaultsKeys {
-    static let email = DefaultsKey<String>("email")
-    static let password = DefaultsKey<String>("password")
-    static let name = DefaultsKey<String>("name")
+    static let email = DefaultsKey<String>("email", defaultValue: "")
+    static let password = DefaultsKey<String>("password", defaultValue: "")
+    static let name = DefaultsKey<String>("name", defaultValue: "")
+    static let uuid = DefaultsKey<String>("User_UUID", defaultValue: "")
     
     static let staging = DefaultsKey<String>("staging_url", defaultValue: "")
 }
