@@ -1,5 +1,5 @@
 //
-//  UserViewController.swift
+//  AccountView.swift
 //  ARPeople_iOS
 //
 //  Created by 築山朋紀 on 2018/12/19.
@@ -9,16 +9,24 @@
 import UIKit
 import SDWebImage
 
-class UserViewController: UIViewController {
+class AccountView: UIView {
     
     @IBOutlet private weak var userImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var friendView: UIView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    
+    required override init(frame: CGRect) {
+        super.init(frame: frame)
+        
         setLayout()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
     
     private func setLayout() {

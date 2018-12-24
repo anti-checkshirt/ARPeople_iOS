@@ -31,9 +31,10 @@
 		B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */; };
 		B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7921D10678001181E6 /* Notification+Extension.swift */; };
 		B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */; };
+		B7694E8021D1393F001181E6 /* AccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7694E7F21D1393F001181E6 /* AccountView.xib */; };
 		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
 		B780945821C94384007B063F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B780945721C94384007B063F /* User.storyboard */; };
-		B780945A21C945E1007B063F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945921C945E1007B063F /* UserViewController.swift */; };
+		B780945A21C945E1007B063F /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945921C945E1007B063F /* AccountView.swift */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -78,9 +79,10 @@
 		B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorFactory.swift; sourceTree = "<group>"; };
 		B7694E7921D10678001181E6 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
+		B7694E7F21D1393F001181E6 /* AccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountView.xib; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		B780945721C94384007B063F /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
-		B780945921C945E1007B063F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		B780945921C945E1007B063F /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		B78C507721C5DFB000869546 /* ARPeople_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARPeople_iOS.entitlements; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				B743020621C4ADBD006572F1 /* Home.storyboard */,
 				B780945721C94384007B063F /* User.storyboard */,
+				B7694E7F21D1393F001181E6 /* AccountView.xib */,
 				B730FF4E21C5906300768A6F /* UserShow.storyboard */,
 			);
 			path = Home;
@@ -144,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B743020821C4ADCA006572F1 /* HomeViewController.swift */,
-				B780945921C945E1007B063F /* UserViewController.swift */,
+				B780945921C945E1007B063F /* AccountView.swift */,
 				B730FF4C21C5904C00768A6F /* UserShowViewController.swift */,
 				B73B4FB121C56408009C13E5 /* UserView.swift */,
 				B73B4FB321C5641C009C13E5 /* BaseNode.swift */,
@@ -346,6 +349,7 @@
 				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
 				25C9D66321C4CF4800FD2EDB /* SettingUser.storyboard in Resources */,
 				B780945821C94384007B063F /* User.storyboard in Resources */,
+				B7694E8021D1393F001181E6 /* AccountView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73B4FB221C56408009C13E5 /* UserView.swift in Sources */,
-				B780945A21C945E1007B063F /* UserViewController.swift in Sources */,
+				B780945A21C945E1007B063F /* AccountView.swift in Sources */,
 				B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */,
 				B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */,
 				B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */,
