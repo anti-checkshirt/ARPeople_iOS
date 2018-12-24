@@ -60,13 +60,11 @@ extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case nameInputField:
-            emailInputField.becomeFirstResponder
+            emailInputField.becomeFirstResponder()
         case emailInputField:
-            passwordInputField.becomeFirstResponder
+            passwordInputField.becomeFirstResponder()
         case passwordInputField:
-            ageInputField.becomeFirstResponder
-        case ageInputField:
-            textField.resignFirstResponder()
+            ageInputField.becomeFirstResponder()
         default:
             break
         }
