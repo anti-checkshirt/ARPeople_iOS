@@ -32,6 +32,10 @@ class RegisterViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    @IBAction private func createUser() {
+        
+    }
+    
     private func showRequest(_ twitter: String, _ github: String, _ age: String) {
         let url = "http://localhost:3001/api/v1/user"
         let parameters: Parameters = [

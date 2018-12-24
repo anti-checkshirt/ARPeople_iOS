@@ -24,6 +24,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="kl6-dS-QSO"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="createUser" destination="rCH-kc-1q7" eventType="touchUpInside" id="sfp-YN-MuV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg3-AH-SJ2">
                                 <rect key="frame" x="0.0" y="826" width="414" height="36"/>
