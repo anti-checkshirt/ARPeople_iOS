@@ -51,7 +51,7 @@ class SettingUserViewController: BaseViewController {
     private func showRequest() {
         let url = "\(AppUser.stagingURL)/api/v1/images"
         let headers: HTTPHeaders = [
-            "Authorization": AppUser.token
+            "Authorization": "Token \(AppUser.token)"
         ]
         
         Alamofire.upload(
