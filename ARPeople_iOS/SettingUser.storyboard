@@ -31,7 +31,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnU-W1-AcG">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="488"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TwitterID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90g-e6-Zdh">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TwitterID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90g-e6-Zdh">
                                                 <rect key="frame" x="20" y="25" width="280" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,7 +50,7 @@
                                                         <rect key="frame" x="35.5" y="0.0" width="264.5" height="40"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,13 +66,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHubID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dY-EF-THM">
-                                                <rect key="frame" x="20" y="122" width="280" height="17"/>
+                                                <rect key="frame" x="20" y="107" width="280" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.46768122911453247" green="0.4680556058883667" blue="0.46773922443389893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5aT-u5-DZQ">
-                                                <rect key="frame" x="0.0" y="144" width="320" height="40"/>
+                                                <rect key="frame" x="0.0" y="129" width="320" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIP-ed-1fN">
                                                         <rect key="frame" x="20" y="0.0" width="15.5" height="40"/>
@@ -84,7 +84,7 @@
                                                         <rect key="frame" x="35.5" y="0.0" width="264.5" height="40"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,7 +100,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQ6-iZ-DQo">
-                                                <rect key="frame" x="129" y="209" width="62" height="30"/>
+                                                <rect key="frame" x="129" y="194" width="62" height="30"/>
                                                 <state key="normal" title="画像選択"/>
                                             </button>
                                         </subviews>
@@ -109,7 +109,7 @@
                                             <constraint firstAttribute="trailing" secondItem="90g-e6-Zdh" secondAttribute="trailing" constant="20" id="0gU-dF-KaW"/>
                                             <constraint firstItem="90g-e6-Zdh" firstAttribute="top" secondItem="KnU-W1-AcG" secondAttribute="top" constant="25" id="8S6-Zn-gZ0"/>
                                             <constraint firstAttribute="trailing" secondItem="0dY-EF-THM" secondAttribute="trailing" constant="20" id="FwN-oV-sqc"/>
-                                            <constraint firstItem="0dY-EF-THM" firstAttribute="top" secondItem="hVu-Yk-xSn" secondAttribute="bottom" constant="35" id="IQ1-Pe-2Bj"/>
+                                            <constraint firstItem="0dY-EF-THM" firstAttribute="top" secondItem="hVu-Yk-xSn" secondAttribute="bottom" constant="20" id="IQ1-Pe-2Bj"/>
                                             <constraint firstItem="TQ6-iZ-DQo" firstAttribute="top" secondItem="5aT-u5-DZQ" secondAttribute="bottom" constant="25" id="Jre-uZ-RbA"/>
                                             <constraint firstItem="5aT-u5-DZQ" firstAttribute="top" secondItem="0dY-EF-THM" secondAttribute="bottom" constant="5" id="M7l-YE-DGc"/>
                                             <constraint firstItem="90g-e6-Zdh" firstAttribute="leading" secondItem="KnU-W1-AcG" secondAttribute="leading" constant="20" id="RjJ-UJ-cW6"/>

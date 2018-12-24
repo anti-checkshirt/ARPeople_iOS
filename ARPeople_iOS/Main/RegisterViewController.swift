@@ -11,10 +11,10 @@ import Alamofire
 
 class RegisterViewController: UIViewController {
     
-    @IBOutlet private weak var nameInputField: InputFiled!
-    @IBOutlet private weak var emailInputField: InputFiled!
-    @IBOutlet private weak var passwordInputField: InputFiled!
-    @IBOutlet private weak var ageInputField: InputFiled!
+    @IBOutlet private weak var nameInputField: UITextField!
+    @IBOutlet private weak var emailInputField: UITextField!
+    @IBOutlet private weak var passwordInputField: UITextField!
+    @IBOutlet private weak var ageInputField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
