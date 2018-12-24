@@ -28,7 +28,8 @@
 		B74EA30C21C3A2C800224050 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EA30B21C3A2C800224050 /* AppUser.swift */; };
 		B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */; };
 		B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7521D0F0CA001181E6 /* UserAPI.swift */; };
-		B780945621C93CB9007B063F /* isValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* isValid.swift */; };
+		B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */; };
+		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
 		B780945821C94384007B063F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B780945721C94384007B063F /* User.storyboard */; };
 		B780945A21C945E1007B063F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945921C945E1007B063F /* UserViewController.swift */; };
 		B7AA0F5221C58243008E28B6 /* ImageUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */; };
@@ -74,7 +75,8 @@
 		B74EA30B21C3A2C800224050 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		B7694E7521D0F0CA001181E6 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
-		B780945521C93CB9007B063F /* isValid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isValid.swift; sourceTree = "<group>"; };
+		B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorFactory.swift; sourceTree = "<group>"; };
+		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		B780945721C94384007B063F /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B780945921C945E1007B063F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B78C507721C5DFB000869546 /* ARPeople_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARPeople_iOS.entitlements; sourceTree = "<group>"; };
@@ -202,7 +204,8 @@
 			children = (
 				B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */,
 				B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */,
-				B780945521C93CB9007B063F /* isValid.swift */,
+				B780945521C93CB9007B063F /* ValidationResult.swift */,
+				B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */,
 				B7E67F9221D0CE3E00527DC5 /* BaseViewController.swift */,
 			);
 			path = Extension;
@@ -436,13 +439,14 @@
 				B743020921C4ADCA006572F1 /* HomeViewController.swift in Sources */,
 				B7E67F7121D00A3B00527DC5 /* APIResult.swift in Sources */,
 				B74EA2EF21C3A24000224050 /* AppDelegate.swift in Sources */,
+				B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */,
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
 				B7AA0F5421C58253008E28B6 /* ImageUploadViewController.swift in Sources */,
 				B7E562E521C505A400F86BDC /* UserModel.swift in Sources */,
 				B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */,
 				B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */,
 				B7E67F6F21D0072C00527DC5 /* APIRequest.swift in Sources */,
-				B780945621C93CB9007B063F /* isValid.swift in Sources */,
+				B780945621C93CB9007B063F /* ValidationResult.swift in Sources */,
 				B743020321C4ADAA006572F1 /* SettingUserViewController.swift in Sources */,
 				B7E67F9721D0EF1B00527DC5 /* UserRequest.swift in Sources */,
 			);

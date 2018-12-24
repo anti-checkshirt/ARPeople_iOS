@@ -34,17 +34,15 @@ class RegisterViewController: UIViewController {
     
     @IBAction private func createUser() {
         let email = emailInputField.text!
-        if email.isEmpty {
-            print("メールアドレスを入力してください")
-            return
-        }
-        switch isValidEmail(email) {
+        let emailValidator = ValidatorFactory.sharedInstance.emailValidator()
+        switch emailValidator.validate(email) {
         case .valid:
-            print("valid")
-        case .invalid:
-            print("invalid")
+            print("成功")
+        case .invalid(let errors):
+            for error in errors {
+                print(error)
+            }
         }
-        
     }
 }
 
