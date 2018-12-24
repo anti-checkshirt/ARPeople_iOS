@@ -23,6 +23,13 @@ class RegisterViewController: UIViewController {
         emailInputField.delegate = self
         passwordInputField.delegate = self
         ageInputField.delegate = self
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.tappend))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func tappend(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
     private func showRequest(_ twitter: String, _ github: String, _ age: String) {
