@@ -49,7 +49,7 @@ class RegisterViewController: UIViewController {
             switch response.result {
             case .success:
                 let decoder = JSONDecoder()
-                let result = try! decoder.decode(User.self, from: data)
+                let result = try! decoder.decode(UserModel.self, from: data)
                 print(result)
             case .failure(let error):
                 print(error)

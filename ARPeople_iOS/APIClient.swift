@@ -12,7 +12,6 @@ struct APIClient {
     
     private init() {}
     
-    /// responseが帰ってこないとき
     static func send<Request: APIRequest>(_ request: Request,
                                           preprocessOnSuccess: @escaping () -> Void = {},
                                           completion: @escaping (APIResult) -> Void) {
@@ -31,7 +30,6 @@ struct APIClient {
         }
     }
     
-    /// responseが一つの時
     static func send<Request: DecodingRequest>(_ request: Request,
                                                decodingCompletion: @escaping (APIDecodingResult<Request.Decoded>) -> Void) {
         request.alamofireRequest
@@ -63,7 +61,6 @@ struct APIClient {
                 }
         }
     }
-    
 }
 
 private extension APIRequest {

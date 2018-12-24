@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User: Codable {
+struct UserModel: Codable {
     
     /// name
     let name: String
@@ -35,7 +35,7 @@ struct User: Codable {
     let id: String
 }
 
-extension User {
+extension UserModel {
     
 //    "Github_ID" = tomoki69386;
 //    "Twitter_ID" = "<null>";
