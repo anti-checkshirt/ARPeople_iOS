@@ -12,6 +12,7 @@ struct APIClient {
     
     private init() {}
     
+    /// レスポンスのないとき
     static func send<Request: APIRequest>(_ request: Request,
                                           preprocessOnSuccess: @escaping () -> Void = {},
                                           completion: @escaping (APIResult) -> Void) {
@@ -30,6 +31,7 @@ struct APIClient {
         }
     }
     
+    /// レスポンスがあるとき
     static func send<Request: DecodingRequest>(_ request: Request,
                                                decodingCompletion: @escaping (APIDecodingResult<Request.Decoded>) -> Void) {
         request.alamofireRequest

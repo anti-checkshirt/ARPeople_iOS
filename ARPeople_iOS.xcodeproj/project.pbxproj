@@ -30,6 +30,7 @@
 		B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7521D0F0CA001181E6 /* UserAPI.swift */; };
 		B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */; };
 		B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7921D10678001181E6 /* Notification+Extension.swift */; };
+		B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */; };
 		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
 		B780945821C94384007B063F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B780945721C94384007B063F /* User.storyboard */; };
 		B780945A21C945E1007B063F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945921C945E1007B063F /* UserViewController.swift */; };
@@ -78,6 +79,7 @@
 		B7694E7521D0F0CA001181E6 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorFactory.swift; sourceTree = "<group>"; };
 		B7694E7921D10678001181E6 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		B780945721C94384007B063F /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B780945921C945E1007B063F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				B74EA30921C3A2B700224050 /* AppColor.swift */,
 				B74EA30B21C3A2C800224050 /* AppUser.swift */,
 				B7E562E421C505A400F86BDC /* UserModel.swift */,
+				B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
 				B7AA0F5421C58253008E28B6 /* ImageUploadViewController.swift in Sources */,
 				B7E562E521C505A400F86BDC /* UserModel.swift in Sources */,
+				B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */,
 				B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */,
 				B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */,
 				B7E67F6F21D0072C00527DC5 /* APIRequest.swift in Sources */,

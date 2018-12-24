@@ -9,10 +9,15 @@
 import Alamofire
 
 enum Headers {
+    case normal
     case none
     
     var item: [String: String] {
         switch self {
+        case .normal:
+            return [
+                "Authorization": "token"
+            ]
         case .none:
             return [:]
         }
