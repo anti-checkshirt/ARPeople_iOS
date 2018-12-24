@@ -17,8 +17,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var passwordInputField: UITextField!
     @IBOutlet private weak var ageInputField: UITextField!
     @IBOutlet private weak var errorNotice: UILabel!
+    @IBOutlet private weak var nameView: UIView!
+    @IBOutlet private weak var emailView: UIView!
+    @IBOutlet private weak var passwordView: UIView!
+    @IBOutlet private weak var ageView: UIView!
     
-    private var txtActiveField: UITextField?
+    private var activeView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,13 +92,23 @@ extension RegisterViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        txtActiveField = nil
-        print("e")
+        activeView = nil
         return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        txtActiveField = textField
+        switch textField {
+        case nameInputField:
+            activeView = nameView
+        case emailInputField:
+            activeView = emailView
+        case passwordInputField:
+            activeView = passwordView
+        case ageInputField:
+            activeView = ageView
+        default:
+            break
+        }
     }
     
     private func configureObserver() {
@@ -107,17 +121,16 @@ extension RegisterViewController: UITextFieldDelegate {
     @objc private func keyboardWillShow(notification: Notification) {
         guard let keyboardHeight = notification.keyboardFrameEnd?.height else { return }
         guard  let navHeight = self.navigationController?.navigationBar.frame.height else { return }
-        guard let txtActiveField = self.txtActiveField else { return }
+        guard let activeView = self.activeView else { return }
         let myBoundHeight = UIScreen.main.bounds.height
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         
-        let txtLimit = txtActiveField.frame.maxY + statusBarHeight + navHeight
+        let txtLimit = activeView.frame.maxY + statusBarHeight + navHeight
         let kbdLimit = myBoundHeight - keyboardHeight
         
         if txtLimit >= kbdLimit {
             baseScrollView.contentOffset.y = txtLimit - kbdLimit
         }
-        print(txtLimit); print(kbdLimit)
     }
     
     @objc private func keyboardWillHide(notification: Notification) {
