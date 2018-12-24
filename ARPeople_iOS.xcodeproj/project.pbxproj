@@ -34,7 +34,6 @@
 		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
 		B780945821C94384007B063F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B780945721C94384007B063F /* User.storyboard */; };
 		B780945A21C945E1007B063F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945921C945E1007B063F /* UserViewController.swift */; };
-		B7AA0F5221C58243008E28B6 /* ImageUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -83,7 +82,6 @@
 		B780945721C94384007B063F /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B780945921C945E1007B063F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B78C507721C5DFB000869546 /* ARPeople_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARPeople_iOS.entitlements; sourceTree = "<group>"; };
-		B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageUpload.storyboard; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -250,7 +248,6 @@
 				B74301FA21C4AD77006572F1 /* Login.storyboard */,
 				B74301FC21C4AD8B006572F1 /* Register.storyboard */,
 				25C9D66221C4CF4800FD2EDB /* SettingUser.storyboard */,
-				B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -340,7 +337,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B74301FB21C4AD77006572F1 /* Login.storyboard in Resources */,
-				B7AA0F5221C58243008E28B6 /* ImageUpload.storyboard in Resources */,
 				B730FF4F21C5906300768A6F /* UserShow.storyboard in Resources */,
 				B74EA2F921C3A24200224050 /* LaunchScreen.storyboard in Resources */,
 				B74EA2F621C3A24200224050 /* Assets.xcassets in Resources */,
