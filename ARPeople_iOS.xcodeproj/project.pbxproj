@@ -35,7 +35,6 @@
 		B780945821C94384007B063F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B780945721C94384007B063F /* User.storyboard */; };
 		B780945A21C945E1007B063F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945921C945E1007B063F /* UserViewController.swift */; };
 		B7AA0F5221C58243008E28B6 /* ImageUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */; };
-		B7AA0F5421C58253008E28B6 /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -85,7 +84,6 @@
 		B780945921C945E1007B063F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B78C507721C5DFB000869546 /* ARPeople_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARPeople_iOS.entitlements; sourceTree = "<group>"; };
 		B7AA0F5121C58243008E28B6 /* ImageUpload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageUpload.storyboard; sourceTree = "<group>"; };
-		B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -263,7 +261,6 @@
 				B743020021C4AD9A006572F1 /* LoginViewController.swift */,
 				B74301FE21C4AD95006572F1 /* RegisterViewController.swift */,
 				B743020221C4ADAA006572F1 /* SettingUserViewController.swift */,
-				B7AA0F5321C58253008E28B6 /* ImageUploadViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -448,7 +445,6 @@
 				B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */,
 				B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */,
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
-				B7AA0F5421C58253008E28B6 /* ImageUploadViewController.swift in Sources */,
 				B7E562E521C505A400F86BDC /* UserModel.swift in Sources */,
 				B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */,
 				B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */,
