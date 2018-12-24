@@ -15,10 +15,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var nameInputField: UITextField!
     @IBOutlet private weak var emailInputField: UITextField!
     @IBOutlet private weak var passwordInputField: UITextField!
+    @IBOutlet private weak var password2InputFiled: UITextField!
     @IBOutlet private weak var errorNotice: UILabel!
     @IBOutlet private weak var nameView: UIView!
     @IBOutlet private weak var emailView: UIView!
     @IBOutlet private weak var passwordView: UIView!
+    @IBOutlet private weak var password2View: UIView!
     
     private var activeView: UIView?
     
@@ -28,6 +30,7 @@ class RegisterViewController: UIViewController {
         nameInputField.delegate = self
         emailInputField.delegate = self
         passwordInputField.delegate = self
+        password2InputFiled.delegate = self
         configureObserver()
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.tappend))
@@ -43,6 +46,10 @@ class RegisterViewController: UIViewController {
         if name.isEmpty { return errorNotice.text = "名前を入力してください" }
         let email = emailInputField.text!
         let password = passwordInputField.text!
+        let password2 = password2InputFiled.text!
+        
+        if password != password2 { return errorNotice.text = "パスワードが一致しません" }
+        
         let emailValidator = ValidatorFactory.sharedInstance.emailValidator()
         let passwordVaildator = ValidatorFactory.sharedInstance.passwordValidator()
         
@@ -78,6 +85,10 @@ extension RegisterViewController: UITextFieldDelegate {
             emailInputField.becomeFirstResponder()
         case emailInputField:
             passwordInputField.becomeFirstResponder()
+        case passwordInputField:
+            password2InputFiled.becomeFirstResponder()
+        case textField:
+            textField.resignFirstResponder()
         default:
             break
         }
@@ -97,6 +108,8 @@ extension RegisterViewController: UITextFieldDelegate {
             activeView = emailView
         case passwordInputField:
             activeView = passwordView
+        case password2View:
+            activeView = password2View
         default:
             break
         }

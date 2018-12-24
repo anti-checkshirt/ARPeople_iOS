@@ -115,7 +115,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="OKx-XY-ruC" secondAttribute="bottom" id="yMA-Z1-SfM"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcG-zX-4SK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード（確認）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcG-zX-4SK">
                                                 <rect key="frame" x="20" y="311" width="374" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -216,6 +216,8 @@
                         <outlet property="errorNotice" destination="vir-3a-vgE" id="QEm-DE-RQc"/>
                         <outlet property="nameInputField" destination="7OZ-YO-9IW" id="vyS-KT-yu4"/>
                         <outlet property="nameView" destination="bke-4d-AAq" id="eFi-Qf-3Ae"/>
+                        <outlet property="password2InputFiled" destination="81C-dG-6Zj" id="SLk-3y-U6S"/>
+                        <outlet property="password2View" destination="H5w-9R-xNT" id="PK3-SD-Sid"/>
                         <outlet property="passwordInputField" destination="OKx-XY-ruC" id="9CW-D9-kHj"/>
                         <outlet property="passwordView" destination="Xei-wA-nJk" id="P3e-Q2-D0H"/>
                     </connections>
