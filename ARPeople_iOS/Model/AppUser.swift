@@ -31,6 +31,11 @@ struct AppUser {
         return Defaults[.uuid]
     }
     
+    /// アクセストークン
+    static var token: String {
+        return Defaults[.token]
+    }
+    
     /// stagingのURL
     static var stagingURL: String {
         return Defaults[.staging]
@@ -46,6 +51,11 @@ extension AppUser {
         Defaults[.password] = password
     }
     
+    /// アクセストークン保存
+    static func save(token: String) {
+        Defaults[.token] = token
+    }
+    
     static func saveEnv(staging: String) {
         Defaults[.staging] = staging
     }
@@ -56,6 +66,7 @@ private extension DefaultsKeys {
     static let password = DefaultsKey<String>("password", defaultValue: "")
     static let name = DefaultsKey<String>("name", defaultValue: "")
     static let uuid = DefaultsKey<String>("User_UUID", defaultValue: "")
+    static let token = DefaultsKey<String>("AccessToken", defaultValue: "")
     
     static let staging = DefaultsKey<String>("staging_url", defaultValue: "")
 }
