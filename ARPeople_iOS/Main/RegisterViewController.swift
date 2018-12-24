@@ -34,14 +34,19 @@ class RegisterViewController: UIViewController {
     
     @IBAction private func createUser() {
         let email = emailInputField.text!
+        let password = passwordInputField.text!
         let emailValidator = ValidatorFactory.sharedInstance.emailValidator()
+        let passwordVaildator = ValidatorFactory.sharedInstance.passwordValidator()
         switch emailValidator.validate(email) {
         case .valid:
-            print("成功")
-        case .invalid(let errors):
-            for error in errors {
-                print(error)
+            switch passwordVaildator.validate(password) {
+            case .valid:
+                print("成功")
+            case .invalid(let errors):
+                print(errors[0])
             }
+        case .invalid(let errors):
+            print(errors[0])
         }
     }
 }

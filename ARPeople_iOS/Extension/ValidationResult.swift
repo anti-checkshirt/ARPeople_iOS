@@ -54,7 +54,7 @@ struct EmailFormatValidator: Validator {
         if emailTest.evaluate(with: value) {
             return .valid
         } else {
-            return .invalid(errors: ["メールアドレスの形式が間違っています。"])
+            return .invalid(errors: ["メールアドレスの形式が間違っています"])
         }
     }
 }
