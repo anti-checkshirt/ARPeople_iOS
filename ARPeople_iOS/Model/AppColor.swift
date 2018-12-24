@@ -25,4 +25,7 @@ struct AppColor {
     
     /// #64BBFF
     static var main: UIColor { return UIColor(hex: "64BBFF") }
+    
+    /// #FFFC87
+    static var yellow: UIColor { return UIColor(hex: "FFFC87") }
 }

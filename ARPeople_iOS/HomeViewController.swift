@@ -10,7 +10,7 @@ import UIKit
 import ARKit
 import SceneKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     @IBOutlet var sceneView: ARSCNView!
     private var hogeView = SCNNode()
@@ -73,6 +73,14 @@ class HomeViewController: UIViewController {
     private func setLayout() {
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
+        
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        
     }
     
     
