@@ -33,28 +33,18 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction private func createUser() {
-        
-    }
-    
-    private func showRequest(_ name: String, _ email: String, _ password: String, _ age: String) {
-        let url = "http://localhost:3001/api/v1/user"
-        let parameters: Parameters = [
-            "name": AppUser.name,
-            "email": AppUser.email,
-            "password": AppUser.password,
-            "age": age
-        ]
-        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
-            guard let data = response.data else { return }
-            switch response.result {
-            case .success:
-                let decoder = JSONDecoder()
-                let result = try! decoder.decode(UserModel.self, from: data)
-                print(result)
-            case .failure(let error):
-                print(error)
-            }
+        let email = emailInputField.text!
+        if email.isEmpty {
+            print("メールアドレスを入力してください")
+            return
         }
+        switch isValidEmail(email) {
+        case .valid:
+            print("valid")
+        case .invalid:
+            print("invalid")
+        }
+        
     }
 }
 
