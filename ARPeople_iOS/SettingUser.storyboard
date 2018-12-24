@@ -151,6 +151,7 @@
                     <connections>
                         <outlet property="githubInputField" destination="Nxs-bk-T8J" id="8xq-vh-1mA"/>
                         <outlet property="twitterInputField" destination="Jg8-Ne-ncT" id="n5K-r7-6sZ"/>
+                        <outlet property="uploadButton" destination="TQ6-iZ-DQo" id="xHM-BR-sZy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzk-JF-Uc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
