@@ -208,6 +208,7 @@
                     <navigationItem key="navigationItem" title="新規登録" id="pTr-fr-6EM"/>
                     <connections>
                         <outlet property="ageInputField" destination="KrS-Aw-vuw" id="ZkR-Rb-EZM"/>
+                        <outlet property="baseScrollView" destination="opV-9p-MT7" id="hBp-5L-85t"/>
                         <outlet property="emailInputField" destination="IVP-8x-yFq" id="Rc8-lI-v7w"/>
                         <outlet property="errorNotice" destination="vir-3a-vgE" id="QEm-DE-RQc"/>
                         <outlet property="nameInputField" destination="7OZ-YO-9IW" id="vyS-KT-yu4"/>

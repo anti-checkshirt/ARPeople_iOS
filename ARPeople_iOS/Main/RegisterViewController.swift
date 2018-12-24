@@ -11,11 +11,14 @@ import Alamofire
 
 class RegisterViewController: UIViewController {
     
+    @IBOutlet private weak var baseScrollView: UIScrollView!
     @IBOutlet private weak var nameInputField: UITextField!
     @IBOutlet private weak var emailInputField: UITextField!
     @IBOutlet private weak var passwordInputField: UITextField!
     @IBOutlet private weak var ageInputField: UITextField!
     @IBOutlet private weak var errorNotice: UILabel!
+    
+    private var txtActiveField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,8 @@ class RegisterViewController: UIViewController {
         emailInputField.delegate = self
         passwordInputField.delegate = self
         ageInputField.delegate = self
-        
+        configureObserver()
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.tappend))
         self.view.addGestureRecognizer(tapGesture)
     }
@@ -42,6 +46,7 @@ class RegisterViewController: UIViewController {
         let password = passwordInputField.text!
         let emailValidator = ValidatorFactory.sharedInstance.emailValidator()
         let passwordVaildator = ValidatorFactory.sharedInstance.passwordValidator()
+        
         switch emailValidator.validate(email) {
         case .valid:
             switch passwordVaildator.validate(password) {
@@ -80,5 +85,42 @@ extension RegisterViewController: UITextFieldDelegate {
             break
         }
         return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        txtActiveField = nil
+        print("e")
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        txtActiveField = textField
+    }
+    
+    private func configureObserver() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardDidHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        
+    }
+    
+    @objc private func keyboardWillShow(notification: Notification) {
+        guard let keyboardHeight = notification.keyboardFrameEnd?.height else { return }
+        guard  let navHeight = self.navigationController?.navigationBar.frame.height else { return }
+        guard let txtActiveField = self.txtActiveField else { return }
+        let myBoundHeight = UIScreen.main.bounds.height
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        
+        let txtLimit = txtActiveField.frame.maxY + statusBarHeight + navHeight
+        let kbdLimit = myBoundHeight - keyboardHeight
+        
+        if txtLimit >= kbdLimit {
+            baseScrollView.contentOffset.y = txtLimit - kbdLimit
+        }
+        print(txtLimit); print(kbdLimit)
+    }
+    
+    @objc private func keyboardWillHide(notification: Notification) {
+        baseScrollView.contentOffset.y = 0
     }
 }

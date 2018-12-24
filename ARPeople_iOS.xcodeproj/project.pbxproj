@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,7 @@
 		B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */; };
 		B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7521D0F0CA001181E6 /* UserAPI.swift */; };
 		B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */; };
+		B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7921D10678001181E6 /* Notification+Extension.swift */; };
 		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
 		B780945821C94384007B063F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B780945721C94384007B063F /* User.storyboard */; };
 		B780945A21C945E1007B063F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945921C945E1007B063F /* UserViewController.swift */; };
@@ -76,6 +77,7 @@
 		B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		B7694E7521D0F0CA001181E6 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorFactory.swift; sourceTree = "<group>"; };
+		B7694E7921D10678001181E6 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		B780945721C94384007B063F /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B780945921C945E1007B063F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				B780945521C93CB9007B063F /* ValidationResult.swift */,
 				B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */,
 				B7E67F9221D0CE3E00527DC5 /* BaseViewController.swift */,
+				B7694E7921D10678001181E6 /* Notification+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -314,7 +317,7 @@
 				};
 			};
 			buildConfigurationList = B74EA2E621C3A24000224050 /* Build configuration list for PBXProject "ARPeople_iOS" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -440,6 +443,7 @@
 				B7E67F7121D00A3B00527DC5 /* APIResult.swift in Sources */,
 				B74EA2EF21C3A24000224050 /* AppDelegate.swift in Sources */,
 				B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */,
+				B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */,
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
 				B7AA0F5421C58253008E28B6 /* ImageUploadViewController.swift in Sources */,
 				B7E562E521C505A400F86BDC /* UserModel.swift in Sources */,
