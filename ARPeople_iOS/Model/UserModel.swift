@@ -36,25 +36,14 @@ struct UserModel: Codable {
 }
 
 extension UserModel {
-    
-//    "Github_ID" = tomoki69386;
-//    "Twitter_ID" = "<null>";
-//    age = 12;
-//    "created_at" = "2018-12-15T09:56:22.578Z";
-//    email = "aaaaa@example.com";
-//    id = 2;
-//    name = "\U3068\U3082\U304d";
-//    "password_digest" = abc123abc;
-//    "updated_at" = "2018-12-15T09:56:22.578Z";
-//    "user_image_url" = "<null>";
 
     enum CodingKeys: String, CodingKey {
         case name = "name"
         case password = "password_digest"
         case age = "age"
         case mail = "email"
-        case twitter = "Twitter_ID"
-        case github = "Github_ID"
+        case twitter = "twitter_id"
+        case github = "github_id"
         case imageURL = "user_image_url"
         case id = "id"
     }

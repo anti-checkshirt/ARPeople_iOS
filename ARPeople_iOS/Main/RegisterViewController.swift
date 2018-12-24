@@ -47,7 +47,6 @@ class RegisterViewController: UIViewController {
             switch passwordVaildator.validate(password) {
             case .valid:
                 errorNotice.text = ""
-                print("成功")
             case .invalid(let errors):
                 errorNotice.text = errors.first
                 return
@@ -55,6 +54,15 @@ class RegisterViewController: UIViewController {
         case .invalid(let errors):
             errorNotice.text = errors.first
             return
+        }
+        
+        UserAPI.fetchRegister(name, email, password, age) { (result) in
+            switch result {
+            case .success(let decoded):
+                print(decoded)
+            case .failure(let error, let statusCode):
+                print(error); print(statusCode)
+            }
         }
     }
 }
