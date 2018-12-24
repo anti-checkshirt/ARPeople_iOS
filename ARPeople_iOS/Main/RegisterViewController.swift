@@ -36,14 +36,12 @@ class RegisterViewController: UIViewController {
         
     }
     
-    private func showRequest(_ twitter: String, _ github: String, _ age: String) {
+    private func showRequest(_ name: String, _ email: String, _ password: String, _ age: String) {
         let url = "http://localhost:3001/api/v1/user"
         let parameters: Parameters = [
             "name": AppUser.name,
             "email": AppUser.email,
             "password": AppUser.password,
-            "twitterID": twitter,
-            "githubID": github,
             "age": age
         ]
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
