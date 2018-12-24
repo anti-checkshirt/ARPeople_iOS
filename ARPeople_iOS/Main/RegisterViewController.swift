@@ -15,6 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var emailInputField: UITextField!
     @IBOutlet private weak var passwordInputField: UITextField!
     @IBOutlet private weak var ageInputField: UITextField!
+    @IBOutlet private weak var errorNotice: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,10 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction private func createUser() {
+        let name = nameInputField.text!
+        if name.isEmpty { return errorNotice.text = "名前を入力してください" }
+        let age = ageInputField.text!
+        if age.isEmpty { return errorNotice.text = "年齢を入力してください" }
         let email = emailInputField.text!
         let password = passwordInputField.text!
         let emailValidator = ValidatorFactory.sharedInstance.emailValidator()
@@ -41,12 +46,15 @@ class RegisterViewController: UIViewController {
         case .valid:
             switch passwordVaildator.validate(password) {
             case .valid:
+                errorNotice.text = ""
                 print("成功")
             case .invalid(let errors):
-                print(errors[0])
+                errorNotice.text = errors.first
+                return
             }
         case .invalid(let errors):
-            print(errors[0])
+            errorNotice.text = errors.first
+            return
         }
     }
 }
