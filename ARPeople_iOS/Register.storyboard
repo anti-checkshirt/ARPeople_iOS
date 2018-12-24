@@ -115,32 +115,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="OKx-XY-ruC" secondAttribute="bottom" id="yMA-Z1-SfM"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年齢" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4g-Xy-e59">
-                                                <rect key="frame" x="20" y="311" width="374" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ald-cR-r7s">
-                                                <rect key="frame" x="0.0" y="333" width="414" height="40"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="20" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KrS-Aw-vuw">
-                                                        <rect key="frame" x="20" y="0.0" width="374" height="40"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
-                                                    </textField>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="KrS-Aw-vuw" firstAttribute="top" secondItem="ald-cR-r7s" secondAttribute="top" id="3A5-n2-KlC"/>
-                                                    <constraint firstAttribute="height" constant="40" id="Ogv-7D-IS9"/>
-                                                    <constraint firstAttribute="bottom" secondItem="KrS-Aw-vuw" secondAttribute="bottom" id="pC2-U6-6dU"/>
-                                                    <constraint firstAttribute="trailing" secondItem="KrS-Aw-vuw" secondAttribute="trailing" constant="20" id="qIO-tN-ekd"/>
-                                                    <constraint firstItem="KrS-Aw-vuw" firstAttribute="leading" secondItem="ald-cR-r7s" secondAttribute="leading" constant="20" id="rWf-qR-8h7"/>
-                                                </constraints>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vir-3a-vgE">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vir-3a-vgE">
                                                 <rect key="frame" x="20" y="378" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.87450980389999999" green="0.0" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,7 +133,6 @@
                                             <constraint firstItem="y32-rX-qN0" firstAttribute="top" secondItem="bke-4d-AAq" secondAttribute="bottom" constant="30" id="Hd2-tx-cSW"/>
                                             <constraint firstAttribute="trailing" secondItem="vir-3a-vgE" secondAttribute="trailing" constant="20" id="N1N-TQ-ect"/>
                                             <constraint firstItem="bke-4d-AAq" firstAttribute="leading" secondItem="Tqs-eR-Cja" secondAttribute="leading" id="NfW-w9-hb4"/>
-                                            <constraint firstItem="ald-cR-r7s" firstAttribute="top" secondItem="n4g-Xy-e59" secondAttribute="bottom" constant="5" id="P11-1U-1vv"/>
                                             <constraint firstAttribute="trailing" secondItem="oZc-av-rfs" secondAttribute="trailing" constant="20" id="TGT-bG-PcU"/>
                                             <constraint firstAttribute="trailing" secondItem="y32-rX-qN0" secondAttribute="trailing" constant="20" id="TYI-kx-RJD"/>
                                             <constraint firstItem="9n0-Uu-K42" firstAttribute="top" secondItem="Tqs-eR-Cja" secondAttribute="top" constant="35" id="VXq-g6-NK8"/>
@@ -167,15 +141,9 @@
                                             <constraint firstItem="vir-3a-vgE" firstAttribute="leading" secondItem="Tqs-eR-Cja" secondAttribute="leading" constant="20" id="bBY-c2-Njk"/>
                                             <constraint firstItem="YmS-dv-4GU" firstAttribute="leading" secondItem="Tqs-eR-Cja" secondAttribute="leading" id="bvs-YX-OXC"/>
                                             <constraint firstItem="Xei-wA-nJk" firstAttribute="leading" secondItem="Tqs-eR-Cja" secondAttribute="leading" id="hWX-HF-KWM"/>
-                                            <constraint firstItem="ald-cR-r7s" firstAttribute="leading" secondItem="Tqs-eR-Cja" secondAttribute="leading" id="lRN-t5-afb"/>
                                             <constraint firstAttribute="trailing" secondItem="Xei-wA-nJk" secondAttribute="trailing" id="nHv-5s-ooG"/>
                                             <constraint firstItem="oZc-av-rfs" firstAttribute="top" secondItem="YmS-dv-4GU" secondAttribute="bottom" constant="30" id="oTI-k3-Zo4"/>
-                                            <constraint firstAttribute="trailing" secondItem="n4g-Xy-e59" secondAttribute="trailing" constant="20" id="p18-WW-90y"/>
-                                            <constraint firstItem="n4g-Xy-e59" firstAttribute="top" secondItem="Xei-wA-nJk" secondAttribute="bottom" constant="30" id="uSe-bZ-QXu"/>
                                             <constraint firstAttribute="trailing" secondItem="bke-4d-AAq" secondAttribute="trailing" id="vAW-Dn-7hL"/>
-                                            <constraint firstAttribute="trailing" secondItem="ald-cR-r7s" secondAttribute="trailing" id="vge-Rb-Ebn"/>
-                                            <constraint firstItem="vir-3a-vgE" firstAttribute="top" secondItem="ald-cR-r7s" secondAttribute="bottom" constant="5" id="yT5-8o-rg4"/>
-                                            <constraint firstItem="n4g-Xy-e59" firstAttribute="leading" secondItem="Tqs-eR-Cja" secondAttribute="leading" constant="20" id="zlr-zl-NJP"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -207,8 +175,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="新規登録" id="pTr-fr-6EM"/>
                     <connections>
-                        <outlet property="ageInputField" destination="KrS-Aw-vuw" id="ZkR-Rb-EZM"/>
-                        <outlet property="ageView" destination="ald-cR-r7s" id="Q3s-kT-PIq"/>
                         <outlet property="baseScrollView" destination="opV-9p-MT7" id="hBp-5L-85t"/>
                         <outlet property="emailInputField" destination="IVP-8x-yFq" id="Rc8-lI-v7w"/>
                         <outlet property="emailView" destination="YmS-dv-4GU" id="4eR-W4-Rpg"/>

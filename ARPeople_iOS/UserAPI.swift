@@ -12,9 +12,9 @@ struct UserAPI {
     
     private init() {}
     
-    static func fetchRegister(_ name: String, _ email: String, _ password: String, _ age: String, completion: @escaping (APIDecodingResult<UserModel>) -> Void) {
+    static func fetchRegister(_ name: String, _ email: String, _ password: String, completion: @escaping (APIDecodingResult<UserModel>) -> Void) {
         
-        let request = RegisterRequest(name: name, email: email, password: password, age: age)
+        let request = RegisterRequest(name: name, email: email, password: password)
         APIClient.send(request, decodingCompletion: completion)
     }
 }

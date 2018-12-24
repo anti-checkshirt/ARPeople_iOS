@@ -15,12 +15,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var nameInputField: UITextField!
     @IBOutlet private weak var emailInputField: UITextField!
     @IBOutlet private weak var passwordInputField: UITextField!
-    @IBOutlet private weak var ageInputField: UITextField!
     @IBOutlet private weak var errorNotice: UILabel!
     @IBOutlet private weak var nameView: UIView!
     @IBOutlet private weak var emailView: UIView!
     @IBOutlet private weak var passwordView: UIView!
-    @IBOutlet private weak var ageView: UIView!
     
     private var activeView: UIView?
     
@@ -30,7 +28,6 @@ class RegisterViewController: UIViewController {
         nameInputField.delegate = self
         emailInputField.delegate = self
         passwordInputField.delegate = self
-        ageInputField.delegate = self
         configureObserver()
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.tappend))
@@ -44,8 +41,6 @@ class RegisterViewController: UIViewController {
     @IBAction private func createUser() {
         let name = nameInputField.text!
         if name.isEmpty { return errorNotice.text = "名前を入力してください" }
-        let age = ageInputField.text!
-        if age.isEmpty { return errorNotice.text = "年齢を入力してください" }
         let email = emailInputField.text!
         let password = passwordInputField.text!
         let emailValidator = ValidatorFactory.sharedInstance.emailValidator()
@@ -65,7 +60,7 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        UserAPI.fetchRegister(name, email, password, age) { (result) in
+        UserAPI.fetchRegister(name, email, password) { (result) in
             switch result {
             case .success(let decoded):
                 print(decoded)
@@ -83,8 +78,6 @@ extension RegisterViewController: UITextFieldDelegate {
             emailInputField.becomeFirstResponder()
         case emailInputField:
             passwordInputField.becomeFirstResponder()
-        case passwordInputField:
-            ageInputField.becomeFirstResponder()
         default:
             break
         }
@@ -104,8 +97,6 @@ extension RegisterViewController: UITextFieldDelegate {
             activeView = emailView
         case passwordInputField:
             activeView = passwordView
-        case ageInputField:
-            activeView = ageView
         default:
             break
         }

@@ -8,6 +8,7 @@
 
 import Alamofire
 
+/// ユーザー登録
 struct RegisterRequest: APIRequest, DecodingRequest {
     
     typealias Decoded = UserModel
@@ -15,19 +16,17 @@ struct RegisterRequest: APIRequest, DecodingRequest {
     
     var header: Headers { return .none }
     
-    var path: String { return "/user" }
+    var path: String { return "/register" }
     
     var name: String
     var email: String
     var password: String
-    var age: String
     
     var parameters: [String : String] {
         return [
             "name": name,
             "email": email,
-            "password": password,
-            "age": age
+            "password": password
         ]
     }
 }
