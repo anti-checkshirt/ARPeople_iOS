@@ -89,9 +89,9 @@
                         <viewLayoutGuide key="safeArea" id="ggm-k8-Oma"/>
                     </view>
                     <connections>
-                        <outlet property="friendView" destination="hBh-0E-Xbh" id="kyI-iK-7Nn"/>
-                        <outlet property="nameLabel" destination="BFm-A1-Zw2" id="SzK-o0-GId"/>
-                        <outlet property="userImageView" destination="5xe-O9-LT7" id="cs4-ld-Svg"/>
+                        <outlet property="friendView" destination="hBh-0E-Xbh" id="GHV-So-qne"/>
+                        <outlet property="nameLabel" destination="BFm-A1-Zw2" id="TEi-jS-FCO"/>
+                        <outlet property="userImageView" destination="5xe-O9-LT7" id="iSU-UE-cdk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K51-LD-Ceg" userLabel="First Responder" sceneMemberID="firstResponder"/>

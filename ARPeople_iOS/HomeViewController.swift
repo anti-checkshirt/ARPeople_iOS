@@ -16,6 +16,8 @@ class HomeViewController: BaseViewController {
     private var hogeView = SCNNode()
     private var isView: Bool = false
     
+    @IBOutlet private weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,7 +76,11 @@ class HomeViewController: BaseViewController {
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         
-        
+        button.backgroundColor = UIColor.yellow
+        button.rx.tap.subscribe(onNext: { _ in
+            let VC = UserViewController()
+            self.present(VC, animated: true, completion: nil)
+        }).disposed(by: self.disposeBag)
     }
     
     override func viewDidLayoutSubviews() {

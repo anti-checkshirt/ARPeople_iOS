@@ -21,10 +21,19 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmz-3c-dE1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4g-If-6Em">
+                                <rect key="frame" x="162.5" y="567" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bvf-Fm-HFu"/>
+                                    <constraint firstAttribute="height" constant="50" id="pbZ-3B-kqB"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3qr-9K-cKg" firstAttribute="bottom" secondItem="r4g-If-6Em" secondAttribute="bottom" constant="50" id="5Q0-5B-pww"/>
                             <constraint firstItem="3qr-9K-cKg" firstAttribute="trailing" secondItem="zmz-3c-dE1" secondAttribute="trailing" id="EwR-ZM-55M"/>
+                            <constraint firstItem="r4g-If-6Em" firstAttribute="centerX" secondItem="SPG-1E-3dV" secondAttribute="centerX" id="Jvy-Pj-vYt"/>
                             <constraint firstAttribute="bottom" secondItem="zmz-3c-dE1" secondAttribute="bottom" id="SKv-hu-kuN"/>
                             <constraint firstItem="zmz-3c-dE1" firstAttribute="leading" secondItem="3qr-9K-cKg" secondAttribute="leading" id="UH2-4L-vHc"/>
                             <constraint firstItem="zmz-3c-dE1" firstAttribute="top" secondItem="SPG-1E-3dV" secondAttribute="top" id="Zfd-M0-rMA"/>
@@ -33,6 +42,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="axT-db-LnR"/>
                     <connections>
+                        <outlet property="button" destination="r4g-If-6Em" id="N5p-s7-ms9"/>
                         <outlet property="sceneView" destination="zmz-3c-dE1" id="MMr-aR-OfW"/>
                     </connections>
                 </viewController>
