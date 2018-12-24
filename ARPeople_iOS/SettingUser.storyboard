@@ -99,6 +99,10 @@
                                                     <constraint firstAttribute="height" constant="40" id="uPE-qM-DP5"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQ6-iZ-DQo">
+                                                <rect key="frame" x="129" y="209" width="62" height="30"/>
+                                                <state key="normal" title="画像選択"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -106,6 +110,7 @@
                                             <constraint firstItem="90g-e6-Zdh" firstAttribute="top" secondItem="KnU-W1-AcG" secondAttribute="top" constant="25" id="8S6-Zn-gZ0"/>
                                             <constraint firstAttribute="trailing" secondItem="0dY-EF-THM" secondAttribute="trailing" constant="20" id="FwN-oV-sqc"/>
                                             <constraint firstItem="0dY-EF-THM" firstAttribute="top" secondItem="hVu-Yk-xSn" secondAttribute="bottom" constant="35" id="IQ1-Pe-2Bj"/>
+                                            <constraint firstItem="TQ6-iZ-DQo" firstAttribute="top" secondItem="5aT-u5-DZQ" secondAttribute="bottom" constant="25" id="Jre-uZ-RbA"/>
                                             <constraint firstItem="5aT-u5-DZQ" firstAttribute="top" secondItem="0dY-EF-THM" secondAttribute="bottom" constant="5" id="M7l-YE-DGc"/>
                                             <constraint firstItem="90g-e6-Zdh" firstAttribute="leading" secondItem="KnU-W1-AcG" secondAttribute="leading" constant="20" id="RjJ-UJ-cW6"/>
                                             <constraint firstAttribute="trailing" secondItem="5aT-u5-DZQ" secondAttribute="trailing" id="b1w-KK-YNV"/>
@@ -113,6 +118,7 @@
                                             <constraint firstAttribute="trailing" secondItem="hVu-Yk-xSn" secondAttribute="trailing" id="fSs-VP-E60"/>
                                             <constraint firstItem="5aT-u5-DZQ" firstAttribute="leading" secondItem="KnU-W1-AcG" secondAttribute="leading" id="fg8-4i-Nze"/>
                                             <constraint firstItem="0dY-EF-THM" firstAttribute="leading" secondItem="KnU-W1-AcG" secondAttribute="leading" constant="20" id="hvU-02-z6W"/>
+                                            <constraint firstItem="TQ6-iZ-DQo" firstAttribute="centerX" secondItem="KnU-W1-AcG" secondAttribute="centerX" id="j8l-Yt-Mby"/>
                                             <constraint firstItem="hVu-Yk-xSn" firstAttribute="top" secondItem="90g-e6-Zdh" secondAttribute="bottom" constant="5" id="vkg-Lw-BfM"/>
                                         </constraints>
                                     </view>
@@ -142,6 +148,10 @@
                     <navigationItem key="navigationItem" title="新規登録" id="fv9-5w-ALg"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="578"/>
+                    <connections>
+                        <outlet property="githubInputField" destination="Nxs-bk-T8J" id="8xq-vh-1mA"/>
+                        <outlet property="twitterInputField" destination="Jg8-Ne-ncT" id="n5K-r7-6sZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzk-JF-Uc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="VbR-D9-wHG"/>
