@@ -45,10 +45,15 @@ struct AppUser {
 extension AppUser {
 
     /// 仮保存
-    static func saveUser(name: String, email: String, password: String) {
-        Defaults[.name] = name
-        Defaults[.email] = email
-        Defaults[.password] = password
+    static func saveUser(user: UserModel) {
+        Defaults[.name] = user.name
+        Defaults[.email] = user.mail
+        Defaults[.password] = user.password
+        Defaults[.age] = user.age
+        Defaults[.twitter] = user.twitter
+        Defaults[.github] = user.github
+        Defaults[.imageURL] = user.imageURL
+        Defaults[.uuid] = user.id
     }
     
     /// アクセストークン保存
@@ -62,11 +67,16 @@ extension AppUser {
 }
 
 private extension DefaultsKeys {
+    static let token = DefaultsKey<String>("AccessToken", defaultValue: "")
+    static let staging = DefaultsKey<String>("staging_url", defaultValue: "")
+    
+    /// UserModel
+    static let name = DefaultsKey<String>("name", defaultValue: "")
     static let email = DefaultsKey<String>("email", defaultValue: "")
     static let password = DefaultsKey<String>("password", defaultValue: "")
-    static let name = DefaultsKey<String>("name", defaultValue: "")
+    static let age = DefaultsKey<String>("age", defaultValue: "")
+    static let twitter = DefaultsKey<String>("twitter_id", defaultValue: "")
+    static let github = DefaultsKey<String>("github_id", defaultValue: "")
+    static let imageURL = DefaultsKey<String>("image_url", defaultValue: "")
     static let uuid = DefaultsKey<String>("User_UUID", defaultValue: "")
-    static let token = DefaultsKey<String>("AccessToken", defaultValue: "")
-    
-    static let staging = DefaultsKey<String>("staging_url", defaultValue: "")
 }

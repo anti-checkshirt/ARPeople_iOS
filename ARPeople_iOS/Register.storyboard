@@ -220,11 +220,20 @@
                         <outlet property="password2View" destination="H5w-9R-xNT" id="PK3-SD-Sid"/>
                         <outlet property="passwordInputField" destination="OKx-XY-ruC" id="9CW-D9-kHj"/>
                         <outlet property="passwordView" destination="Xei-wA-nJk" id="P3e-Q2-D0H"/>
+                        <segue destination="GTn-iR-yrI" kind="show" identifier="toSettingUser" id="5Vp-NC-3XM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Khv-zd-PEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1140.5797101449277" y="-265.17857142857144"/>
+        </scene>
+        <!--SettingUser-->
+        <scene sceneID="4dt-fF-heo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingUser" id="GTn-iR-yrI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHk-9a-NnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1756" y="-265"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ng8-Wf-RFx">

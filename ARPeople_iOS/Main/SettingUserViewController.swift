@@ -49,7 +49,10 @@ class SettingUserViewController: BaseViewController {
     }
     
     private func showRequest() {
-        let url = "\(AppUser.stagingURL)/api/v1/setting"
+        let url = "\(AppUser.stagingURL)/api/v1/images"
+        let headers: HTTPHeaders = [
+            "Authorization": AppUser.token
+        ]
         
         Alamofire.upload(
             multipartFormData: { multipartFormData in
@@ -59,26 +62,23 @@ class SettingUserViewController: BaseViewController {
                     multipartFormData.append(imageData, withName: "image\(number)", fileName: "image\(number).jpeg", mimeType: "image/jpeg")
                     number += 1
                 }
-                multipartFormData.append(AppUser.uuid.data(using: String.Encoding.utf8)!, withName: "userID")
-        },
-            to: url,
-            encodingCompletion: { encodingResult in
-                switch encodingResult {
-                case .success(let upload, _, _):
-                    print(encodingResult)
-                    upload.responseJSON { response in
-                        print(response)
-                        self.count = 0
-                        self.images.removeAll()
-                    }
-                    upload.uploadProgress { progress in
-                        print(progress.fractionCompleted)
-                    }
-                case .failure(let error):
-                    print(error)
+        }, to: url, headers: headers, encodingCompletion: { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                print(encodingResult)
+                upload.responseJSON { response in
+                    print(response)
                     self.count = 0
                     self.images.removeAll()
                 }
+                upload.uploadProgress { progress in
+                    print(progress.fractionCompleted)
+                }
+            case .failure(let error):
+                print(error)
+                self.count = 0
+                self.images.removeAll()
+            }
         })
     }
     
