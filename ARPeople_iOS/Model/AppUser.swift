@@ -49,10 +49,10 @@ extension AppUser {
         Defaults[.name] = user.name
         Defaults[.email] = user.mail
         Defaults[.password] = user.password
-        Defaults[.age] = user.age ?? ""
-        Defaults[.twitter] = user.twitter ?? ""
-        Defaults[.github] = user.github ?? ""
-        Defaults[.imageURL] = user.imageURL ?? ""
+        Defaults[.age] = user.age
+        Defaults[.twitter] = user.twitter
+        Defaults[.github] = user.github
+        Defaults[.imageURL] = user.imageURL
         Defaults[.uuid] = user.id
     }
     

@@ -19,19 +19,19 @@ struct UserModel: Codable {
     let password: String
     
     /// age
-    let age: String?
+    let age: String
     
     /// mail
     let mail: String
     
     /// twitter
-    let twitter: String?
+    let twitter: String
     
     /// github
-    let github: String?
+    let github: String
     
     ///imageURL
-    let imageURL: String?
+    let imageURL: String
     
     /// UUID
     let id: String
