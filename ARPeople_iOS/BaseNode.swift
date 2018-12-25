@@ -13,7 +13,7 @@ import ARKit
 class BaseNode: SCNNode {
     init(image: UIImage, width: CGFloat) {
         super.init()
-        let panelNode = SCNNode(geometry: SCNBox(width: width, height: width * 0.7, length: 0, chamferRadius: 0))
+        let panelNode = SCNNode(geometry: SCNBox(width: width, height: width * 0.5, length: 0, chamferRadius: 0))
         
         let front = SCNMaterial()
         front.diffuse.contents = image
