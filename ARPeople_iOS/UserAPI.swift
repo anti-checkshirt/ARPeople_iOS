@@ -20,7 +20,7 @@ struct UserAPI {
     }
     
     ///ログイン
-    static func fetchLogin(_ email: String, _ password: String, completion: @escaping (APIDecodingResult<AccessTokenModel>) -> Void) {
+    static func fetchLogin(_ email: String, _ password: String, completion: @escaping (APIDecodingResult<UserModel>) -> Void) {
         let request = AccessTokenRequest(email: email, password: password)
         APIClient.send(request, decodingCompletion: completion)
     }

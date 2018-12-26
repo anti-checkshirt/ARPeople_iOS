@@ -13,3 +13,9 @@ struct AccessTokenModel: Codable {
     /// アクセストークン
     let token: String
 }
+
+extension AccessTokenModel {
+    enum CodingKeys: String, CodingKey {
+        case token = "access_token"
+    }
+}

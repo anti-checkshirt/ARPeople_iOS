@@ -34,7 +34,7 @@ struct RegisterRequest: APIRequest, DecodingRequest {
 /// ログイン
 struct AccessTokenRequest: APIRequest, DecodingRequest {
     
-    typealias Decoded = AccessTokenModel
+    typealias Decoded = UserModel
     static var httpMethod: HTTPMethod { return .post }
     
     var header: Headers { return .none }
