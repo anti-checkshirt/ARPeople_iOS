@@ -32,8 +32,8 @@ struct UserAPI {
     }
     
     /// ユーザー情報を変更
-    static func fetchChangeUser(_ name: String, _ email: String, _ password: String, _ age: String, _ twitterID: String, _ githubID: String, completion: @escaping (APIResult) -> Void) {
+    static func fetchChangeUser(_ name: String, _ email: String, _ password: String, _ age: String, _ twitterID: String, _ githubID: String, completion: @escaping (APIDecodingResult<UserModel>) -> Void) {
         let request = ChangeUserRequest(name: name, email: email, password: password, age: age, twitterID: twitterID, githubID: githubID)
-        APIClient.send(request, completion: completion)
+        APIClient.send(request, decodingCompletion: completion)
     }
 }

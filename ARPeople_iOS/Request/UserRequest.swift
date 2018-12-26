@@ -39,7 +39,7 @@ struct AccessTokenRequest: APIRequest, DecodingRequest {
     
     var header: Headers { return .none }
     
-    var path: String { return "login" }
+    var path: String { return "/login" }
     
     var email: String
     var password: String
@@ -60,17 +60,18 @@ struct UserRequest: APIRequest, DecodingRequest {
     
     var header: Headers { return .normal }
     
-    var path: String { return "user" }
+    var path: String { return "/data" }
     
     var parameters: [String : String] { return [:]}
 }
 
 /// ユーザー情報の変更
-struct ChangeUserRequest: APIRequest {
+struct ChangeUserRequest: APIRequest, DecodingRequest {
 
+    typealias Decoded = UserModel
     static var httpMethod: HTTPMethod { return .put }
     var header: Headers { return .normal }
-    var path: String { return "user" }
+    var path: String { return "/user" }
     
     var name: String
     var email: String

@@ -16,7 +16,7 @@ enum Headers {
         switch self {
         case .normal:
             return [
-                "Authorization": "Token \(AppUser.token)"
+                "Authorization": AppUser.token
             ]
         case .none:
             return [:]
