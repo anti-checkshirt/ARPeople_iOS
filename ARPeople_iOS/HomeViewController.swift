@@ -59,7 +59,7 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         
         isView = false
-        
+        hogeView.removeFromParentNode()
         let configuration = ARWorldTrackingConfiguration()
         sceneView.session.run(configuration)
     }
