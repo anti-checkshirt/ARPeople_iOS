@@ -41,6 +41,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         AppUser.saveEnv(staging: stagingURL)
+        
+        UserAPI.fetchGetUser { (result) in
+            switch result {
+            case .success(let decoded):
+                print(decoded)
+            case .failure(_, let statusCode):
+                print(statusCode ?? "")
+            }
+        }
 
         return true
     }

@@ -56,13 +56,11 @@ struct AccessTokenRequest: APIRequest, DecodingRequest {
 struct UserRequest: APIRequest, DecodingRequest {
     
     typealias Decoded = UserModel
-    static var httpMethod: HTTPMethod { return .get }
-    
+    static var httpMethod: HTTPMethod { return .post }
     var header: Headers { return .normal }
+    var path: String { return "/user" }
     
-    var path: String { return "/data" }
-    
-    var parameters: [String : String] { return [:]}
+    var parameters: [String : String] { return [:] }
 }
 
 /// ユーザー情報の変更
