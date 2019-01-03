@@ -18,7 +18,7 @@ class UserViewController: UIViewController {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
+        imageView.setImage(url: "https://pbs.twimg.com/profile_banners/764414957920276480/1543038909/1500x500")
         return imageView
     }()
     private let userImageView: UIImageView = {
@@ -83,7 +83,7 @@ class UserViewController: UIViewController {
         imageContainer.snp.makeConstraints { make in
             make.top.equalTo(baseScrollView)
             make.left.right.equalTo(view)
-            make.height.equalTo(imageContainer.snp.width).multipliedBy(0.6)
+            make.height.equalTo(imageContainer.snp.width).multipliedBy(0.3)
         }
         
         headerImageView.snp.makeConstraints { make in
@@ -131,6 +131,8 @@ class UserViewController: UIViewController {
         navigationItem.setRightBarButton(rightBarButton, animated: true)
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
+        let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButtonItem
     }
     
     @objc private func backButtonTappend() {
