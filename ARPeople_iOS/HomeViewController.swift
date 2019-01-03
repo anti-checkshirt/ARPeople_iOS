@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc private func userButtonTappend() {
-        print("hoge")
+        performSegue(withIdentifier: "toUser", sender: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {

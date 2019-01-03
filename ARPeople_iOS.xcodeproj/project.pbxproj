@@ -51,6 +51,8 @@
 		B7DBF40C21DE5DC300ACB218 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DBF40B21DE5DC300ACB218 /* KeychainAccess.framework */; };
 		B7DBF40F21DE5E5400ACB218 /* AppKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF40E21DE5E5400ACB218 /* AppKeychain.swift */; };
 		B7DBF41121DE6CBA00ACB218 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF41021DE6CBA00ACB218 /* UIImageView+Extension.swift */; };
+		B7DBF41421DE75F800ACB218 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF41321DE75F800ACB218 /* UserViewController.swift */; };
+		B7DBF41721DE760B00ACB218 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF41621DE760B00ACB218 /* User.storyboard */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -109,6 +111,8 @@
 		B7DBF40B21DE5DC300ACB218 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		B7DBF40E21DE5E5400ACB218 /* AppKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeychain.swift; sourceTree = "<group>"; };
 		B7DBF41021DE6CBA00ACB218 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		B7DBF41321DE75F800ACB218 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		B7DBF41621DE760B00ACB218 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 		B74EA30221C3A26900224050 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B7DBF41221DE75E800ACB218 /* User */,
 				B7DBF3F721DD1F6B00ACB218 /* Face */,
 				B743020521C4ADB5006572F1 /* Home */,
 				B74EA30621C3A29500224050 /* Main */,
@@ -280,6 +285,7 @@
 		B74EA30421C3A27200224050 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				B7DBF41521DE760000ACB218 /* User */,
 				B7DBF3F121DCE36900ACB218 /* Face */,
 				B743020421C4ADB1006572F1 /* Home */,
 				B74EA30521C3A29000224050 /* Main */,
@@ -350,6 +356,23 @@
 				B74EA30B21C3A2C800224050 /* AppUser.swift */,
 			);
 			name = App;
+			sourceTree = "<group>";
+		};
+		B7DBF41221DE75E800ACB218 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B7DBF41321DE75F800ACB218 /* UserViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B7DBF41521DE760000ACB218 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B7DBF41621DE760B00ACB218 /* User.storyboard */,
+			);
+			name = User;
+			path = U;
 			sourceTree = "<group>";
 		};
 		B7E67F6C21D0070D00527DC5 /* Request */ = {
@@ -437,6 +460,7 @@
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
 				B7DBF3F621DCE42A00ACB218 /* Face.storyboard in Resources */,
 				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
+				B7DBF41721DE760B00ACB218 /* User.storyboard in Resources */,
 				25C9D66321C4CF4800FD2EDB /* SettingUser.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73B4FB221C56408009C13E5 /* UserView.swift in Sources */,
+				B7DBF41421DE75F800ACB218 /* UserViewController.swift in Sources */,
 				B7DBF40F21DE5E5400ACB218 /* AppKeychain.swift in Sources */,
 				B7DBF41121DE6CBA00ACB218 /* UIImageView+Extension.swift in Sources */,
 				B7DBF3ED21DCDF5B00ACB218 /* UserIndexTableViewCell.swift in Sources */,
