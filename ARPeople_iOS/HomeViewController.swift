@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "つながり"
-        let userBarButtonItem = UIBarButtonItem(image: UIImage(), style: .plain, target: self, action: #selector(HomeViewController.userButtonTappend))
+        let userBarButtonItem = UIBarButtonItem(image: UIImage(named: "user"), style: .plain, target: self, action: #selector(HomeViewController.userButtonTappend))
         navigationItem.setRightBarButtonItems([userBarButtonItem], animated: true)
         let nib = UINib(nibName: "UserIndex", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "UserIndex")
