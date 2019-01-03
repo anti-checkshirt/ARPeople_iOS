@@ -138,6 +138,6 @@ class UserViewController: UIViewController {
     }
     
     @objc private func moveSetting() {
-        
+        performSegue(withIdentifier: "toSetting", sender: nil)
     }
 }

@@ -53,6 +53,8 @@
 		B7DBF41121DE6CBA00ACB218 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF41021DE6CBA00ACB218 /* UIImageView+Extension.swift */; };
 		B7DBF41421DE75F800ACB218 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF41321DE75F800ACB218 /* UserViewController.swift */; };
 		B7DBF41721DE760B00ACB218 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF41621DE760B00ACB218 /* User.storyboard */; };
+		B7DBF41B21DE949500ACB218 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF41A21DE949500ACB218 /* Setting.storyboard */; };
+		B7DBF41D21DE94B900ACB218 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF41C21DE94B900ACB218 /* SettingViewController.swift */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -113,6 +115,8 @@
 		B7DBF41021DE6CBA00ACB218 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		B7DBF41321DE75F800ACB218 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B7DBF41621DE760B00ACB218 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		B7DBF41A21DE949500ACB218 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		B7DBF41C21DE94B900ACB218 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 		B74EA30221C3A26900224050 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B7DBF41821DE947500ACB218 /* Setting */,
 				B7DBF41221DE75E800ACB218 /* User */,
 				B7DBF3F721DD1F6B00ACB218 /* Face */,
 				B743020521C4ADB5006572F1 /* Home */,
@@ -285,6 +290,7 @@
 		B74EA30421C3A27200224050 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				B7DBF41921DE948400ACB218 /* Setting */,
 				B7DBF41521DE760000ACB218 /* User */,
 				B7DBF3F121DCE36900ACB218 /* Face */,
 				B743020421C4ADB1006572F1 /* Home */,
@@ -375,6 +381,22 @@
 			path = U;
 			sourceTree = "<group>";
 		};
+		B7DBF41821DE947500ACB218 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B7DBF41C21DE94B900ACB218 /* SettingViewController.swift */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		B7DBF41921DE948400ACB218 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B7DBF41A21DE949500ACB218 /* Setting.storyboard */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
 		B7E67F6C21D0070D00527DC5 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +480,7 @@
 				B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */,
 				B7DBF3F021DCDF6B00ACB218 /* UserIndex.xib in Resources */,
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
+				B7DBF41B21DE949500ACB218 /* Setting.storyboard in Resources */,
 				B7DBF3F621DCE42A00ACB218 /* Face.storyboard in Resources */,
 				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
 				B7DBF41721DE760B00ACB218 /* User.storyboard in Resources */,
@@ -547,6 +570,7 @@
 				B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */,
 				B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */,
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
+				B7DBF41D21DE94B900ACB218 /* SettingViewController.swift in Sources */,
 				B7E562E521C505A400F86BDC /* UserModel.swift in Sources */,
 				B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */,
 				B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */,

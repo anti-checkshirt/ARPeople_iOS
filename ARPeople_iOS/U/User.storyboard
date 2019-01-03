@@ -21,10 +21,23 @@
                         <viewLayoutGuide key="safeArea" id="zRP-Oq-ODS"/>
                     </view>
                     <navigationItem key="navigationItem" id="qlA-wj-Iz7"/>
+                    <connections>
+                        <segue destination="prr-8m-jMC" kind="push" identifier="toSetting" id="p4x-ys-Yk7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vg-3S-2mS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200.8" y="-222.63868065967017"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="cIQ-K6-eBO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Setting" id="prr-8m-jMC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8es-eJ-gbe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Fg-2l-YZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="-223"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r50-2F-VVe">
