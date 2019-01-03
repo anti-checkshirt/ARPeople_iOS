@@ -48,6 +48,8 @@
 		B7DBF40721DE56AE00ACB218 /* DKPhotoGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DBF40521DE56AE00ACB218 /* DKPhotoGallery.framework */; };
 		B7DBF40921DE571300ACB218 /* CropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DBF40821DE571300ACB218 /* CropViewController.framework */; };
 		B7DBF40A21DE57D800ACB218 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74301EA21C4AC97006572F1 /* SDWebImage.framework */; };
+		B7DBF40C21DE5DC300ACB218 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DBF40B21DE5DC300ACB218 /* KeychainAccess.framework */; };
+		B7DBF40F21DE5E5400ACB218 /* AppKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF40E21DE5E5400ACB218 /* AppKeychain.swift */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -93,7 +95,6 @@
 		B7694E7921D10678001181E6 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
-		B78C507721C5DFB000869546 /* ARPeople_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARPeople_iOS.entitlements; sourceTree = "<group>"; };
 		B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIndexTableViewCell.swift; sourceTree = "<group>"; };
 		B7DBF3EF21DCDF6B00ACB218 /* UserIndex.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserIndex.xib; sourceTree = "<group>"; };
 		B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -104,6 +105,8 @@
 		B7DBF40421DE56AE00ACB218 /* DKCamera.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DKCamera.framework; path = Carthage/Build/iOS/DKCamera.framework; sourceTree = "<group>"; };
 		B7DBF40521DE56AE00ACB218 /* DKPhotoGallery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DKPhotoGallery.framework; path = Carthage/Build/iOS/DKPhotoGallery.framework; sourceTree = "<group>"; };
 		B7DBF40821DE571300ACB218 /* CropViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CropViewController.framework; path = Carthage/Build/iOS/CropViewController.framework; sourceTree = "<group>"; };
+		B7DBF40B21DE5DC300ACB218 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		B7DBF40E21DE5E5400ACB218 /* AppKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeychain.swift; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7DBF40C21DE5DC300ACB218 /* KeychainAccess.framework in Frameworks */,
 				B7DBF40A21DE57D800ACB218 /* SDWebImage.framework in Frameworks */,
 				B7DBF40921DE571300ACB218 /* CropViewController.framework in Frameworks */,
 				B7DBF40621DE56AE00ACB218 /* DKCamera.framework in Frameworks */,
@@ -152,6 +156,7 @@
 		B74301E821C4AC96006572F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7DBF40B21DE5DC300ACB218 /* KeychainAccess.framework */,
 				B7DBF40821DE571300ACB218 /* CropViewController.framework */,
 				B7DBF40421DE56AE00ACB218 /* DKCamera.framework */,
 				B7DBF40521DE56AE00ACB218 /* DKPhotoGallery.framework */,
@@ -210,7 +215,6 @@
 		B74EA2ED21C3A24000224050 /* ARPeople_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B78C507721C5DFB000869546 /* ARPeople_iOS.entitlements */,
 				B74EA30421C3A27200224050 /* Storyboard */,
 				B74EA30321C3A26D00224050 /* Model */,
 				B74EA30221C3A26900224050 /* View */,
@@ -263,8 +267,7 @@
 		B74EA30321C3A26D00224050 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B74EA30921C3A2B700224050 /* AppColor.swift */,
-				B74EA30B21C3A2C800224050 /* AppUser.swift */,
+				B7DBF40D21DE5E4100ACB218 /* App */,
 				B7E562E421C505A400F86BDC /* UserModel.swift */,
 				B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */,
 			);
@@ -334,6 +337,16 @@
 				B73B4FB321C5641C009C13E5 /* BaseNode.swift */,
 			);
 			name = Face;
+			sourceTree = "<group>";
+		};
+		B7DBF40D21DE5E4100ACB218 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B7DBF40E21DE5E5400ACB218 /* AppKeychain.swift */,
+				B74EA30921C3A2B700224050 /* AppColor.swift */,
+				B74EA30B21C3A2C800224050 /* AppUser.swift */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 		B7E67F6C21D0070D00527DC5 /* Request */ = {
@@ -470,6 +483,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/DKPhotoGallery.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CropViewController.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -488,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73B4FB221C56408009C13E5 /* UserView.swift in Sources */,
+				B7DBF40F21DE5E5400ACB218 /* AppKeychain.swift in Sources */,
 				B7DBF3ED21DCDF5B00ACB218 /* UserIndexTableViewCell.swift in Sources */,
 				B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */,
 				B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */,
