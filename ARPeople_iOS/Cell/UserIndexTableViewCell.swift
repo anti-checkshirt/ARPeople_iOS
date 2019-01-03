@@ -30,6 +30,7 @@ class UserIndexTableViewCell: UITableViewCell {
         nameLabel.text = "築山朋紀"
         ageLabel.text = "10"
         emailLabel.text = "tomoki69386@gmail.com"
+        userImageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

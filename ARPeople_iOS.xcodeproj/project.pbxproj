@@ -50,6 +50,7 @@
 		B7DBF40A21DE57D800ACB218 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74301EA21C4AC97006572F1 /* SDWebImage.framework */; };
 		B7DBF40C21DE5DC300ACB218 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DBF40B21DE5DC300ACB218 /* KeychainAccess.framework */; };
 		B7DBF40F21DE5E5400ACB218 /* AppKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF40E21DE5E5400ACB218 /* AppKeychain.swift */; };
+		B7DBF41121DE6CBA00ACB218 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF41021DE6CBA00ACB218 /* UIImageView+Extension.swift */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -107,6 +108,7 @@
 		B7DBF40821DE571300ACB218 /* CropViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CropViewController.framework; path = Carthage/Build/iOS/CropViewController.framework; sourceTree = "<group>"; };
 		B7DBF40B21DE5DC300ACB218 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		B7DBF40E21DE5E5400ACB218 /* AppKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeychain.swift; sourceTree = "<group>"; };
+		B7DBF41021DE6CBA00ACB218 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */,
 				B7E67F9221D0CE3E00527DC5 /* BaseViewController.swift */,
 				B7694E7921D10678001181E6 /* Notification+Extension.swift */,
+				B7DBF41021DE6CBA00ACB218 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 			files = (
 				B73B4FB221C56408009C13E5 /* UserView.swift in Sources */,
 				B7DBF40F21DE5E5400ACB218 /* AppKeychain.swift in Sources */,
+				B7DBF41121DE6CBA00ACB218 /* UIImageView+Extension.swift in Sources */,
 				B7DBF3ED21DCDF5B00ACB218 /* UserIndexTableViewCell.swift in Sources */,
 				B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */,
 				B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */,
