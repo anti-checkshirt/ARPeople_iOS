@@ -12,7 +12,6 @@ import UIKit
 class InputView: UITextView {
     
     private let placeHolderLabel = UILabel()
-    
     var placeholder: String = "" {
         didSet {
             placeHolderLabel.text = placeholder
