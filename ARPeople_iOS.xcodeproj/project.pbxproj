@@ -58,6 +58,7 @@
 		B7DBF42121DF9F8100ACB218 /* NormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42021DF9F8100ACB218 /* NormalTableViewCell.swift */; };
 		B7DBF42321DFAA9200ACB218 /* SwiftyTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DBF42221DFAA9200ACB218 /* SwiftyTable.framework */; };
 		B7DBF42521DFCA1C00ACB218 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF42421DFCA1C00ACB218 /* Info.storyboard */; };
+		B7DBF42721DFCA3C00ACB218 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42621DFCA3C00ACB218 /* InfoViewController.swift */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -123,6 +124,7 @@
 		B7DBF42021DF9F8100ACB218 /* NormalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTableViewCell.swift; sourceTree = "<group>"; };
 		B7DBF42221DFAA9200ACB218 /* SwiftyTable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTable.framework; path = Carthage/Build/iOS/SwiftyTable.framework; sourceTree = "<group>"; };
 		B7DBF42421DFCA1C00ACB218 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		B7DBF42621DFCA3C00ACB218 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				B7DBF41C21DE94B900ACB218 /* SettingViewController.swift */,
+				B7DBF42621DFCA3C00ACB218 /* InfoViewController.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				B7DBF40F21DE5E5400ACB218 /* AppKeychain.swift in Sources */,
 				B7DBF41121DE6CBA00ACB218 /* UIImageView+Extension.swift in Sources */,
 				B7DBF3ED21DCDF5B00ACB218 /* UserIndexTableViewCell.swift in Sources */,
+				B7DBF42721DFCA3C00ACB218 /* InfoViewController.swift in Sources */,
 				B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */,
 				B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */,
 				B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */,
