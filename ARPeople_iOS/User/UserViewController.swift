@@ -88,6 +88,11 @@ class UserViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        editButton.rx.tap.subscribe(onNext: { _ in
+            let VC = UserEditViewController()
+            self.present(VC, animated: false, completion: nil)
+        }).disposed(by: self.disposeBag)
 
         setLayout()
         baseScrollView.backgroundColor = .white
