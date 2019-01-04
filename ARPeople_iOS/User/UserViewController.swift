@@ -66,7 +66,8 @@ class UserViewController: UIViewController {
     }()
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
-//        tableView.register(ageSectionHeaderView.self, forCellReuseIdentifier: "ageSectionHeaderView")
+        tableView.backgroundColor = .white
+        tableView.register(ageSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: "ageSectionHeaderView")
         tableView.register(NormalTableViewCell.self, forCellReuseIdentifier: "NormalTableViewCell")
         tableView.tableFooterView = UIView()
         return tableView
@@ -90,6 +91,7 @@ class UserViewController: UIViewController {
         baseScrollView.addSubview(tableView)
         view.addSubview(navigationBarBacking)
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     override func viewWillLayoutSubviews() {
@@ -190,7 +192,7 @@ extension UserViewController: UIScrollViewDelegate {
 
 extension UserViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -204,5 +206,13 @@ extension UserViewController: UITableViewDataSource {
 }
 
 extension UserViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        switch section {
+        case 0:
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ageSectionHeaderView") as! ageSectionHeaderView
+            return header
+        default:
+            return UIView()
+        }
+    }
 }

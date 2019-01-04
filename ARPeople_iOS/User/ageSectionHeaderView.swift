@@ -14,6 +14,7 @@ class ageSectionHeaderView: UITableViewHeaderFooterView {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .boldSystemFont(ofSize: 20)
+        label.text = "年齢"
         return label
     }()
     
