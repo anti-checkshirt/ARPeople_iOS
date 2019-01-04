@@ -24,6 +24,8 @@ class SettingViewController: UIViewController {
         tableView.delegate = self
         navigationItem.title = "設定"
         navigationController?.navigationBar.prefersLargeTitles = true
+        let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
