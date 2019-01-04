@@ -66,7 +66,7 @@ class UserViewController: UIViewController {
         return button
     }()
     private let tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
+        let tableView = UITableView()
         tableView.backgroundColor = .white
         tableView.register(AgeSectionHeaderView.self)
         tableView.register(NormalTableViewCell.self)
@@ -227,12 +227,12 @@ extension UserViewController: UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        switch Section(section) {
-        case .age:
-            return 10
-        case .social:
-            return 40
-        }
-    }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        switch Section(section) {
+//        case .age:
+//            return 10
+//        case .social:
+//            return 40
+//        }
+//    }
 }

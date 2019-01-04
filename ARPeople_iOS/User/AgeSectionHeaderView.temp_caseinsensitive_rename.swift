@@ -13,7 +13,8 @@ class AgeSectionHeaderView: UITableViewHeaderFooterView {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .boldSystemFont(ofSize: 16)
+        label.textColor = AppColor.glay
         return label
     }()
     
@@ -28,7 +29,6 @@ class AgeSectionHeaderView: UITableViewHeaderFooterView {
     }
     
     func setUp() {
-        self.backgroundView = UIView() // 背景透明化
         self.contentView.addSubview(self.titleLabel)
         
         // Layout
