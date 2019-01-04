@@ -47,7 +47,6 @@ class InputView: UITextView {
 }
 
 extension InputView: UITextViewDelegate {
-    
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         placeHolderLabel.isHidden = true
         return true
