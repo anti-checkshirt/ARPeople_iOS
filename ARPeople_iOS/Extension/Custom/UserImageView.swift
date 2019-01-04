@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class UserImageView: UIImageView {
     init() {
         super.init(frame: .zero)

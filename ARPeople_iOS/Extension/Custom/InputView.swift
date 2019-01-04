@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class InputView: UITextView {
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {

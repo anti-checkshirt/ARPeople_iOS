@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class InputField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: .zero)
