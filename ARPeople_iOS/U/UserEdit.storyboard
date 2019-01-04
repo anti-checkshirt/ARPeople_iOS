@@ -60,6 +60,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="プロフィール文章"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Twitter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8J8-Hb-w8c" customClass="InputField" customModule="ARPeople_iOS" customModuleProvider="target">
                                         <rect key="frame" x="16" y="572" width="343" height="40"/>

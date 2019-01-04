@@ -29,6 +29,8 @@ class UserEditViewController: BaseViewController {
         doneView.delegate = self
         let barButton = UIBarButtonItem(customView: doneView)
         navigationItem.setRightBarButton(barButton, animated: true)
+        
+        profileTextField.placeholder = "プロフィール文章"
     }
 
 }

@@ -11,6 +11,14 @@ import UIKit
 @IBDesignable
 class InputView: UITextView {
     
+    private let placeHolderLabel = UILabel()
+    
+    var placeholder: String = "" {
+        didSet {
+            placeHolderLabel.text = placeholder
+        }
+    }
+    
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: .zero, textContainer: textContainer)
         
@@ -26,5 +34,30 @@ class InputView: UITextView {
     private func setUp() {
         self.layer.cornerRadius = 5
         self.backgroundColor = AppColor.bgGlay
+        self.delegate = self
+        
+        placeHolderLabel.numberOfLines = 0
+        placeHolderLabel.textColor = .lightGray
+        self.addSubview(placeHolderLabel)
+        placeHolderLabel.snp.makeConstraints { make in
+            make.top.equalTo(5)
+            make.left.right.equalTo(self)
+        }
+    }
+}
+
+extension InputView: UITextViewDelegate {
+    //textviewがフォーカスされたら、Labelを非表示
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        placeHolderLabel.isHidden = true
+        return true
+    }
+    
+    //textviewからフォーカスが外れて、TextViewが空だったらLabelを再び表示
+    func textViewDidEndEditing(_ textView: UITextView) {
+        
+        if textView.text.isEmpty {
+            placeHolderLabel.isHidden = false
+        }
     }
 }
