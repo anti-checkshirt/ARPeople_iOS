@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Edit View Controller-->
+        <!--プロフィール編集-->
         <scene sceneID="DYm-oV-QYc">
             <objects>
                 <viewController id="2Bx-DQ-kEe" customClass="UserEditViewController" customModule="ARPeople_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwu-Za-7Ac">
-                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="884"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gae-8Q-xVe" userLabel="header">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
@@ -27,7 +27,7 @@
                                             <constraint firstAttribute="width" secondItem="gae-8Q-xVe" secondAttribute="height" multiplier="3:2" id="e9f-Nt-W73"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fjc-1K-3ru" userLabel="User">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fjc-1K-3ru" userLabel="User" customClass="UserImageView" customModule="ARPeople_iOS" customModuleProvider="target">
                                         <rect key="frame" x="16" y="200" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="2QE-kC-Dac"/>
@@ -128,7 +128,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i4B-aQ-Hey"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hJP-r0-KHl"/>
+                    <navigationItem key="navigationItem" title="プロフィール編集" id="hJP-r0-KHl"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="ageInputField" destination="1Ce-D6-9AM" id="C6h-Rn-8rY"/>
@@ -150,8 +150,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x1U-U5-YiF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="65K-1P-Gou">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="65K-1P-Gou">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

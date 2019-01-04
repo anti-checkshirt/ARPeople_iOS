@@ -11,7 +11,7 @@ import UIKit
 class UserEditViewController: BaseViewController {
     
     @IBOutlet private weak var headerImageView: UIImageView!
-    @IBOutlet private weak var userImageView: UIImageView!
+    @IBOutlet private weak var userImageView: UserImageView!
     @IBOutlet private weak var nameInputField: InputField!
     @IBOutlet private weak var jobInputField: InputField!
     @IBOutlet private weak var profileTextField: UITextView!
@@ -24,7 +24,6 @@ class UserEditViewController: BaseViewController {
 
         headerImageView.setImage(url: "https://pbs.twimg.com/profile_banners/764414957920276480/1543038909/1500x500")
         userImageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
-        userImageView.layer.cornerRadius = 50
     }
 
 }

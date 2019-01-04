@@ -9,6 +9,11 @@
 import UIKit
 
 class UserImageView: UIImageView {
+    init() {
+        super.init(frame: .zero)
+        
+        setUp()
+    }
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
@@ -22,6 +27,10 @@ class UserImageView: UIImageView {
     }
     
     private func setUp() {
-        
+        self.contentMode = .scaleAspectFill
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 50
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.white.cgColor
     }
 }

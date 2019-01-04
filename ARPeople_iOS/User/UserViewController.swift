@@ -25,16 +25,7 @@ class UserViewController: BaseViewController {
         imageView.setImage(url: "https://pbs.twimg.com/profile_banners/764414957920276480/1543038909/1500x500")
         return imageView
     }()
-    private let userImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 50
-        imageView.layer.borderWidth = 2
-        imageView.layer.borderColor = UIColor.white.cgColor
-        imageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
-        return imageView
-    }()
+    private let userImageView = UserImageView()
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "築山 朋紀"
@@ -94,6 +85,7 @@ class UserViewController: BaseViewController {
         }).disposed(by: self.disposeBag)
 
         setLayout()
+        userImageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
         baseScrollView.backgroundColor = .white
         baseScrollView.delegate = self
         view.addSubview(baseScrollView)
