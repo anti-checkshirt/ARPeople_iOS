@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: BaseViewController {
     
     @IBOutlet private weak var baseScrollView: UIScrollView!
     @IBOutlet private weak var nameInputField: UITextField!

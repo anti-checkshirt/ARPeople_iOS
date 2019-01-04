@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserEditViewController: UIViewController {
+class UserEditViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

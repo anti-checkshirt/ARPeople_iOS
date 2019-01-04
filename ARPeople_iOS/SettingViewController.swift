@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class SettingViewController: UIViewController {
+class SettingViewController: BaseViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     private let sections = ["アカウント", "サポート", "アプリについて"]

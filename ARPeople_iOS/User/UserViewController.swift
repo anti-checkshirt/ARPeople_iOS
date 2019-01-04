@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import SwiftyTable
 
-class UserViewController: UIViewController {
+class UserViewController: BaseViewController {
     
     private let baseScrollView = UIScrollView()
     private let imageContainer = UIView()

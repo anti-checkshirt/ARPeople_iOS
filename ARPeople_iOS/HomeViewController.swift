@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyTable
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     @IBOutlet private weak var tableView: UITableView!
 
