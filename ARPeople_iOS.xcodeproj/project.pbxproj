@@ -55,6 +55,8 @@
 		B7DBF41721DE760B00ACB218 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF41621DE760B00ACB218 /* User.storyboard */; };
 		B7DBF41B21DE949500ACB218 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF41A21DE949500ACB218 /* Setting.storyboard */; };
 		B7DBF41D21DE94B900ACB218 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF41C21DE94B900ACB218 /* SettingViewController.swift */; };
+		B7DBF41F21DF9C0C00ACB218 /* ageSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF41E21DF9C0C00ACB218 /* ageSectionHeaderView.swift */; };
+		B7DBF42121DF9F8100ACB218 /* NormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42021DF9F8100ACB218 /* NormalTableViewCell.swift */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -117,6 +119,8 @@
 		B7DBF41621DE760B00ACB218 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B7DBF41A21DE949500ACB218 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B7DBF41C21DE94B900ACB218 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B7DBF41E21DF9C0C00ACB218 /* ageSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ageSectionHeaderView.swift; sourceTree = "<group>"; };
+		B7DBF42021DF9F8100ACB218 /* NormalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTableViewCell.swift; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -368,6 +372,8 @@
 			isa = PBXGroup;
 			children = (
 				B7DBF41321DE75F800ACB218 /* UserViewController.swift */,
+				B7DBF42021DF9F8100ACB218 /* NormalTableViewCell.swift */,
+				B7DBF41E21DF9C0C00ACB218 /* ageSectionHeaderView.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -561,6 +567,7 @@
 				B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */,
 				B7E67F9321D0CE3E00527DC5 /* BaseViewController.swift in Sources */,
 				B730FF4D21C5904C00768A6F /* UserShowViewController.swift in Sources */,
+				B7DBF42121DF9F8100ACB218 /* NormalTableViewCell.swift in Sources */,
 				B7E67F7321D00A5800527DC5 /* APIClient.swift in Sources */,
 				B74EA30C21C3A2C800224050 /* AppUser.swift in Sources */,
 				B74301FF21C4AD95006572F1 /* RegisterViewController.swift in Sources */,
@@ -573,6 +580,7 @@
 				B7DBF41D21DE94B900ACB218 /* SettingViewController.swift in Sources */,
 				B7E562E521C505A400F86BDC /* UserModel.swift in Sources */,
 				B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */,
+				B7DBF41F21DF9C0C00ACB218 /* ageSectionHeaderView.swift in Sources */,
 				B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */,
 				B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */,
 				B7E67F6F21D0072C00527DC5 /* APIRequest.swift in Sources */,

@@ -64,6 +64,13 @@ class UserViewController: UIViewController {
         button.clipsToBounds = true
         return button
     }()
+    private let tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+//        tableView.register(ageSectionHeaderView.self, forCellReuseIdentifier: "ageSectionHeaderView")
+        tableView.register(NormalTableViewCell.self, forCellReuseIdentifier: "NormalTableViewCell")
+        tableView.tableFooterView = UIView()
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +87,9 @@ class UserViewController: UIViewController {
         baseScrollView.addSubview(profileMessage)
         baseScrollView.addSubview(twitterButton)
         baseScrollView.addSubview(githubButton)
+        baseScrollView.addSubview(tableView)
         view.addSubview(navigationBarBacking)
+        tableView.dataSource = self
     }
     
     override func viewWillLayoutSubviews() {
@@ -94,7 +103,6 @@ class UserViewController: UIViewController {
         baseScrollView.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
-        baseScrollView.contentSize = CGSize(width: baseScrollView.frame.width, height: baseScrollView.frame.height * 2)
         
         imageContainer.snp.makeConstraints { make in
             make.top.equalTo(baseScrollView)
@@ -143,6 +151,13 @@ class UserViewController: UIViewController {
             make.left.equalTo(twitterButton.snp.right).offset(16)
             make.width.height.equalTo(44)
         }
+        
+        tableView.snp.makeConstraints { make in
+            make.left.right.equalTo(view)
+            make.top.equalTo(githubButton.snp.bottom).offset(10)
+            make.height.equalTo(view)
+        }
+        baseScrollView.contentSize = CGSize(width: view.frame.width, height: tableView.frame.maxY)
     }
     
     private func setLayout() {
@@ -171,4 +186,23 @@ class UserViewController: UIViewController {
 extension UserViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
     }
+}
+
+extension UserViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NormalTableViewCell", for: indexPath) as! NormalTableViewCell
+        return cell
+    }
+}
+
+extension UserViewController: UITableViewDelegate {
+    
 }
