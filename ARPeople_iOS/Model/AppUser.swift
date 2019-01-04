@@ -11,6 +11,11 @@ import SwiftyUserDefaults
 
 struct AppUser {
     
+    /// SlackURL
+    static var slackURL: String {
+        return Defaults[.slackURL]
+    }
+    
     /// 名前
     static var name: String {
         return Defaults[.name]
@@ -61,14 +66,17 @@ extension AppUser {
         Defaults[.token] = token
     }
     
-    static func saveEnv(staging: String) {
+    /// envの保存
+    static func saveEnv(staging: String, slack: String) {
         Defaults[.staging] = staging
+        Defaults[.slackURL] = slack
     }
 }
 
 private extension DefaultsKeys {
     static let token = DefaultsKey<String>("AccessToken", defaultValue: "")
     static let staging = DefaultsKey<String>("staging_url", defaultValue: "")
+    static let slackURL = DefaultsKey<String>("slack_url", defaultValue: "")
     
     /// UserModel
     static let name = DefaultsKey<String>("name", defaultValue: "")
