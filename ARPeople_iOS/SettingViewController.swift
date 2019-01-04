@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SettingViewController: UIViewController {
     
@@ -20,6 +21,7 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.delegate = self
         navigationItem.title = "設定"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -70,5 +72,33 @@ extension SettingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section]
+    }
+}
+
+extension SettingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+        case (1, 0):
+            performSegue(withIdentifier: "toInfo", sender: nil)
+            
+        case (2, 0):
+            guard let url = URL(string: "https://tomoki69386.github.io/Qiita_Client/Service/Service") else { return }
+            let SFVC = SFSafariViewController(url: url)
+            present(SFVC, animated: true, completion: nil)
+            
+        case (2, 1):
+            guard let url = URL(string: "https://tomoki69386.github.io/Qiita_Client/Privacy/Privacy") else { return }
+            let SFVC = SFSafariViewController(url: url)
+            present(SFVC, animated: true, completion: nil)
+            
+        case (2, 2):
+            tableView.deselectRow(at: indexPath, animated: true)
+            guard let url = URL(string: "app-settings:root=General&path=com.gekkado.lunascope") else { return }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        default: break
+        }
     }
 }

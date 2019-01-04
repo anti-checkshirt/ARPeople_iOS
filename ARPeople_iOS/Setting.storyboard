@@ -44,11 +44,22 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="fUc-t2-g8l" id="pDt-vC-Vnf"/>
+                        <segue destination="XuJ-K6-NqO" kind="push" identifier="toInfo" id="ADg-QF-Dsr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFH-kC-UNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="529" y="-544"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="9Hq-vG-WXK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Info" id="XuJ-K6-NqO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="B3A-0E-mWe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LK8-sg-7Zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="-545"/>
         </scene>
     </scenes>
 </document>
