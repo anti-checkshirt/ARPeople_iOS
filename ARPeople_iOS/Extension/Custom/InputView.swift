@@ -53,7 +53,6 @@ extension InputView: UITextViewDelegate {
         return true
     }
     
-    //textviewからフォーカスが外れて、TextViewが空だったらLabelを再び表示
     func textViewDidEndEditing(_ textView: UITextView) {
         
         if textView.text.isEmpty {
