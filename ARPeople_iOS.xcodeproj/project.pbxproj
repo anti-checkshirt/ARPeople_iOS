@@ -277,16 +277,12 @@
 		B74EA30121C3A26100224050 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B7DBF43A21DFEC1800ACB218 /* Validator */,
+				B7DBF43921DFEBFB00ACB218 /* Custom */,
 				B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */,
 				B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */,
-				B780945521C93CB9007B063F /* ValidationResult.swift */,
-				B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */,
-				B7E67F9221D0CE3E00527DC5 /* BaseViewController.swift */,
 				B7694E7921D10678001181E6 /* Notification+Extension.swift */,
 				B7DBF41021DE6CBA00ACB218 /* UIImageView+Extension.swift */,
-				B7DBF43321DFE65500ACB218 /* InputField.swift */,
-				B7DBF43721DFEB2A00ACB218 /* InputView.swift */,
-				B7DBF43521DFE7E200ACB218 /* UserImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -420,6 +416,26 @@
 				B7DBF42421DFCA1C00ACB218 /* Info.storyboard */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		B7DBF43921DFEBFB00ACB218 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				B7E67F9221D0CE3E00527DC5 /* BaseViewController.swift */,
+				B7DBF43321DFE65500ACB218 /* InputField.swift */,
+				B7DBF43721DFEB2A00ACB218 /* InputView.swift */,
+				B7DBF43521DFE7E200ACB218 /* UserImageView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		B7DBF43A21DFEC1800ACB218 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				B780945521C93CB9007B063F /* ValidationResult.swift */,
+				B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */,
+			);
+			name = Validator;
 			sourceTree = "<group>";
 		};
 		B7E67F6C21D0070D00527DC5 /* Request */ = {
