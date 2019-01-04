@@ -29,12 +29,14 @@ class AgeSectionHeaderView: UITableViewHeaderFooterView {
     }
     
     func setUp() {
+        self.backgroundView = UIView()
         self.contentView.addSubview(self.titleLabel)
         
         // Layout
         
         self.titleLabel.snp.makeConstraints { make in
-            make.edges.equalTo(self.contentView.snp_margins)
+            make.top.right.bottom.equalToSuperview()
+            make.left.equalTo(self.contentView.snp.leftMargin)
         }
     }
 }

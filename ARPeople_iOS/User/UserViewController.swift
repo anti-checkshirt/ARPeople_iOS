@@ -68,6 +68,8 @@ class UserViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .white
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
         tableView.register(AgeSectionHeaderView.self)
         tableView.register(NormalTableViewCell.self)
         tableView.tableFooterView = UIView()
