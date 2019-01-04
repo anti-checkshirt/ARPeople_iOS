@@ -23,6 +23,7 @@
                     <navigationItem key="navigationItem" id="qlA-wj-Iz7"/>
                     <connections>
                         <segue destination="prr-8m-jMC" kind="push" identifier="toSetting" id="p4x-ys-Yk7"/>
+                        <segue destination="BLv-HR-ciY" kind="modal" identifier="toUserEdit" animates="NO" id="WO7-vH-nfn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vg-3S-2mS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,7 +38,15 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Fg-2l-YZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="-223"/>
+            <point key="canvasLocation" x="1760" y="-333"/>
+        </scene>
+        <!--UserEdit-->
+        <scene sceneID="ZI0-Av-rzq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserEdit" id="BLv-HR-ciY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcb-sQ-Xfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="-126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r50-2F-VVe">

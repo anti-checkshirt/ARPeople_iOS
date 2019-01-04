@@ -90,8 +90,7 @@ class UserViewController: BaseViewController {
         super.viewDidLoad()
         
         editButton.rx.tap.subscribe(onNext: { _ in
-            let VC = UserEditViewController()
-            self.present(VC, animated: false, completion: nil)
+            self.performSegue(withIdentifier: "toUserEdit", sender: nil)
         }).disposed(by: self.disposeBag)
 
         setLayout()

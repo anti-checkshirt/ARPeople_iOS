@@ -62,6 +62,7 @@
 		B7DBF42921DFCF1100ACB218 /* AppRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42821DFCF1100ACB218 /* AppRequest.swift */; };
 		B7DBF42B21DFD18B00ACB218 /* AppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42A21DFD18B00ACB218 /* AppAPI.swift */; };
 		B7DBF42D21DFD9AC00ACB218 /* UserEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42C21DFD9AB00ACB218 /* UserEditViewController.swift */; };
+		B7DBF43221DFDC3900ACB218 /* UserEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF43121DFDC3900ACB218 /* UserEdit.storyboard */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -131,6 +132,7 @@
 		B7DBF42821DFCF1100ACB218 /* AppRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRequest.swift; sourceTree = "<group>"; };
 		B7DBF42A21DFD18B00ACB218 /* AppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPI.swift; sourceTree = "<group>"; };
 		B7DBF42C21DFD9AB00ACB218 /* UserEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditViewController.swift; sourceTree = "<group>"; };
+		B7DBF43121DFDC3900ACB218 /* UserEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserEdit.storyboard; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				B7DBF41621DE760B00ACB218 /* User.storyboard */,
+				B7DBF43121DFDC3900ACB218 /* UserEdit.storyboard */,
 			);
 			name = User;
 			path = U;
@@ -485,6 +488,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7DBF43221DFDC3900ACB218 /* UserEdit.storyboard in Resources */,
 				B74301FB21C4AD77006572F1 /* Login.storyboard in Resources */,
 				B7DBF3F421DCE39F00ACB218 /* TabBar.storyboard in Resources */,
 				B730FF4F21C5906300768A6F /* UserShow.storyboard in Resources */,
