@@ -47,7 +47,7 @@ class InputView: UITextView {
 }
 
 extension InputView: UITextViewDelegate {
-    //textviewがフォーカスされたら、Labelを非表示
+    
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         placeHolderLabel.isHidden = true
         return true
