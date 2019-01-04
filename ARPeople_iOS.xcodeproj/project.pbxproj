@@ -59,6 +59,7 @@
 		B7DBF42321DFAA9200ACB218 /* SwiftyTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DBF42221DFAA9200ACB218 /* SwiftyTable.framework */; };
 		B7DBF42521DFCA1C00ACB218 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF42421DFCA1C00ACB218 /* Info.storyboard */; };
 		B7DBF42721DFCA3C00ACB218 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42621DFCA3C00ACB218 /* InfoViewController.swift */; };
+		B7DBF42921DFCF1100ACB218 /* AppRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42821DFCF1100ACB218 /* AppRequest.swift */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -125,6 +126,7 @@
 		B7DBF42221DFAA9200ACB218 /* SwiftyTable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTable.framework; path = Carthage/Build/iOS/SwiftyTable.framework; sourceTree = "<group>"; };
 		B7DBF42421DFCA1C00ACB218 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		B7DBF42621DFCA3C00ACB218 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		B7DBF42821DFCF1100ACB218 /* AppRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRequest.swift; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				B7E67F6E21D0072C00527DC5 /* APIRequest.swift */,
+				B7DBF42821DFCF1100ACB218 /* AppRequest.swift */,
 				B7E67F9621D0EF1B00527DC5 /* UserRequest.swift */,
 			);
 			path = Request;
@@ -578,6 +581,7 @@
 				B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */,
 				B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */,
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
+				B7DBF42921DFCF1100ACB218 /* AppRequest.swift in Sources */,
 				B7DBF41D21DE94B900ACB218 /* SettingViewController.swift in Sources */,
 				B7E562E521C505A400F86BDC /* UserModel.swift in Sources */,
 				B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */,

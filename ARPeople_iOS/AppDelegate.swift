@@ -39,8 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let stagingURL = ProcessInfo.processInfo.environment["staging_url"] else {
             fatalError("staging_urlが.envファイルに記載されていません。")
         }
+        guard let slackURL = ProcessInfo.processInfo.environment["slack_url"] else {
+            fatalError("slack_urlが.envファイルに記載されていません。")
+        }
         
-        AppUser.saveEnv(staging: stagingURL)
+        AppUser.saveEnv(staging: stagingURL, slack: slackURL)
 
         return true
     }
