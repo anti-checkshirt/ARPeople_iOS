@@ -44,6 +44,12 @@ class UserViewController: UIViewController {
         label.font = .systemFont(ofSize: 14)
         return label
     }()
+    private let profileMessage: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.text = "中1のときから不登校でその後一切学校に行かず、面接だけで受かる通信孤高も退学し、現在はフリーのiOSエンジニアをしております。\n\nご飯を食べたり寝たりする時間を忘れてコードを書く人とはいい話ができそうです。\n\nSwift\nRailsちょっと"
+        return label
+    }()
     private let twitterButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(hex: "1DA1F2")
@@ -71,6 +77,7 @@ class UserViewController: UIViewController {
         baseScrollView.addSubview(userImageView)
         baseScrollView.addSubview(nameLabel)
         baseScrollView.addSubview(jobLabel)
+        baseScrollView.addSubview(profileMessage)
         baseScrollView.addSubview(twitterButton)
         baseScrollView.addSubview(githubButton)
         view.addSubview(navigationBarBacking)
@@ -119,8 +126,14 @@ class UserViewController: UIViewController {
             make.left.equalTo(16)
         }
         
-        twitterButton.snp.makeConstraints { make in
+        profileMessage.snp.makeConstraints { make in
+            make.left.equalTo(16)
+            make.right.equalTo(view).inset(16)
             make.top.equalTo(jobLabel.snp.bottom).offset(5)
+        }
+        
+        twitterButton.snp.makeConstraints { make in
+            make.top.equalTo(profileMessage.snp.bottom).offset(20)
             make.left.equalTo(16)
             make.width.height.equalTo(44)
         }
