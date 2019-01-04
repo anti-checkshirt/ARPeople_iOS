@@ -12,7 +12,7 @@ import Alamofire
 struct StackMessageRequest: APIRequest {
     
     static var httpMethod: HTTPMethod { return .post }
-    var header: Headers
+    var header: Headers { return .none }
     var isAPIHost: BaseURL { return .slack }
     var isHeaders: Headers { return .none }
     var path: String { return AppUser.slackURL }

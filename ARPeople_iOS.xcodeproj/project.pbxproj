@@ -60,6 +60,7 @@
 		B7DBF42521DFCA1C00ACB218 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF42421DFCA1C00ACB218 /* Info.storyboard */; };
 		B7DBF42721DFCA3C00ACB218 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42621DFCA3C00ACB218 /* InfoViewController.swift */; };
 		B7DBF42921DFCF1100ACB218 /* AppRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42821DFCF1100ACB218 /* AppRequest.swift */; };
+		B7DBF42B21DFD18B00ACB218 /* AppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42A21DFD18B00ACB218 /* AppAPI.swift */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -127,6 +128,7 @@
 		B7DBF42421DFCA1C00ACB218 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		B7DBF42621DFCA3C00ACB218 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B7DBF42821DFCF1100ACB218 /* AppRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRequest.swift; sourceTree = "<group>"; };
+		B7DBF42A21DFD18B00ACB218 /* AppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPI.swift; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				B7E67F7021D00A3B00527DC5 /* APIResult.swift */,
 				B7E67F7221D00A5800527DC5 /* APIClient.swift */,
 				B7694E7521D0F0CA001181E6 /* UserAPI.swift */,
+				B7DBF42A21DFD18B00ACB218 /* AppAPI.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
 				B7DBF42921DFCF1100ACB218 /* AppRequest.swift in Sources */,
 				B7DBF41D21DE94B900ACB218 /* SettingViewController.swift in Sources */,
+				B7DBF42B21DFD18B00ACB218 /* AppAPI.swift in Sources */,
 				B7E562E521C505A400F86BDC /* UserModel.swift in Sources */,
 				B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */,
 				B7DBF41F21DF9C0C00ACB218 /* AgeSectionHeaderView.temp_caseinsensitive_rename.swift in Sources */,
