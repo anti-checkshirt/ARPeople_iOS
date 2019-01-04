@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RxSwift
 import Device
 
 class InfoViewController: UIViewController {
     
     @IBOutlet private weak var nameInputField: UITextField!
     @IBOutlet private weak var textView: UITextView!
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +24,18 @@ class InfoViewController: UIViewController {
         nameInputField.delegate = self
         nameInputField.becomeFirstResponder()
         let barButton = UIBarButtonItem(title: "送信", style: .done, target: self, action: #selector(InfoViewController.send))
-        barButton.tintColor = AppColor.white
+        barButton.tintColor = .blue
         barButton.isEnabled = false
         navigationItem.setRightBarButtonItems([barButton], animated: true)
+        
+        textView.rx.text.asDriver().drive(onNext: { outPutText in
+            guard let text = outPutText else { return }
+            if text.count == 0 {
+                barButton.isEnabled = false
+            } else {
+                barButton.isEnabled = true
+            }
+        }).disposed(by: self.disposeBag)
     }
     
     @objc func send() {
