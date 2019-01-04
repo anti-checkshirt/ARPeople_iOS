@@ -57,6 +57,7 @@
 		B7DBF41F21DF9C0C00ACB218 /* AgeSectionHeaderView.temp_caseinsensitive_rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF41E21DF9C0C00ACB218 /* AgeSectionHeaderView.temp_caseinsensitive_rename.swift */; };
 		B7DBF42121DF9F8100ACB218 /* NormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF42021DF9F8100ACB218 /* NormalTableViewCell.swift */; };
 		B7DBF42321DFAA9200ACB218 /* SwiftyTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DBF42221DFAA9200ACB218 /* SwiftyTable.framework */; };
+		B7DBF42521DFCA1C00ACB218 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF42421DFCA1C00ACB218 /* Info.storyboard */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -121,6 +122,7 @@
 		B7DBF41E21DF9C0C00ACB218 /* AgeSectionHeaderView.temp_caseinsensitive_rename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeSectionHeaderView.temp_caseinsensitive_rename.swift; sourceTree = "<group>"; };
 		B7DBF42021DF9F8100ACB218 /* NormalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTableViewCell.swift; sourceTree = "<group>"; };
 		B7DBF42221DFAA9200ACB218 /* SwiftyTable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTable.framework; path = Carthage/Build/iOS/SwiftyTable.framework; sourceTree = "<group>"; };
+		B7DBF42421DFCA1C00ACB218 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -196,7 +198,6 @@
 			children = (
 				B743020621C4ADBD006572F1 /* Home.storyboard */,
 				B730FF4E21C5906300768A6F /* UserShow.storyboard */,
-				B7DBF3EE21DCDF6400ACB218 /* Xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -334,13 +335,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		B7DBF3EE21DCDF6400ACB218 /* Xib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Xib;
-			sourceTree = "<group>";
-		};
 		B7DBF3F121DCE36900ACB218 /* Face */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				B7DBF41A21DE949500ACB218 /* Setting.storyboard */,
+				B7DBF42421DFCA1C00ACB218 /* Info.storyboard */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -486,6 +481,7 @@
 				B7E67F6621CFF2A700527DC5 /* .env in Resources */,
 				B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */,
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
+				B7DBF42521DFCA1C00ACB218 /* Info.storyboard in Resources */,
 				B7DBF41B21DE949500ACB218 /* Setting.storyboard in Resources */,
 				B7DBF3F621DCE42A00ACB218 /* Face.storyboard in Resources */,
 				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
