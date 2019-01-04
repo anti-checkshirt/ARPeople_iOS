@@ -14,7 +14,7 @@ class UserEditViewController: BaseViewController {
     @IBOutlet private weak var userImageView: UserImageView!
     @IBOutlet private weak var nameInputField: InputField!
     @IBOutlet private weak var jobInputField: InputField!
-    @IBOutlet private weak var profileTextField: UITextView!
+    @IBOutlet private weak var profileTextField: InputView!
     @IBOutlet private weak var twitterInputField: InputField!
     @IBOutlet private weak var githubInputField: InputField!
     @IBOutlet private weak var ageInputField: InputField!
