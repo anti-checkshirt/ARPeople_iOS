@@ -73,10 +73,16 @@ class UserViewController: UIViewController {
         baseScrollView.addSubview(jobLabel)
         baseScrollView.addSubview(twitterButton)
         baseScrollView.addSubview(githubButton)
+        view.addSubview(navigationBarBacking)
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        
+        navigationBarBacking.snp.makeConstraints { make in
+            make.top.left.right.equalTo(view)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.top)
+        }
         
         baseScrollView.snp.makeConstraints { make in
             make.edges.equalTo(view)
@@ -86,14 +92,15 @@ class UserViewController: UIViewController {
         imageContainer.snp.makeConstraints { make in
             make.top.equalTo(baseScrollView)
             make.left.right.equalTo(view)
-            make.height.equalTo(imageContainer.snp.width).multipliedBy(0.3)
+            make.height.equalTo(imageContainer.snp.width).multipliedBy(0.5)
+            make.bottom.equalTo(navigationBarBacking).priority(.high)
         }
         
         headerImageView.snp.makeConstraints { make in
             make.left.right.equalTo(imageContainer)
             make.top.equalTo(view).priority(.high)
-            make.height.greaterThanOrEqualTo(imageContainer.snp.height).priority(.required)
-            make.bottom.equalTo(imageContainer.snp.bottom)
+            make.height.greaterThanOrEqualTo(imageContainer).priority(.high)
+            make.bottom.equalTo(imageContainer)
         }
         
         userImageView.snp.makeConstraints { make in
@@ -132,6 +139,7 @@ class UserViewController: UIViewController {
         let rightBarButton = UIBarButtonItem(image: UIImage(named: "setting"), style: .plain, target: self, action: #selector(self.moveSetting))
         rightBarButton.tintColor = .white
         navigationItem.setRightBarButton(rightBarButton, animated: true)
+        navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -149,10 +157,5 @@ class UserViewController: UIViewController {
 
 extension UserViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y >= 100 {
-            navigationItem.title = "築山朋紀"
-            self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-            self.navigationController?.navigationBar.shadowImage = nil
-        }
     }
 }
