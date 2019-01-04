@@ -66,6 +66,7 @@
 		B7DBF43421DFE65500ACB218 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF43321DFE65500ACB218 /* InputField.swift */; };
 		B7DBF43621DFE7E200ACB218 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF43521DFE7E200ACB218 /* UserImageView.swift */; };
 		B7DBF43821DFEB2A00ACB218 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF43721DFEB2A00ACB218 /* InputView.swift */; };
+		B7DBF43C21DFEC7300ACB218 /* DoneBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF43B21DFEC7300ACB218 /* DoneBarButtonView.swift */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -139,6 +140,7 @@
 		B7DBF43321DFE65500ACB218 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		B7DBF43521DFE7E200ACB218 /* UserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
 		B7DBF43721DFEB2A00ACB218 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		B7DBF43B21DFEC7300ACB218 /* DoneBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneBarButtonView.swift; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 				B7DBF43321DFE65500ACB218 /* InputField.swift */,
 				B7DBF43721DFEB2A00ACB218 /* InputView.swift */,
 				B7DBF43521DFE7E200ACB218 /* UserImageView.swift */,
+				B7DBF43B21DFEC7300ACB218 /* DoneBarButtonView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */,
 				B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */,
 				B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */,
+				B7DBF43C21DFEC7300ACB218 /* DoneBarButtonView.swift in Sources */,
 				B7E67F9321D0CE3E00527DC5 /* BaseViewController.swift in Sources */,
 				B730FF4D21C5904C00768A6F /* UserShowViewController.swift in Sources */,
 				B7DBF42121DF9F8100ACB218 /* NormalTableViewCell.swift in Sources */,

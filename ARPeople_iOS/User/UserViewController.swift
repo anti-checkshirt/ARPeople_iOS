@@ -142,7 +142,6 @@ class UserViewController: BaseViewController {
             make.height.equalTo(36)
             make.width.equalTo(60)
         }
-        print(editButton.frame)
         
         nameLabel.snp.makeConstraints { make in
             make.top.equalTo(userImageView.snp.bottom).offset(5)
