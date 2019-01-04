@@ -12,9 +12,8 @@ class AgeSectionHeaderView: UITableViewHeaderFooterView {
 
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.font = .boldSystemFont(ofSize: 20)
-        label.text = "年齢"
         return label
     }()
     
@@ -35,9 +34,7 @@ class AgeSectionHeaderView: UITableViewHeaderFooterView {
         // Layout
         
         self.titleLabel.snp.makeConstraints { make in
-            make.top.greaterThanOrEqualToSuperview()
-            make.left.equalTo(self.contentView.snp.leftMargin)
-            make.bottom.equalTo(self.contentView.snp.bottomMargin)
+            make.edges.equalTo(self.contentView.snp_margins)
         }
     }
 }

@@ -27,9 +27,7 @@ class NormalTableViewCell: UITableViewCell {
     private func setUp() {
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
-            make.top.greaterThanOrEqualToSuperview()
-            make.left.equalTo(self.contentView.snp.leftMargin)
-            make.bottom.equalTo(self.contentView.snp.bottomMargin)
+            make.edges.equalTo(self.contentView.snp_margins)
         }
     }
     

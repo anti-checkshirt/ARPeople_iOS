@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import SwiftyTable
 
 class UserViewController: UIViewController {
     
@@ -67,8 +68,8 @@ class UserViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .white
-        tableView.register(ageSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: "ageSectionHeaderView")
-        tableView.register(NormalTableViewCell.self, forCellReuseIdentifier: "NormalTableViewCell")
+        tableView.register(AgeSectionHeaderView.self)
+        tableView.register(NormalTableViewCell.self)
         tableView.tableFooterView = UIView()
         return tableView
     }()
@@ -185,34 +186,53 @@ class UserViewController: UIViewController {
     }
 }
 
-extension UserViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+extension UserViewController {
+    private enum Section: Int, TableSection, CaseIterable {
+        case age
+        case social
     }
 }
 
 extension UserViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return Section.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        switch Section(section) {
+        case .age:
+            return 1
+        case .social:
+            return 2
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NormalTableViewCell", for: indexPath) as! NormalTableViewCell
+        let cell = tableView.dequeueReusableCell(of: NormalTableViewCell.self, for: indexPath)
         return cell
     }
 }
 
 extension UserViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        switch section {
-        case 0:
-            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ageSectionHeaderView") as! ageSectionHeaderView
+        switch Section(section) {
+        case .age:
+            let header = tableView.dequeueReusableHeaderFooterView(of: AgeSectionHeaderView.self)
+            header?.titleLabel.text = "生年月日"
             return header
-        default:
-            return UIView()
+        case .social:
+            let header = tableView.dequeueReusableHeaderFooterView(of: AgeSectionHeaderView.self)
+            header?.titleLabel.text = "ソーシャル"
+            return header
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch Section(section) {
+        case .age:
+            return 10
+        case .social:
+            return 40
         }
     }
 }
