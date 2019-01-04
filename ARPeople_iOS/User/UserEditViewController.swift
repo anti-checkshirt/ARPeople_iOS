@@ -9,22 +9,22 @@
 import UIKit
 
 class UserEditViewController: BaseViewController {
+    
+    @IBOutlet private weak var headerImageView: UIImageView!
+    @IBOutlet private weak var userImageView: UIImageView!
+    @IBOutlet private weak var nameInputField: InputField!
+    @IBOutlet private weak var jobInputField: InputField!
+    @IBOutlet private weak var profileTextField: UITextView!
+    @IBOutlet private weak var twitterInputField: InputField!
+    @IBOutlet private weak var githubInputField: InputField!
+    @IBOutlet private weak var ageInputField: InputField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        headerImageView.setImage(url: "https://pbs.twimg.com/profile_banners/764414957920276480/1543038909/1500x500")
+        userImageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
+        userImageView.layer.cornerRadius = 50
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
