@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyTable
 
 class HomeViewController: UIViewController {
     
@@ -18,8 +19,8 @@ class HomeViewController: UIViewController {
         navigationItem.title = "つながり"
         let userBarButtonItem = UIBarButtonItem(image: UIImage(named: "user"), style: .plain, target: self, action: #selector(HomeViewController.userButtonTappend))
         navigationItem.setRightBarButtonItems([userBarButtonItem], animated: true)
-        let nib = UINib(nibName: "UserIndex", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "UserIndex")
+        tableView.register(UserIndexTableViewCell.self)
+        tableView.rowHeight = 60
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -43,7 +44,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserIndex", for: indexPath) as! UserIndexTableViewCell
+        let cell = tableView.dequeueReusableCell(of: UserIndexTableViewCell.self, for: indexPath)
         cell.setUp()
         return cell
     }

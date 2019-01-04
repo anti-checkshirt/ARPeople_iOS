@@ -10,33 +10,60 @@ import UIKit
 
 class UserIndexTableViewCell: UITableViewCell {
     
-    @IBOutlet private weak var userImageView: UIImageView!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var ageLabel: UILabel!
-    @IBOutlet private weak var emailLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    private let userImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.cornerRadius = 25
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 20)
+        return label
+    }()
+    private let jobLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setLayout()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setLayout() {
-        userImageView.layer.cornerRadius = userImageView.frame.width / 2
-        userImageView.clipsToBounds = true
+        self.addSubview(userImageView)
+        self.addSubview(nameLabel)
+        self.addSubview(jobLabel)
+        
+        userImageView.snp.makeConstraints { make in
+            make.top.left.equalTo(5)
+            make.width.height.equalTo(50)
+        }
+        
+        nameLabel.snp.makeConstraints { make in
+            make.top.equalTo(5)
+            make.left.equalTo(userImageView.snp.right).offset(5)
+            make.right.equalTo(contentView.snp.rightMargin)
+            make.height.equalTo(20)
+        }
+        
+        jobLabel.snp.makeConstraints { make in
+            make.top.equalTo(nameLabel.snp.bottom).offset(5)
+            make.left.right.equalTo(nameLabel)
+            make.bottom.equalTo(contentView).inset(5)
+        }
     }
     
     func setUp() {
         nameLabel.text = "築山朋紀"
-        ageLabel.text = "10"
-        emailLabel.text = "tomoki69386@gmail.com"
+        jobLabel.text = "フリーランス/iOSエンジニア"
         userImageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

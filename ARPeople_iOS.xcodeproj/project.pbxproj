@@ -33,7 +33,6 @@
 		B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */; };
 		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
 		B7DBF3ED21DCDF5B00ACB218 /* UserIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */; };
-		B7DBF3F021DCDF6B00ACB218 /* UserIndex.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF3EF21DCDF6B00ACB218 /* UserIndex.xib */; };
 		B7DBF3F421DCE39F00ACB218 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */; };
 		B7DBF3F621DCE42A00ACB218 /* Face.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF3F521DCE42A00ACB218 /* Face.storyboard */; };
 		B7DBF3F921DE536D00ACB218 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74301E921C4AC97006572F1 /* Alamofire.framework */; };
@@ -104,7 +103,6 @@
 		B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIndexTableViewCell.swift; sourceTree = "<group>"; };
-		B7DBF3EF21DCDF6B00ACB218 /* UserIndex.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserIndex.xib; sourceTree = "<group>"; };
 		B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		B7DBF3F521DCE42A00ACB218 /* Face.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Face.storyboard; sourceTree = "<group>"; };
 		B7DBF3FE21DE536D00ACB218 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
@@ -339,7 +337,6 @@
 		B7DBF3EE21DCDF6400ACB218 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				B7DBF3EF21DCDF6B00ACB218 /* UserIndex.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -488,7 +485,6 @@
 				B74EA2F621C3A24200224050 /* Assets.xcassets in Resources */,
 				B7E67F6621CFF2A700527DC5 /* .env in Resources */,
 				B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */,
-				B7DBF3F021DCDF6B00ACB218 /* UserIndex.xib in Resources */,
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
 				B7DBF41B21DE949500ACB218 /* Setting.storyboard in Resources */,
 				B7DBF3F621DCE42A00ACB218 /* Face.storyboard in Resources */,
