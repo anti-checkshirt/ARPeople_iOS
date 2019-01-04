@@ -26,11 +26,20 @@ class DoneBarButtonView: UIView {
         
         setUp()
     }
-
-    required override init(frame: CGRect) {
-        super.init(frame: f)
+    
+    init(with image: UIImage) {
+        let frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        super.init(frame: frame)
         
-        setUp()
+        doneButton.setImage(image, for: .normal)
+        doneButton.backgroundColor = .blue
+        doneButton.layer.cornerRadius = 17
+        
+        doneButton.rx.tap.subscribe(onNext: { _ in
+            self.delegate?.didTappendButton()
+        }).disposed(by: self.disposeBag)
+        doneButton.frame = frame
+        self.addSubview(doneButton)
     }
     
     required init?(coder aDecoder: NSCoder) {
