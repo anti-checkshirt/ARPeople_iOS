@@ -180,9 +180,13 @@ class UserViewController: BaseViewController {
     }
     
     private func setLayout() {
-        let leftBarButton = UIBarButtonItem(image: UIImage(named: "back"), style: .plain, target: self, action: #selector(self.backButtonTappend))
-        leftBarButton.tintColor = .white
-        navigationItem.setLeftBarButton(leftBarButton, animated: true)
+//        let leftBarButton = UIBarButtonItem(image: UIImage(named: "back"), style: .plain, target: self, action: #selector(self.backButtonTappend))
+//        leftBarButton.tintColor = .white
+//        navigationItem.setLeftBarButton(leftBarButton, animated: true)
+        let hogeView = DoneBarButtonView(image: UIImage(named: "back"))
+        let hoge = UIBarButtonItem(customView: hogeView)
+        navigationItem.setLeftBarButton(hoge, animated: true
+        )
         let rightBarButton = UIBarButtonItem(image: UIImage(named: "setting"), style: .plain, target: self, action: #selector(self.moveSetting))
         rightBarButton.tintColor = .white
         navigationItem.setRightBarButton(rightBarButton, animated: true)

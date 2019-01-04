@@ -27,7 +27,7 @@ class DoneBarButtonView: UIView {
         setUp()
     }
     
-    init(with image: UIImage) {
+    init(image: UIImage?) {
         let frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         super.init(frame: frame)
         
@@ -60,5 +60,13 @@ class DoneBarButtonView: UIView {
         
         self.addSubview(doneButton)
         doneButton.frame = f
+    }
+}
+
+extension DoneBarButtonView {
+    enum currentButton {
+        case back
+        case setting
+        case done
     }
 }
