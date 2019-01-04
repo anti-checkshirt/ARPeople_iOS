@@ -13,6 +13,7 @@ class UserViewController: UIViewController {
     
     private let baseScrollView = UIScrollView()
     private let imageContainer = UIView()
+    private let navigationBarBacking = UIView()
 
     private let headerImageView: UIImageView = {
         let imageView = UIImageView()
@@ -63,6 +64,7 @@ class UserViewController: UIViewController {
 
         setLayout()
         baseScrollView.backgroundColor = .white
+        baseScrollView.delegate = self
         view.addSubview(baseScrollView)
         baseScrollView.addSubview(imageContainer)
         baseScrollView.addSubview(headerImageView)
@@ -72,8 +74,9 @@ class UserViewController: UIViewController {
         baseScrollView.addSubview(twitterButton)
         baseScrollView.addSubview(githubButton)
     }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         
         baseScrollView.snp.makeConstraints { make in
             make.edges.equalTo(view)
@@ -100,23 +103,23 @@ class UserViewController: UIViewController {
         }
         
         nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(userImageView.snp.bottom).offset(10)
+            make.top.equalTo(userImageView.snp.bottom).offset(5)
             make.left.equalTo(16)
         }
         
         jobLabel.snp.makeConstraints { make in
-            make.top.equalTo(nameLabel.snp.bottom).offset(10)
+            make.top.equalTo(nameLabel.snp.bottom).offset(5)
             make.left.equalTo(16)
         }
         
         twitterButton.snp.makeConstraints { make in
-            make.top.equalTo(jobLabel.snp.bottom).offset(10)
+            make.top.equalTo(jobLabel.snp.bottom).offset(5)
             make.left.equalTo(16)
             make.width.height.equalTo(44)
         }
         
         githubButton.snp.makeConstraints { make in
-            make.top.equalTo(jobLabel.snp.bottom).offset(10)
+            make.top.equalTo(twitterButton)
             make.left.equalTo(twitterButton.snp.right).offset(16)
             make.width.height.equalTo(44)
         }
@@ -129,8 +132,8 @@ class UserViewController: UIViewController {
         let rightBarButton = UIBarButtonItem(image: UIImage(named: "setting"), style: .plain, target: self, action: #selector(self.moveSetting))
         rightBarButton.tintColor = .white
         navigationItem.setRightBarButton(rightBarButton, animated: true)
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController!.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
         let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButtonItem
     }
@@ -141,5 +144,15 @@ class UserViewController: UIViewController {
     
     @objc private func moveSetting() {
         performSegue(withIdentifier: "toSetting", sender: nil)
+    }
+}
+
+extension UserViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y >= 100 {
+            navigationItem.title = "築山朋紀"
+            self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+            self.navigationController?.navigationBar.shadowImage = nil
+        }
     }
 }
