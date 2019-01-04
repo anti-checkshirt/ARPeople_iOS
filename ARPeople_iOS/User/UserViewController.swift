@@ -69,7 +69,6 @@ class UserViewController: UIViewController {
         let tableView = UITableView()
         tableView.backgroundColor = .white
         tableView.allowsSelection = false
-        tableView.separatorStyle = .none
         tableView.register(AgeSectionHeaderView.self)
         tableView.register(NormalTableViewCell.self)
         tableView.tableFooterView = UIView()
@@ -211,6 +210,7 @@ extension UserViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(of: NormalTableViewCell.self, for: indexPath)
+        tableView.separatorColor = .white
         return cell
     }
 }
@@ -228,13 +228,4 @@ extension UserViewController: UITableViewDelegate {
             return header
         }
     }
-    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        switch Section(section) {
-//        case .age:
-//            return 10
-//        case .social:
-//            return 40
-//        }
-//    }
 }
