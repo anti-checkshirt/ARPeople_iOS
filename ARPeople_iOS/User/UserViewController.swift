@@ -8,6 +8,8 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 import SwiftyTable
 
 class UserViewController: UIViewController {
@@ -74,6 +76,15 @@ class UserViewController: UIViewController {
         tableView.tableFooterView = UIView()
         return tableView
     }()
+    private let editButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("変更", for: .normal)
+        button.setTitleColor(UIColor.blue, for: .normal)
+        button.layer.cornerRadius = 18
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.blue.cgColor
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +96,7 @@ class UserViewController: UIViewController {
         baseScrollView.addSubview(imageContainer)
         baseScrollView.addSubview(headerImageView)
         baseScrollView.addSubview(userImageView)
+        baseScrollView.addSubview(editButton)
         baseScrollView.addSubview(nameLabel)
         baseScrollView.addSubview(jobLabel)
         baseScrollView.addSubview(profileMessage)
@@ -127,6 +139,14 @@ class UserViewController: UIViewController {
             make.width.height.equalTo(100)
             make.top.equalTo(imageContainer.snp.bottom).inset(50)
         }
+        
+        editButton.snp.makeConstraints { make in
+            make.right.equalTo(view).inset(16)
+            make.bottom.equalTo(userImageView)
+            make.height.equalTo(36)
+            make.width.equalTo(60)
+        }
+        print(editButton.frame)
         
         nameLabel.snp.makeConstraints { make in
             make.top.equalTo(userImageView.snp.bottom).offset(5)
