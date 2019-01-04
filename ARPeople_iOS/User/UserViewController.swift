@@ -180,16 +180,14 @@ class UserViewController: BaseViewController {
     }
     
     private func setLayout() {
-//        let leftBarButton = UIBarButtonItem(image: UIImage(named: "back"), style: .plain, target: self, action: #selector(self.backButtonTappend))
-//        leftBarButton.tintColor = .white
-//        navigationItem.setLeftBarButton(leftBarButton, animated: true)
-        let hogeView = DoneBarButtonView(image: UIImage(named: "back"))
-        let hoge = UIBarButtonItem(customView: hogeView)
-        navigationItem.setLeftBarButton(hoge, animated: true
-        )
-        let rightBarButton = UIBarButtonItem(image: UIImage(named: "setting"), style: .plain, target: self, action: #selector(self.moveSetting))
-        rightBarButton.tintColor = .white
-        navigationItem.setRightBarButton(rightBarButton, animated: true)
+        let backView = DoneBarButtonView(image: UIImage(named: "back"), currentButton: .back)
+        backView.delegate = self
+        let backBarButtonItem = UIBarButtonItem(customView: backView)
+        navigationItem.setLeftBarButton(backBarButtonItem, animated: true)
+        let settingView = DoneBarButtonView(image: UIImage(named: "setting"), currentButton: .setting)
+        settingView.delegate = self
+        let settingBarButtonItem = UIBarButtonItem(customView: settingView)
+        navigationItem.setRightBarButton(settingBarButtonItem, animated: true)
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -247,4 +245,19 @@ extension UserViewController: UITableViewDelegate {
             return header
         }
     }
+}
+
+extension UserViewController: DoneBarButtonViewDelegate {
+    func didTappendButton(_ doneBarButtonView: DoneBarButtonView, currentButton: DoneBarButtonView.currentButton) {
+        switch currentButton {
+        case .back:
+            self.dismiss(animated: true, completion: nil)
+        case .setting:
+            self.performSegue(withIdentifier: "toSetting", sender: nil)
+        case .done:
+            break
+        }
+    }
+    
+    
 }

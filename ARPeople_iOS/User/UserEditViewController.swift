@@ -25,7 +25,7 @@ class UserEditViewController: BaseViewController {
         headerImageView.setImage(url: "https://pbs.twimg.com/profile_banners/764414957920276480/1543038909/1500x500")
         userImageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
         
-        let doneView = DoneBarButtonView()
+        let doneView = DoneBarButtonView(currentButton: .done)
         doneView.delegate = self
         let barButton = UIBarButtonItem(customView: doneView)
         navigationItem.setRightBarButton(barButton, animated: true)
@@ -34,7 +34,12 @@ class UserEditViewController: BaseViewController {
 }
 
 extension UserEditViewController: DoneBarButtonViewDelegate {
-    func didTappendButton() {
-        self.dismiss(animated: true, completion: nil)
+    func didTappendButton(_ doneBarButtonView: DoneBarButtonView, currentButton: DoneBarButtonView.currentButton) {
+        switch currentButton {
+        case .done:
+            self.dismiss(animated: true, completion: nil)
+        case .setting, .back:
+            break
+        }
     }
 }
