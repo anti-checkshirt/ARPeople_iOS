@@ -84,6 +84,24 @@ extension UserEditViewController: DoneBarButtonViewDelegate {
     func didTappendButton(_ doneBarButtonView: DoneBarButtonView, currentButton: DoneBarButtonView.currentButton) {
         switch currentButton {
         case .done:
+            let name = nameInputField.text!
+            let job = jobInputField.text!
+            let profile = profileTextField.text!
+            let twitter = twitterInputField.text!
+            let github = githubInputField.text!
+            let age = ageInputField.text!
+            if name.isEmpty { return }
+            
+            UserAPI.fetchChangeUser(name, AppUser.email, age, twitter, github, job: job, phoneNumber: "08023323620", profileMessage: profile) { (result) in
+                switch result {
+                case .success(let decoded):
+                    print(decoded)
+                    AppUser.saveUser(user: decoded)
+                case .failure(_, let statusCode):
+                    print(statusCode ?? "")
+                }
+            }
+
             self.dismiss(animated: true, completion: nil)
         case .back:
             self.dismiss(animated: true, completion: nil)

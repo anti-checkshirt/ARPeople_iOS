@@ -77,7 +77,6 @@ struct ChangeUserRequest: APIRequest, DecodingRequest {
     
     var name: String
     var email: String
-    var password: String
     var age: String
     var twitterID: String
     var githubID: String
@@ -89,7 +88,6 @@ struct ChangeUserRequest: APIRequest, DecodingRequest {
         return [
             "name": name,
             "email": email,
-            "password": password,
             "age": age,
             "twitterID": twitterID,
             "githubID": githubID,
