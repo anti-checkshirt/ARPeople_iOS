@@ -6,11 +6,37 @@
 //  Copyright © 2019 tomoki. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Alamofire
+import DKImagePickerController
 
 struct ImageRequest {
-    static func send(_ image: Data, to url: String) {
+    
+    private var topViewController: UIViewController? {
+        guard var topViewController = UIApplication.shared.keyWindow?.rootViewController else { return nil }
+        while let presentedViewController = topViewController.presentedViewController {
+            topViewController = presentedViewController
+        }
+        return topViewController
+    }
+    
+    func openView() {
+        guard let vc = topViewController else { return }
+        let pickerController = DKImagePickerController()
+        pickerController.maxSelectableCount = 10
+        pickerController.didSelectAssets = { [self] (assets: [DKAsset]) in
+            for asset in assets {
+                asset.fetchFullScreenImage(completeBlock: { (image, info) in
+                    guard let image = image else { return }
+                    guard let imageData = image.jpegData(compressionQuality: 1.0) else { return }
+                    self.send(imageData, to: "\(AppUser.stagingURL)/user_image")
+                })
+            }
+        }
+        vc.present(pickerController, animated: true)
+    }
+    
+    private func send(_ image: Data, to url: String) {
         
         let header = ["Authorization": AppUser.token]
         
