@@ -12,8 +12,8 @@ import DKImagePickerController
 class UserEditViewController: BaseViewController {
     
     @IBOutlet private weak var baseScrollView: UIScrollView!
-    @IBOutlet private weak var headerImageView: UIImageView!
-    @IBOutlet private weak var userImageView: UserImageView!
+    @IBOutlet private weak var headerImageView: EditImageView!
+    @IBOutlet private weak var userImageView: EditUserImageView!
     @IBOutlet private weak var nameInputField: InputField!
     @IBOutlet private weak var jobInputField: InputField!
     @IBOutlet private weak var profileTextField: InputView!
