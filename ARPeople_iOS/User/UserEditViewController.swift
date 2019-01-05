@@ -68,7 +68,9 @@ extension UserEditViewController: DoneBarButtonViewDelegate {
         switch currentButton {
         case .done:
             self.dismiss(animated: true, completion: nil)
-        case .setting, .back:
+        case .back:
+            self.dismiss(animated: true, completion: nil)
+        case .setting:
             break
         }
     }
