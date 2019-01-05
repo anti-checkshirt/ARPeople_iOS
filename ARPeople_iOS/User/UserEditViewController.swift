@@ -26,6 +26,7 @@ class UserEditViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showRequest()
         nameInputField.delegate = self
         jobInputField.delegate = self
         twitterInputField.delegate = self
@@ -56,6 +57,22 @@ class UserEditViewController: BaseViewController {
         cancelView.delegate = self
         let leftButton = UIBarButtonItem(customView: cancelView)
         navigationItem.setLeftBarButton(leftButton, animated: true)
+    }
+    
+    private func showRequest() {
+        UserAPI.fetchGetUser { (result) in
+            switch result {
+            case .success(let decoded):
+                self.nameInputField.text = decoded.name
+                self.jobInputField.text = decoded.job
+                self.profileTextField.text = decoded.profileMessage
+                self.twitterInputField.text = decoded.twitter
+                self.githubInputField.text = decoded.github
+                self.ageInputField.text = decoded.age
+            case .failure(_, let statusCode):
+                print(statusCode ?? "")
+            }
+        }
     }
     
     @objc private func tapped(_ sender: UITapGestureRecognizer) {
