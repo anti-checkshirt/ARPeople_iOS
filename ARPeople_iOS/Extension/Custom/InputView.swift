@@ -37,6 +37,7 @@ class InputView: UITextView {
         
         placeHolderLabel.numberOfLines = 0
         placeHolderLabel.textColor = .lightGray
+        placeHolderLabel.font = .systemFont(ofSize: 14)
         self.addSubview(placeHolderLabel)
         placeHolderLabel.snp.makeConstraints { make in
             make.top.equalTo(5)

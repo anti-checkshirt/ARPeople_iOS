@@ -141,6 +141,7 @@
 		B7DBF43521DFE7E200ACB218 /* UserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
 		B7DBF43721DFEB2A00ACB218 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		B7DBF43B21DFEC7300ACB218 /* DoneBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneBarButtonView.swift; sourceTree = "<group>"; };
+		B7DBF43D21E0041A00ACB218 /* ARPeople_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARPeople_iOS.entitlements; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -250,6 +251,7 @@
 		B74EA2ED21C3A24000224050 /* ARPeople_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B7DBF43D21E0041A00ACB218 /* ARPeople_iOS.entitlements */,
 				B74EA30421C3A27200224050 /* Storyboard */,
 				B74EA30321C3A26D00224050 /* Model */,
 				B74EA30221C3A26900224050 /* View */,
@@ -487,7 +489,7 @@
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -774,7 +776,6 @@
 			baseConfigurationReference = BC961E217F437BE30CBD5419 /* Pods-ARPeople_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ARPeople_iOS/ARPeople_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FJMPLD4D4X;
 				ENABLE_BITCODE = YES;
@@ -800,7 +801,6 @@
 			baseConfigurationReference = C910CF4850881AF08677983D /* Pods-ARPeople_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ARPeople_iOS/ARPeople_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FJMPLD4D4X;
 				ENABLE_BITCODE = YES;
