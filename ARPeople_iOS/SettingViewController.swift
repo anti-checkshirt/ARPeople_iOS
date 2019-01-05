@@ -87,12 +87,12 @@ extension SettingViewController: UITableViewDelegate {
             performSegue(withIdentifier: "toInfo", sender: nil)
             
         case (2, 0):
-            guard let url = URL(string: "https://tomoki69386.github.io/Qiita_Client/Service/Service") else { return }
+            guard let url = URL(string: "https://anti-checkshirt.github.io/ARPeople_iOS/docs/Service/Service") else { return }
             let SFVC = SFSafariViewController(url: url)
             present(SFVC, animated: true, completion: nil)
             
         case (2, 1):
-            guard let url = URL(string: "https://tomoki69386.github.io/Qiita_Client/Privacy/Privacy") else { return }
+            guard let url = URL(string: "https://anti-checkshirt.github.io/ARPeople_iOS/docs/Privacy/Privacy") else { return }
             let SFVC = SFSafariViewController(url: url)
             present(SFVC, animated: true, completion: nil)
             

@@ -7,4 +7,6 @@ target 'ARPeople_iOS' do
 
   # Pods for ARPeople_iOS
 
+  pod 'LicensePlist'
+
 end

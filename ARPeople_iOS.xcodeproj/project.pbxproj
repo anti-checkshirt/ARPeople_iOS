@@ -67,6 +67,7 @@
 		B7DBF43621DFE7E200ACB218 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF43521DFE7E200ACB218 /* UserImageView.swift */; };
 		B7DBF43821DFEB2A00ACB218 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF43721DFEB2A00ACB218 /* InputView.swift */; };
 		B7DBF43C21DFEC7300ACB218 /* DoneBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF43B21DFEC7300ACB218 /* DoneBarButtonView.swift */; };
+		B7DBF44821E0D49000ACB218 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF44721E0D49000ACB218 /* Settings.bundle */; };
 		B7E562E521C505A400F86BDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E562E421C505A400F86BDC /* UserModel.swift */; };
 		B7E67F6621CFF2A700527DC5 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6521CFF2A700527DC5 /* .env */; };
 		B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = B7E67F6921CFF41800527DC5 /* .env.sample */; };
@@ -142,6 +143,7 @@
 		B7DBF43721DFEB2A00ACB218 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		B7DBF43B21DFEC7300ACB218 /* DoneBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneBarButtonView.swift; sourceTree = "<group>"; };
 		B7DBF43D21E0041A00ACB218 /* ARPeople_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARPeople_iOS.entitlements; sourceTree = "<group>"; };
+		B7DBF44721E0D49000ACB218 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B7E562E421C505A400F86BDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B7E67F6521CFF2A700527DC5 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		B7E67F6921CFF41800527DC5 /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				B74EA2FA21C3A24200224050 /* Info.plist */,
 				B7E67F6521CFF2A700527DC5 /* .env */,
 				B7E67F6921CFF41800527DC5 /* .env.sample */,
+				B7DBF44721E0D49000ACB218 /* Settings.bundle */,
 			);
 			path = ARPeople_iOS;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				B74EA2E821C3A24000224050 /* Frameworks */,
 				B74EA2E921C3A24000224050 /* Resources */,
 				B7DBF3F821DE52B300ACB218 /* Carthage */,
+				B7DBF43F21E0D2BC00ACB218 /* LicensePlist */,
 			);
 			buildRules = (
 			);
@@ -526,6 +530,7 @@
 				B74EA2F621C3A24200224050 /* Assets.xcassets in Resources */,
 				B7E67F6621CFF2A700527DC5 /* .env in Resources */,
 				B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */,
+				B7DBF44821E0D49000ACB218 /* Settings.bundle in Resources */,
 				B743020721C4ADBD006572F1 /* Home.storyboard in Resources */,
 				B7DBF42521DFCA1C00ACB218 /* Info.storyboard in Resources */,
 				B7DBF41B21DE949500ACB218 /* Setting.storyboard in Resources */,
@@ -592,6 +597,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		B7DBF43F21E0D2BC00ACB218 /* LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = LicensePlist;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n${PODS_ROOT}/LicensePlist/license-plist --output-path $PRODUCT_NAME/Settings.bundle\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

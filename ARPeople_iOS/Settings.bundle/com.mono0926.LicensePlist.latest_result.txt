@@ -1,0 +1,35 @@
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 2.0.0
+
+name: Alamofire, nameSpecified: , owner: Alamofire, version: 4.8.0
+
+name: AlamofireImage, nameSpecified: , owner: Alamofire, version: 3.5.0
+
+name: Device, nameSpecified: , owner: Ekhoo, version: 3.1.2
+
+name: DKCamera, nameSpecified: , owner: zhangao0086, version: 1.6.4
+
+name: DKImagePickerController, nameSpecified: , owner: zhangao0086, version: 4.1.2
+
+name: DKPhotoGallery, nameSpecified: , owner: zhangao0086, version: 0.0.11
+
+name: KeychainAccess, nameSpecified: , owner: kishikawakatsumi, version: v3.1.2
+
+name: RxSwift, nameSpecified: , owner: ReactiveX, version: 4.4.0
+
+name: SDWebImage, nameSpecified: , owner: rs, version: 4.4.3
+
+name: SnapKit, nameSpecified: , owner: SnapKit, version: 4.2.0
+
+name: SwiftyTable, nameSpecified: , owner: jrsaruo, version: v1.1
+
+name: SwiftyUserDefaults, nameSpecified: , owner: radex, version: 4.0.0-alpha.1
+
+name: TOCropViewController, nameSpecified: , owner: TimOliver, version: 2.4.0
+
+add-version-numbers: false
+
+LicensePlist Version: 1.8.3

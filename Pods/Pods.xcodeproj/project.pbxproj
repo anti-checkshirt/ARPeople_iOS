@@ -69,9 +69,26 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A78FD346F294EDAD17260711A1B3A3DF /* Pods */,
 				3573BB590FC53EE6CFEB3F693EC80144 /* Products */,
 				168258931B8C6125B91B718159F5B2E9 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7FFF874690523EB3C0D273FFC7BA7553 /* LicensePlist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LicensePlist;
+			path = LicensePlist;
+			sourceTree = "<group>";
+		};
+		A78FD346F294EDAD17260711A1B3A3DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FFF874690523EB3C0D273FFC7BA7553 /* LicensePlist */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
