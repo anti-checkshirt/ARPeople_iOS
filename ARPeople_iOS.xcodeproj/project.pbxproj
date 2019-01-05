@@ -465,6 +465,7 @@
 				B74EA2E821C3A24000224050 /* Frameworks */,
 				B74EA2E921C3A24000224050 /* Resources */,
 				B7DBF3F821DE52B300ACB218 /* Carthage */,
+				2138FBC70AB17FFBBEDB228E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -539,6 +540,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2138FBC70AB17FFBBEDB228E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ARPeople_iOS/Pods-ARPeople_iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARPeople_iOS/Pods-ARPeople_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8EB39026FD6031765C4E0D6F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
