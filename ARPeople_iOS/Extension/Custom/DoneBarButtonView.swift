@@ -21,10 +21,10 @@ class DoneBarButtonView: UIView {
     weak var delegate: DoneBarButtonViewDelegate?
     let disposeBag = DisposeBag()
     
-    init(currentButton: currentButton) {
+    init(currentButton: currentButton, title: String) {
         super.init(frame: f)
         
-        setUp(currentButton)
+        setUp(currentButton, title)
     }
     
     init(image: UIImage?, currentButton: currentButton) {
@@ -49,8 +49,8 @@ class DoneBarButtonView: UIView {
         setUp(.done)
     }
     
-    private func setUp(_ currentButton: currentButton) {
-        doneButton.setTitle("完了", for: .normal)
+    private func setUp(_ currentButton: currentButton, _ title: String) {
+        doneButton.setTitle(title, for: .normal)
         doneButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
         doneButton.backgroundColor = .blue
         doneButton.layer.cornerRadius = 17
