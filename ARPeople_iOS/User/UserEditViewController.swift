@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DKImagePickerController
 
 class UserEditViewController: BaseViewController {
     
@@ -26,6 +27,7 @@ class UserEditViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        selectImage()
         showRequest()
         nameInputField.delegate = self
         jobInputField.delegate = self
@@ -45,6 +47,21 @@ class UserEditViewController: BaseViewController {
             target: self,
             action: #selector(self.tapped))
         baseScrollView.addGestureRecognizer(tapGesture)
+    }
+    
+    private func selectImage(){
+        let pickerController = DKImagePickerController()
+        pickerController.maxSelectableCount = 10
+        pickerController.didSelectAssets = { [self] (assets: [DKAsset]) in
+            for asset in assets {
+                asset.fetchFullScreenImage(completeBlock: { (image, info) in
+                    guard let image = image else { return }
+                    guard let imageData = image.jpegData(compressionQuality: 1.0) else { return }
+                    ImageRequest.send(imageData, to: "\(AppUser.stagingURL)/user_image")
+                })
+            }
+        }
+        self.present(pickerController, animated: true)
     }
     
     private func setNav() {
