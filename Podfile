@@ -8,7 +8,5 @@ target 'ARPeople_iOS' do
   # Pods for ARPeople_iOS
 
   pod 'LicensePlist'
-  pod 'Flurry-iOS-SDK/FlurrySDK'
-  pod 'Flurry-iOS-SDK/FlurryAds'
 
 end
