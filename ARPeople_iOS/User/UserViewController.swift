@@ -85,6 +85,7 @@ class UserViewController: BaseViewController {
         }).disposed(by: self.disposeBag)
 
         setLayout()
+        showRequest()
         userImageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
         baseScrollView.backgroundColor = .white
         baseScrollView.delegate = self
@@ -102,6 +103,19 @@ class UserViewController: BaseViewController {
         view.addSubview(navigationBarBacking)
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    private func showRequest() {
+        UserAPI.fetchGetUser { (result) in
+            switch result {
+            case .success(let decoded):
+                self.nameLabel.text = decoded.name
+                self.jobLabel.text = decoded.job
+                self.profileMessage.text = decoded.profileMessage
+            case .failure(_, let statusCode):
+                print(statusCode ?? "")
+            }
+        }
     }
     
     override func viewWillLayoutSubviews() {

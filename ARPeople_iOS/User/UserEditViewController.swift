@@ -26,6 +26,7 @@ class UserEditViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showRequest()
         nameInputField.delegate = self
         jobInputField.delegate = self
         twitterInputField.delegate = self
@@ -58,6 +59,22 @@ class UserEditViewController: BaseViewController {
         navigationItem.setLeftBarButton(leftButton, animated: true)
     }
     
+    private func showRequest() {
+        UserAPI.fetchGetUser { (result) in
+            switch result {
+            case .success(let decoded):
+                self.nameInputField.text = decoded.name
+                self.jobInputField.text = decoded.job
+                self.profileTextField.text = decoded.profileMessage
+                self.twitterInputField.text = decoded.twitter
+                self.githubInputField.text = decoded.github
+                self.ageInputField.text = decoded.age
+            case .failure(_, let statusCode):
+                print(statusCode ?? "")
+            }
+        }
+    }
+    
     @objc private func tapped(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
@@ -67,6 +84,24 @@ extension UserEditViewController: DoneBarButtonViewDelegate {
     func didTappendButton(_ doneBarButtonView: DoneBarButtonView, currentButton: DoneBarButtonView.currentButton) {
         switch currentButton {
         case .done:
+            let name = nameInputField.text!
+            let job = jobInputField.text!
+            let profile = profileTextField.text!
+            let twitter = twitterInputField.text!
+            let github = githubInputField.text!
+            let age = ageInputField.text!
+            if name.isEmpty { return }
+            
+            UserAPI.fetchChangeUser(name, AppUser.email, age, twitter, github, job: job, phoneNumber: "08023323620", profileMessage: profile) { (result) in
+                switch result {
+                case .success(let decoded):
+                    print(decoded)
+                    AppUser.saveUser(user: decoded)
+                case .failure(_, let statusCode):
+                    print(statusCode ?? "")
+                }
+            }
+
             self.dismiss(animated: true, completion: nil)
         case .back:
             self.dismiss(animated: true, completion: nil)
