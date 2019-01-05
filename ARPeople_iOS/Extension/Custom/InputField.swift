@@ -44,6 +44,7 @@ class AgeInputField: InputField {
         datepicker.timeZone = timeZone
         datepicker.datePickerMode = UIDatePicker.Mode.date
         datepicker.maximumDate = Date()
+        datepicker.locale = Locale(identifier: "ja_JP")
         
         let vi = UIView(frame: datepicker.bounds)
         vi.backgroundColor = UIColor.white
