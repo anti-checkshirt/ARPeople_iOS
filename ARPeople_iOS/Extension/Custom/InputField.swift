@@ -28,11 +28,6 @@ class InputField: UITextField {
     }
 }
 
-extension UITextFieldDelegate {
-    func textFieldDoneTouch(_ textField: UITextField) {}
-    func textFieldCancelTouch(_ textField: UITextField) {}
-}
-
 class AgeInputField: InputField {
     
     let datepicker = UIDatePicker()
@@ -69,12 +64,12 @@ class AgeInputField: InputField {
     }
     
     @objc func donePressed() {
-        delegate?.textFieldDoneTouch(self)
+        self.resignFirstResponder()
         self.text = "\(self.format(date: datepicker.date))"
     }
     
     @objc func cancelPressed() {
-        delegate?.textFieldCancelTouch(self)
+        self.resignFirstResponder()
         self.text = ""
     }
     

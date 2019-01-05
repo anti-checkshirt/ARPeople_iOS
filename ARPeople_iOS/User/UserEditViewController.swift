@@ -116,12 +116,4 @@ extension UserEditViewController: UITextFieldDelegate {
     @objc private func keyboardWillHide(notification: Notification) {
         baseScrollView.contentOffset.y = 0
     }
-    
-    func textFieldDoneTouch(_ textField: UITextField) {
-        view.endEditing(true)
-    }
-    
-    func textFieldCancelTouch(_ textField: UITextField) {
-        view.endEditing(true)
-    }
 }
