@@ -11,6 +11,7 @@ import Alamofire
 /// ユーザー登録
 struct RegisterRequest: APIRequest, DecodingRequest {
     
+    var isAPIHost: BaseURL { return .normal }
     typealias Decoded = UserModel
     static var httpMethod: HTTPMethod { return .post }
     
@@ -34,6 +35,7 @@ struct RegisterRequest: APIRequest, DecodingRequest {
 /// ログイン
 struct AccessTokenRequest: APIRequest, DecodingRequest {
     
+    var isAPIHost: BaseURL { return .normal }
     typealias Decoded = UserModel
     static var httpMethod: HTTPMethod { return .post }
     
@@ -55,6 +57,7 @@ struct AccessTokenRequest: APIRequest, DecodingRequest {
 /// ユーザー情報の取得
 struct UserRequest: APIRequest, DecodingRequest {
     
+    var isAPIHost: BaseURL { return .normal }
     typealias Decoded = UserModel
     static var httpMethod: HTTPMethod { return .post }
     var header: Headers { return .normal }
@@ -66,6 +69,7 @@ struct UserRequest: APIRequest, DecodingRequest {
 /// ユーザー情報の変更
 struct ChangeUserRequest: APIRequest, DecodingRequest {
 
+    var isAPIHost: BaseURL { return .normal }
     typealias Decoded = UserModel
     static var httpMethod: HTTPMethod { return .put }
     var header: Headers { return .normal }

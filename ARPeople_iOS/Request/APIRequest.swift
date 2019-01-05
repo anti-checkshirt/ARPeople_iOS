@@ -8,6 +8,20 @@
 
 import Alamofire
 
+enum BaseURL {
+    case normal
+    case slack
+    
+    var url: String {
+        switch self {
+        case .normal:
+            return AppUser.stagingURL
+        case .slack:
+            return "https://hooks.slack.com"
+        }
+    }
+}
+
 enum Headers {
     case normal
     case none
@@ -29,6 +43,7 @@ protocol APIRequest {
     var header: Headers { get }
     var path: String { get }
     var parameters: [String: String] { get }
+    var isAPIHost: BaseURL { get }
 }
 
 extension APIRequest {
@@ -36,16 +51,11 @@ extension APIRequest {
     
     /// APIホスト
     var baseURL: URL {
-        return URL(string: AppUser.stagingURL)!
-    }
-    
-    /// バージョン
-    var version: URL {
-        return URL(string: "/api/v1")!
+        return URL(string: isAPIHost.url)!
     }
     
     var urlComponents: URLComponents {
-        guard let urlComponents = URLComponents(string: "\(self.baseURL)\(self.version)\(self.path)") else {
+        guard let urlComponents = URLComponents(string: "\(self.baseURL)\(self.path)") else {
             assertionFailure("\(self.path)は無効なURLです")
             return URLComponents()
         }

@@ -34,8 +34,10 @@ DKImagePickerController is available on CocoaPods. Simply add the following line
 ```
 # For latest release in cocoapods
 pod 'DKImagePickerController'
+```
 
-# For Swift 4
+#### For Swift 4.1
+```
 pod 'DKImagePickerController', :git => 'https://github.com/zhangao0086/DKImagePickerController.git', :branch => 'Swift4'
 ```
 
@@ -108,6 +110,9 @@ self.presentViewController(pickerController, animated: true) {}
  
  /// Allow swipe to select images.
  @objc public var allowSwipeToSelect: Bool = false
+ 
+ /// Allow select all
+ @objc public var allowSelectAll: Bool = false
  
  /// A Bool value indicating whether the inline mode is enabled.
  @objc public var inline: Bool = false

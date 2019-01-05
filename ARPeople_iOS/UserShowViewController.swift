@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserShowViewController: UIViewController {
+class UserShowViewController: BaseViewController {
     
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var ageLabel: UILabel!
