@@ -81,6 +81,9 @@ struct ChangeUserRequest: APIRequest, DecodingRequest {
     var age: String
     var twitterID: String
     var githubID: String
+    var job: String
+    var phoneNumber: String
+    var profileMessage: String
 
     var parameters: [String : String] {
         return [
@@ -89,7 +92,10 @@ struct ChangeUserRequest: APIRequest, DecodingRequest {
             "password": password,
             "age": age,
             "twitterID": twitterID,
-            "githubID": githubID
+            "githubID": githubID,
+            "job": job,
+            "phoneNumber": phoneNumber,
+            "profileMessage": profileMessage
         ]
     }
 }
