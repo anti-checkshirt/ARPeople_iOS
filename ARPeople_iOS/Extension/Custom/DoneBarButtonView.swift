@@ -46,7 +46,7 @@ class DoneBarButtonView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        setUp(.done)
+        setUp(.done, "")
     }
     
     private func setUp(_ currentButton: currentButton, _ title: String) {

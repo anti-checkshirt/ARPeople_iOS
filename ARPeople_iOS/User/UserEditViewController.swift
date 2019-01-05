@@ -47,12 +47,12 @@ class UserEditViewController: BaseViewController {
     }
     
     private func setNav() {
-        let doneView = DoneBarButtonView(currentButton: .done)
+        let doneView = DoneBarButtonView(currentButton: .done, title: "保存")
         doneView.delegate = self
         let barButton = UIBarButtonItem(customView: doneView)
         navigationItem.setRightBarButton(barButton, animated: true)
         
-        let cancelView = DoneBarButtonView(currentButton: .back)
+        let cancelView = DoneBarButtonView(currentButton: .back, title: "戻る")
         cancelView.delegate = self
         let leftButton = UIBarButtonItem(customView: cancelView)
         navigationItem.setLeftBarButton(leftButton, animated: true)
