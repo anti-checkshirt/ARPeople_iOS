@@ -31,6 +31,7 @@ class UserEditViewController: BaseViewController {
         twitterInputField.delegate = self
         githubInputField.delegate = self
         ageInputField.delegate = self
+        ageInputField.dateFormat = "yyyy年MM月dd日"
 
         headerImageView.setImage(url: "https://pbs.twimg.com/profile_banners/764414957920276480/1543038909/1500x500")
         userImageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")

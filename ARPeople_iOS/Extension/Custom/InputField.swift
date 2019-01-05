@@ -43,7 +43,7 @@ class AgeInputField: InputField {
         let timeZone = datepicker.timeZone
         datepicker.timeZone = timeZone
         datepicker.datePickerMode = UIDatePicker.Mode.date
-        datepicker.minimumDate = Date()
+        datepicker.maximumDate = Date()
         
         let vi = UIView(frame: datepicker.bounds)
         vi.backgroundColor = UIColor.white
@@ -51,9 +51,9 @@ class AgeInputField: InputField {
         self.inputView = vi
         
         let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
+        toolBar.barStyle = .default
         toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor.black
+        toolBar.tintColor = .black
         let doneButton   = UIBarButtonItem(title: "決定", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.donePressed))
         let cancelButton = UIBarButtonItem(title: "キャンセル", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.cancelPressed))
         let spaceButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
