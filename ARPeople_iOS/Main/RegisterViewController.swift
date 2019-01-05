@@ -71,7 +71,6 @@ class RegisterViewController: BaseViewController {
             switch result {
             case .success(let decoded):
                 print(decoded)
-                AppUser.save(token: decoded.token)
                 AppUser.saveUser(user: decoded)
                 self.performSegue(withIdentifier: "toSettingUser", sender: nil)
             case .failure(let error, let statusCode):

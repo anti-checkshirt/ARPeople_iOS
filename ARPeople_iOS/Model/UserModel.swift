@@ -39,19 +39,31 @@ struct UserModel: Codable {
     /// AccessToken
     let token: String
     
+    /// プロフィール文章
+    let profileMessage: String
+    
+    /// 職業
+    let job: String
+    
+    /// 電話番号
+    let phoneNumber: String
+    
 }
 
 extension UserModel {
 
     enum CodingKeys: String, CodingKey {
-        case name = "name"
+        case name
         case password = "password_digest"
-        case age = "age"
+        case age
         case mail = "email"
         case twitter = "twitter_id"
         case github = "github_id"
         case imageURL = "user_image_url"
         case id = "uuid"
         case token = "access_token"
+        case profileMessage = "profile_message"
+        case job
+        case phoneNumber = "phone_number"
     }
 }

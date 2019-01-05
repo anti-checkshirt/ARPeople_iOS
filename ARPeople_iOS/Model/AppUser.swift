@@ -59,11 +59,10 @@ extension AppUser {
         Defaults[.github] = user.github
         Defaults[.imageURL] = user.imageURL
         Defaults[.uuid] = user.id
-    }
-    
-    /// アクセストークン保存
-    static func save(token: String) {
-        Defaults[.token] = token
+        Defaults[.profileMessage] = user.profileMessage
+        Defaults[.phoneNumber] = user.phoneNumber
+        Defaults[.job] = user.job
+        Defaults[.token] = user.token
     }
     
     /// envの保存
@@ -87,4 +86,7 @@ private extension DefaultsKeys {
     static let github = DefaultsKey<String>("github_id", defaultValue: "")
     static let imageURL = DefaultsKey<String>("image_url", defaultValue: "")
     static let uuid = DefaultsKey<String>("User_UUID", defaultValue: "")
+    static let job = DefaultsKey<String>("job", defaultValue: "")
+    static let profileMessage = DefaultsKey<String>("profile_message", defaultValue: "")
+    static let phoneNumber = DefaultsKey<String>("phone_number", defaultValue: "")
 }
