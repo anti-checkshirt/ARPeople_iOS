@@ -135,6 +135,7 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="ageInputField" destination="1Ce-D6-9AM" id="C6h-Rn-8rY"/>
+                        <outlet property="baseScrollView" destination="nwu-Za-7Ac" id="rud-ba-VY7"/>
                         <outlet property="githubInputField" destination="ZZE-67-dNy" id="2pV-vI-uMc"/>
                         <outlet property="headerImageView" destination="gae-8Q-xVe" id="3pq-XU-9cd"/>
                         <outlet property="jobInputField" destination="OwP-yq-sIj" id="IGV-nb-9jK"/>
