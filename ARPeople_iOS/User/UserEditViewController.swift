@@ -26,8 +26,6 @@ class UserEditViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        ImageRequest().openView()
 
         showRequest()
         nameInputField.delegate = self
