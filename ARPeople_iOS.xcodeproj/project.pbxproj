@@ -466,6 +466,7 @@
 				B74EA2E921C3A24000224050 /* Resources */,
 				B7DBF3F821DE52B300ACB218 /* Carthage */,
 				2138FBC70AB17FFBBEDB228E /* [CP] Embed Pods Frameworks */,
+				B7DBF43F21E0D2BC00ACB218 /* LicensePlist */,
 			);
 			buildRules = (
 			);
@@ -615,6 +616,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		B7DBF43F21E0D2BC00ACB218 /* LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = LicensePlist;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n${PODS_ROOT}/LicensePlist/license-plist --output-path $PRODUCT_NAME/Settings.bundle\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
