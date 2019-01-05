@@ -18,7 +18,7 @@ class UserEditViewController: BaseViewController {
     @IBOutlet private weak var profileTextField: InputView!
     @IBOutlet private weak var twitterInputField: InputField!
     @IBOutlet private weak var githubInputField: InputField!
-    @IBOutlet private weak var ageInputField: InputField!
+    @IBOutlet private weak var ageInputField: AgeInputField!
     
     private var txtActiveField: UITextField?
     let datepicker = UIDatePicker()
@@ -46,53 +46,10 @@ class UserEditViewController: BaseViewController {
             target: self,
             action: #selector(self.tapped))
         baseScrollView.addGestureRecognizer(tapGesture)
-        setPicker()
     }
     
     @objc private func tapped(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
-    }
-    
-    private func setPicker() {
-        let timeZone = datepicker.timeZone
-        datepicker.timeZone = timeZone
-        datepicker.datePickerMode = UIDatePicker.Mode.date
-        datepicker.minimumDate = Date()
-        
-        let vi = UIView(frame: datepicker.bounds)
-        vi.backgroundColor = UIColor.white
-        vi.addSubview(datepicker)
-        ageInputField.inputView = vi
-        
-        let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor.black
-        let doneButton   = UIBarButtonItem(title: "決定", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.donePressed))
-        let cancelButton = UIBarButtonItem(title: "キャンセル", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.cancelPressed))
-        let spaceButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        toolBar.sizeToFit()
-        ageInputField.inputAccessoryView = toolBar
-    }
-    
-    @objc func donePressed() {
-        view.endEditing(true)
-        ageInputField.text = "\(self.format(date: datepicker.date))"
-    }
-    
-    @objc func cancelPressed() {
-        ageInputField.text = ""
-        ageInputField.placeholder = "期限：----年--月--日"
-        view.endEditing(true)
-    }
-    
-    func format(date: Date) -> String{
-        let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "yyyy年MM月dd日"
-        let strDate = dateformatter.string(from: date)
-        return strDate
     }
 }
 
@@ -158,5 +115,13 @@ extension UserEditViewController: UITextFieldDelegate {
     
     @objc private func keyboardWillHide(notification: Notification) {
         baseScrollView.contentOffset.y = 0
+    }
+    
+    func textFieldDoneTouch(_ textField: UITextField) {
+        view.endEditing(true)
+    }
+    
+    func textFieldCancelTouch(_ textField: UITextField) {
+        view.endEditing(true)
     }
 }

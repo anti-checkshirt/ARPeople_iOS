@@ -82,7 +82,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="生年月日" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ce-D6-9AM" customClass="InputField" customModule="ARPeople_iOS" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="生年月日" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ce-D6-9AM" customClass="AgeInputField" customModule="ARPeople_iOS" customModuleProvider="target">
                                         <rect key="frame" x="16" y="684" width="343" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="YLY-fr-lTZ"/>
