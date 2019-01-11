@@ -71,7 +71,7 @@ class UserEditViewController: BaseViewController {
                 self.githubInputField.text = decoded.github
                 self.ageInputField.text = decoded.age
             case .failure(_, let statusCode):
-                print(statusCode ?? "")
+                self.error(statusCode: statusCode)
             }
         }
     }
@@ -99,7 +99,7 @@ extension UserEditViewController: DoneBarButtonViewDelegate {
                     print(decoded)
                     AppUser.saveUser(user: decoded)
                 case .failure(_, let statusCode):
-                    print(statusCode ?? "")
+                    self.error(statusCode: statusCode)
                 }
             }
 

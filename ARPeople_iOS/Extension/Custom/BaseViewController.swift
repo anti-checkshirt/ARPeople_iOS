@@ -19,10 +19,8 @@ class BaseViewController: UIViewController, SwipeBackable {
         setSwipeBack()
     }
     
-    func error(statusCode: Int?) {
-        guard let status = statusCode else { return }
-        print(status)
-        let alert = UIAlertController(title: "失敗", message: "再度ログインしてください", preferredStyle: .alert)
+    func error(statusCode: error) {
+        let alert = UIAlertController(title: statusCode.title, message: statusCode.message, preferredStyle: .alert)
         let doneButton = UIAlertAction(title: "OK", style: .default) { _ in
             print("aa")
         }

@@ -29,6 +29,7 @@
 		B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */; };
 		B74F571D21E239AC00315776 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74F571C21E239AC00315776 /* Nuke.framework */; };
 		B751893821E943DB00919E65 /* UserLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751893721E943DB00919E65 /* UserLevel.swift */; };
+		B751893A21E94B8B00919E65 /* statusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751893921E94B8B00919E65 /* statusCode.swift */; };
 		B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7521D0F0CA001181E6 /* UserAPI.swift */; };
 		B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */; };
 		B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7921D10678001181E6 /* Notification+Extension.swift */; };
@@ -112,6 +113,7 @@
 		B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		B74F571C21E239AC00315776 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		B751893721E943DB00919E65 /* UserLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLevel.swift; sourceTree = "<group>"; };
+		B751893921E94B8B00919E65 /* statusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusCode.swift; sourceTree = "<group>"; };
 		B7694E7521D0F0CA001181E6 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorFactory.swift; sourceTree = "<group>"; };
 		B7694E7921D10678001181E6 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			children = (
 				B7E67F6C21D0070D00527DC5 /* Request */,
 				B7E67F7021D00A3B00527DC5 /* APIResult.swift */,
+				B751893921E94B8B00919E65 /* statusCode.swift */,
 				B7E67F7221D00A5800527DC5 /* APIClient.swift */,
 				B7694E7521D0F0CA001181E6 /* UserAPI.swift */,
 				B7DBF42A21DFD18B00ACB218 /* AppAPI.swift */,
@@ -657,6 +660,7 @@
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
 				B7DBF42921DFCF1100ACB218 /* AppRequest.swift in Sources */,
 				B7DBF41D21DE94B900ACB218 /* SettingViewController.swift in Sources */,
+				B751893A21E94B8B00919E65 /* statusCode.swift in Sources */,
 				B7DBF42B21DFD18B00ACB218 /* AppAPI.swift in Sources */,
 				B7E562E521C505A400F86BDC /* UserModel.swift in Sources */,
 				B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */,

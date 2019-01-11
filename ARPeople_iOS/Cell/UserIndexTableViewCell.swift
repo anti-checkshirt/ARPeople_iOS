@@ -68,7 +68,7 @@ class UserIndexTableViewCell: UITableViewCell {
                 self.jobLabel.text = decoded.job
                 self.userImageView.setImage(url: decoded.imageURL)
             case .failure(_, let statusCode):
-                print(statusCode ?? "")
+                self.error(statusCode: statusCode)
             }
         }
     }

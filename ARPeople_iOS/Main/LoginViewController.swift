@@ -30,8 +30,8 @@ class LoginViewController: BaseViewController {
             switch result {
             case .success(let decoded):
                 print(decoded.token)
-            case .failure(let error, let statusCode):
-                print(error); print(statusCode)
+            case .failure(_, let statusCode):
+                self.error(statusCode: statusCode)
             }
         }
     }
