@@ -30,6 +30,7 @@
 		B74F571D21E239AC00315776 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74F571C21E239AC00315776 /* Nuke.framework */; };
 		B751893821E943DB00919E65 /* UserLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751893721E943DB00919E65 /* UserLevel.swift */; };
 		B751893A21E94B8B00919E65 /* statusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751893921E94B8B00919E65 /* statusCode.swift */; };
+		B751893C21E94E9300919E65 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751893B21E94E9300919E65 /* Alert.swift */; };
 		B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7521D0F0CA001181E6 /* UserAPI.swift */; };
 		B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */; };
 		B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7921D10678001181E6 /* Notification+Extension.swift */; };
@@ -114,6 +115,7 @@
 		B74F571C21E239AC00315776 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		B751893721E943DB00919E65 /* UserLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLevel.swift; sourceTree = "<group>"; };
 		B751893921E94B8B00919E65 /* statusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusCode.swift; sourceTree = "<group>"; };
+		B751893B21E94E9300919E65 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B7694E7521D0F0CA001181E6 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorFactory.swift; sourceTree = "<group>"; };
 		B7694E7921D10678001181E6 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				B743020521C4ADB5006572F1 /* Home */,
 				B74EA30621C3A29500224050 /* Main */,
 				B74EA2EE21C3A24000224050 /* AppDelegate.swift */,
+				B751893B21E94E9300919E65 /* Alert.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */,
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
 				B7DBF42921DFCF1100ACB218 /* AppRequest.swift in Sources */,
+				B751893C21E94E9300919E65 /* Alert.swift in Sources */,
 				B7DBF41D21DE94B900ACB218 /* SettingViewController.swift in Sources */,
 				B751893A21E94B8B00919E65 /* statusCode.swift in Sources */,
 				B7DBF42B21DFD18B00ACB218 /* AppAPI.swift in Sources */,

@@ -18,15 +18,6 @@ class BaseViewController: UIViewController, SwipeBackable {
         
         setSwipeBack()
     }
-    
-    func error(statusCode: error) {
-        let alert = UIAlertController(title: statusCode.title, message: statusCode.message, preferredStyle: .alert)
-        let doneButton = UIAlertAction(title: "OK", style: .default) { _ in
-            print("aa")
-        }
-        alert.addAction(doneButton)
-        self.present(alert, animated: true)
-    }
 }
 
 protocol SwipeBackable {

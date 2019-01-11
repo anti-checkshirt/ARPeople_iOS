@@ -115,7 +115,7 @@ class UserViewController: BaseViewController {
                 self.jobLabel.text = decoded.job
                 self.profileMessage.text = decoded.profileMessage
             case .failure(_, let statusCode):
-                self.error(statusCode: statusCode)
+                Alert().error(statusCode)
             }
         }
     }

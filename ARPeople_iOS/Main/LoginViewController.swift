@@ -31,7 +31,7 @@ class LoginViewController: BaseViewController {
             case .success(let decoded):
                 print(decoded.token)
             case .failure(_, let statusCode):
-                self.error(statusCode: statusCode)
+                Alert().error(statusCode)
             }
         }
     }

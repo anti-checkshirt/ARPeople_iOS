@@ -62,7 +62,7 @@ class InfoViewController: BaseViewController {
 //                PopUp().topMessage(text: "送信完了")
                 self.navigationController?.popViewController(animated: true)
             case .failure(_, let statusCode):
-                self.error(statusCode: statusCode)
+                Alert().error(statusCode)
             }
         }
     }

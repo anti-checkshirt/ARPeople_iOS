@@ -74,7 +74,7 @@ class RegisterViewController: BaseViewController {
                 AppUser.saveUser(user: decoded)
                 self.performSegue(withIdentifier: "toSettingUser", sender: nil)
             case .failure(_, let statusCode):
-                self.error(statusCode: statusCode)
+                Alert().error(statusCode)
             }
         }
     }
