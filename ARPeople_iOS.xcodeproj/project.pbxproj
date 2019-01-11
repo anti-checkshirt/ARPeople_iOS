@@ -31,6 +31,7 @@
 		B751893821E943DB00919E65 /* UserLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751893721E943DB00919E65 /* UserLevel.swift */; };
 		B751893A21E94B8B00919E65 /* statusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751893921E94B8B00919E65 /* statusCode.swift */; };
 		B751893C21E94E9300919E65 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751893B21E94E9300919E65 /* Alert.swift */; };
+		B751893E21E952F200919E65 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751893D21E952F200919E65 /* Storyboards.swift */; };
 		B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7521D0F0CA001181E6 /* UserAPI.swift */; };
 		B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */; };
 		B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7921D10678001181E6 /* Notification+Extension.swift */; };
@@ -116,6 +117,7 @@
 		B751893721E943DB00919E65 /* UserLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLevel.swift; sourceTree = "<group>"; };
 		B751893921E94B8B00919E65 /* statusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusCode.swift; sourceTree = "<group>"; };
 		B751893B21E94E9300919E65 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		B751893D21E952F200919E65 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		B7694E7521D0F0CA001181E6 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		B7694E7721D0F9F7001181E6 /* ValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorFactory.swift; sourceTree = "<group>"; };
 		B7694E7921D10678001181E6 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 		B74EA30421C3A27200224050 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				B751893D21E952F200919E65 /* Storyboards.swift */,
 				B7DBF41921DE948400ACB218 /* Setting */,
 				B7DBF41521DE760000ACB218 /* User */,
 				B7DBF3F121DCE36900ACB218 /* Face */,
@@ -673,6 +676,7 @@
 				B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */,
 				B7DBF43821DFEB2A00ACB218 /* InputView.swift in Sources */,
 				B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */,
+				B751893E21E952F200919E65 /* Storyboards.swift in Sources */,
 				B7E67F6F21D0072C00527DC5 /* APIRequest.swift in Sources */,
 				B780945621C93CB9007B063F /* ValidationResult.swift in Sources */,
 				B7DBF42D21DFD9AC00ACB218 /* UserEditViewController.swift in Sources */,

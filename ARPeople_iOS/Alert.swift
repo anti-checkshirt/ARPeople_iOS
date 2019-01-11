@@ -21,7 +21,7 @@ struct Alert {
     func error(_ statusCode: error) {
         let alert = UIAlertController(title: statusCode.title, message: statusCode.message, preferredStyle: .alert)
         let doneButton = UIAlertAction(title: "OK", style: .default) { _ in
-            print("aa")
+            self.topViewController?.present(statusCode.target, animated: true)
         }
         alert.addAction(doneButton)
         topViewController?.present(alert, animated: true)

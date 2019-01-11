@@ -6,6 +6,8 @@
 //  Copyright © 2019 tomoki. All rights reserved.
 //
 
+import UIKit
+
 enum error {
     /// 400
     case badRequest
@@ -56,6 +58,23 @@ enum error {
             return "現在アクセス出来ません"
         case .none:
             return "アクセスに失敗しました"
+        }
+    }
+    
+    var target: UIViewController {
+        switch self {
+        case .badRequest:
+            return Storyboards.registerNav.instantiateViewController()
+        case .unauthorized:
+            return Storyboards.registerNav.instantiateViewController()
+        case .notFound:
+            return Storyboards.registerNav.instantiateViewController()
+        case .conflict:
+            return Storyboards.registerNav.instantiateViewController()
+        case .internalServerError:
+            return Storyboards.registerNav.instantiateViewController()
+        case .none:
+            return Storyboards.registerNav.instantiateViewController()
         }
     }
 }
