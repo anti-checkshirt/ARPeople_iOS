@@ -51,12 +51,12 @@ class SettingUserViewController: BaseViewController {
     private func showRequest() {
         let url = "\(AppUser.stagingURL)/api/v1/images"
         let headers: HTTPHeaders = [
-            "Authorization": "Token \(AppUser.token)"
+            "Authorization": "\(AppUser.token)"
         ]
         
         Alamofire.upload(
             multipartFormData: { multipartFormData in
-                var number: Int = 1
+                var number = 1
                 for image in self.images {
                     guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
                     multipartFormData.append(imageData, withName: "image\(number)", fileName: "image\(number).jpeg", mimeType: "image/jpeg")
