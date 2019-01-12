@@ -16,6 +16,7 @@ class Storyboards {
     
     static let settingUserNav = Storyboard<SettingViewController>(name: "SettingUser")
     static let registerNav = Storyboard<UINavigationController>(name: "Register")
+    static let settingUserNav = Storyboards<UINavigationController>(name: "SettingUser")
     
 }
 
