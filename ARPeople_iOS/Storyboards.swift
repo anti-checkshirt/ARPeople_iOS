@@ -8,16 +8,12 @@
 
 import UIKit
 
-// MARK: - Storyboards -
-
 class Storyboards {
     
     fileprivate init() {}
     
     static let settingUserNav = Storyboard<SettingViewController>(name: "SettingUser")
     static let registerNav = Storyboard<UINavigationController>(name: "Register")
-    static let settingUserNav = Storyboards<UINavigationController>(name: "SettingUser")
-    
 }
 
 // MARK: - Storyboard -
@@ -26,13 +22,9 @@ final class Storyboard<InitialVC: UIViewController>: Storyboards {
     
     let name: String
     
-    // MARK: - Initializer
-    
     fileprivate init(name: String) {
         self.name = name
     }
-    
-    // MARK: - Methods
     
     func instantiateViewController() -> InitialVC {
         let storyboard = UIStoryboard(name: self.name, bundle: nil)

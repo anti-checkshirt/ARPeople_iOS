@@ -49,7 +49,7 @@ class SettingUserViewController: BaseViewController {
     }
     
     private func showRequest() {
-        let url = "\(AppUser.stagingURL)/api/v1/images"
+        let url = "\(AppUser.stagingURL)/images"
         let headers: HTTPHeaders = [
             "Authorization": "\(AppUser.token)"
         ]
