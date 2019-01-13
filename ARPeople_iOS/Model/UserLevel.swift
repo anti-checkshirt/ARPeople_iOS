@@ -8,6 +8,8 @@
 
 import SwiftyUserDefaults
 
+// MARK: UserLevel
+
 enum UserLevel: Int, DefaultsSerializable {
     /// 登録してない
     case unregistered

@@ -16,6 +16,7 @@
 		B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */; };
 		B74234F621EB6A6500CCBD6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74234F521EB6A6500CCBD6C /* Main.storyboard */; };
 		B74234F921EB6AEC00CCBD6C /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74234F821EB6AEC00CCBD6C /* CommonButton.swift */; };
+		B74234FB21EB737E00CCBD6C /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74234FA21EB737E00CCBD6C /* NormalButton.swift */; };
 		B74301FB21C4AD77006572F1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FA21C4AD77006572F1 /* Login.storyboard */; };
 		B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FC21C4AD8B006572F1 /* Register.storyboard */; };
 		B74301FF21C4AD95006572F1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74301FE21C4AD95006572F1 /* RegisterViewController.swift */; };
@@ -95,6 +96,7 @@
 		B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B74234F521EB6A6500CCBD6C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B74234F821EB6AEC00CCBD6C /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		B74234FA21EB737E00CCBD6C /* NormalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
 		B74301E921C4AC97006572F1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		B74301EA21C4AC97006572F1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		B74301EB21C4AC97006572F1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				B74234F821EB6AEC00CCBD6C /* CommonButton.swift */,
+				B74234FA21EB737E00CCBD6C /* NormalButton.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */,
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
 				B7DBF42921DFCF1100ACB218 /* AppRequest.swift in Sources */,
+				B74234FB21EB737E00CCBD6C /* NormalButton.swift in Sources */,
 				B751893C21E94E9300919E65 /* Alert.swift in Sources */,
 				B7DBF41D21DE94B900ACB218 /* SettingViewController.swift in Sources */,
 				B751893A21E94B8B00919E65 /* statusCode.swift in Sources */,

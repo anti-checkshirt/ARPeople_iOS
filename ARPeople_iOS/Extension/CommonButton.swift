@@ -8,8 +8,7 @@
 
 import UIKit
 
-@IBDesignable
-class CommonButton: UIButton {
+@IBDesignable class CommonButton: UIButton {
     
     @IBInspectable var shadowOffset: CGSize = .zero {
         didSet {
