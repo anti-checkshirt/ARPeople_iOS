@@ -14,6 +14,8 @@
 		B73B4FB221C56408009C13E5 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB121C56408009C13E5 /* UserView.swift */; };
 		B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB321C5641C009C13E5 /* BaseNode.swift */; };
 		B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */; };
+		B74234F621EB6A6500CCBD6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74234F521EB6A6500CCBD6C /* Main.storyboard */; };
+		B74234F921EB6AEC00CCBD6C /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74234F821EB6AEC00CCBD6C /* CommonButton.swift */; };
 		B74301FB21C4AD77006572F1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FA21C4AD77006572F1 /* Login.storyboard */; };
 		B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74301FC21C4AD8B006572F1 /* Register.storyboard */; };
 		B74301FF21C4AD95006572F1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74301FE21C4AD95006572F1 /* RegisterViewController.swift */; };
@@ -91,6 +93,8 @@
 		B73B4FB121C56408009C13E5 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		B73B4FB321C5641C009C13E5 /* BaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
 		B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B74234F521EB6A6500CCBD6C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B74234F821EB6AEC00CCBD6C /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
 		B74301E921C4AC97006572F1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		B74301EA21C4AC97006572F1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		B74301EB21C4AC97006572F1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -202,6 +206,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B74234F721EB6ACD00CCBD6C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B74234F821EB6AEC00CCBD6C /* CommonButton.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		B74301E821C4AC96006572F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +309,7 @@
 		B74EA30121C3A26100224050 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B74234F721EB6ACD00CCBD6C /* Common */,
 				B7DBF43A21DFEC1800ACB218 /* Validator */,
 				B7DBF43921DFEBFB00ACB218 /* Custom */,
 				B74EA30D21C3A2EF00224050 /* UIColor+Hex.swift */,
@@ -348,6 +361,7 @@
 		B74EA30521C3A29000224050 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B74234F521EB6A6500CCBD6C /* Main.storyboard */,
 				B74301FA21C4AD77006572F1 /* Login.storyboard */,
 				B74301FC21C4AD8B006572F1 /* Register.storyboard */,
 				25C9D66221C4CF4800FD2EDB /* SettingUser.storyboard */,
@@ -544,6 +558,7 @@
 				B730FF4F21C5906300768A6F /* UserShow.storyboard in Resources */,
 				B74EA2F921C3A24200224050 /* LaunchScreen.storyboard in Resources */,
 				B74EA2F621C3A24200224050 /* Assets.xcassets in Resources */,
+				B74234F621EB6A6500CCBD6C /* Main.storyboard in Resources */,
 				B7E67F6621CFF2A700527DC5 /* .env in Resources */,
 				B7E67F6A21CFF41800527DC5 /* .env.sample in Resources */,
 				B7DBF44821E0D49000ACB218 /* Settings.bundle in Resources */,
@@ -649,6 +664,7 @@
 				B7DBF42721DFCA3C00ACB218 /* InfoViewController.swift in Sources */,
 				B73B4FB621C566F2009C13E5 /* UIView+Extension.swift in Sources */,
 				B743020121C4AD9A006572F1 /* LoginViewController.swift in Sources */,
+				B74234F921EB6AEC00CCBD6C /* CommonButton.swift in Sources */,
 				B73B4FB421C5641C009C13E5 /* BaseNode.swift in Sources */,
 				B7DBF43C21DFEC7300ACB218 /* DoneBarButtonView.swift in Sources */,
 				B7E67F9321D0CE3E00527DC5 /* BaseViewController.swift in Sources */,
