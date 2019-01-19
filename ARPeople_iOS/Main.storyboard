@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AR名刺-->
         <scene sceneID="dSK-jT-Unm">
             <objects>
                 <viewController id="HUH-gN-Oze" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPi-L3-b2H" customClass="NormalButton" customModule="ARPeople_iOS" customModuleProvider="target">
                                 <rect key="frame" x="26" y="344" width="323" height="40"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="hht-Jp-aGg"/>
                                 </constraints>
@@ -34,19 +34,30 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4i-Uo-1tp" customClass="NormalButton" customModule="ARPeople_iOS" customModuleProvider="target">
+                                <rect key="frame" x="26" y="414" width="323" height="40"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="c1m-sA-IFH"/>
+                                </constraints>
+                                <state key="normal" title="新登録"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Bcg-m7-kQe" firstAttribute="trailing" secondItem="3M0-yA-gr5" secondAttribute="trailing" id="0Oe-03-6kH"/>
                             <constraint firstItem="Bcg-m7-kQe" firstAttribute="trailing" secondItem="bPi-L3-b2H" secondAttribute="trailing" constant="26" id="Lug-K1-U1B"/>
+                            <constraint firstItem="G4i-Uo-1tp" firstAttribute="top" secondItem="bPi-L3-b2H" secondAttribute="bottom" constant="30" id="Vej-FF-vYG"/>
+                            <constraint firstItem="G4i-Uo-1tp" firstAttribute="leading" secondItem="Bcg-m7-kQe" secondAttribute="leading" constant="26" id="Xag-Je-WRi"/>
                             <constraint firstItem="bPi-L3-b2H" firstAttribute="leading" secondItem="Bcg-m7-kQe" secondAttribute="leading" constant="26" id="h7Y-js-cIq"/>
+                            <constraint firstItem="Bcg-m7-kQe" firstAttribute="trailing" secondItem="G4i-Uo-1tp" secondAttribute="trailing" constant="26" id="jiO-iA-m8O"/>
                             <constraint firstItem="3M0-yA-gr5" firstAttribute="leading" secondItem="Bcg-m7-kQe" secondAttribute="leading" id="qBn-YG-430"/>
                             <constraint firstItem="3M0-yA-gr5" firstAttribute="top" secondItem="Bcg-m7-kQe" secondAttribute="top" id="vrK-KS-DuT"/>
                             <constraint firstItem="bPi-L3-b2H" firstAttribute="top" secondItem="3M0-yA-gr5" secondAttribute="bottom" constant="30" id="w3k-nq-I0d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcg-m7-kQe"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DFS-4r-IPK"/>
+                    <navigationItem key="navigationItem" title="AR名刺" id="DFS-4r-IPK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZe-dr-iHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

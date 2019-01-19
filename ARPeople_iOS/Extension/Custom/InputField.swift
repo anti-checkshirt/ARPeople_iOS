@@ -24,7 +24,7 @@ class InputField: UITextField {
     
     private func setUp() {
         self.layer.cornerRadius = 5
-        self.backgroundColor = AppColor.bgGlay
+        self.backgroundColor = AppColor.bg
     }
 }
 
