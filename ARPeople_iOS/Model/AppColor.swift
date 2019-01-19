@@ -31,4 +31,10 @@ struct AppColor {
     
     /// #474E60
     static var dark: UIColor { return #colorLiteral(red: 0.348711729, green: 0.3810535073, blue: 0.4523038268, alpha: 1) }
+    
+    /// #D8D8D8
+    static var nonHighlighted: UIColor { return #colorLiteral(red: 0.8765067458, green: 0.876527369, blue: 0.8765162826, alpha: 1) }
+    
+    /// #F2F2F2
+    static var highlighted: UIColor { return #colorLiteral(red: 0.9593952298, green: 0.9594177604, blue: 0.959405601, alpha: 1) }
 }

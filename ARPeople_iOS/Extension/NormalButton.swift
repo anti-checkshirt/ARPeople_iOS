@@ -14,20 +14,20 @@ import UIKit
         super.draw(rect)
         
         self.layer.cornerRadius = 20
-        self.layer.shadowColor = UIColor(hex: "414141").cgColor
+        self.layer.shadowColor = AppColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: -1)
         self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 2
-        self.setTitleColor(UIColor(hex: "474E60"), for: .normal)
-        self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        self.setTitleColor(AppColor.dark, for: .normal)
+        self.titleLabel?.font = .boldSystemFont(ofSize: 16)
     }
     
     override var isHighlighted: Bool {
         didSet {
             if isHighlighted {
-                self.backgroundColor = UIColor(hex: "D8D8D8")
+                self.backgroundColor = AppColor.nonHighlighted
             } else {
-                self.backgroundColor = UIColor(hex: "F2F2F2")
+                self.backgroundColor = AppColor.highlighted
             }
         }
     }
