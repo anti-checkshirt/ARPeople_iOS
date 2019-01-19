@@ -33,6 +33,9 @@
                                 <state key="normal" title="ログイン">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="tiU-ea-8Aj" kind="push" id="4Vn-Up-brR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4i-Uo-1tp" customClass="NormalButton" customModule="ARPeople_iOS" customModuleProvider="target">
                                 <rect key="frame" x="26" y="414" width="323" height="40"/>
@@ -62,6 +65,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZe-dr-iHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052" y="80.50974512743629"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="Ngk-eo-caK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="tiU-ea-8Aj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="STh-So-1NJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdh-au-9OD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Go-jr-9wB">
