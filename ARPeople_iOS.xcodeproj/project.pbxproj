@@ -41,6 +41,7 @@
 		B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */; };
 		B77264DC21F356C000E103BB /* Service.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77264DB21F356C000E103BB /* Service.storyboard */; };
 		B77264DF21F4020900E103BB /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77264DE21F4020900E103BB /* Tutorial.storyboard */; };
+		B77264E221F4024700E103BB /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E121F4024700E103BB /* TutorialViewController.swift */; };
 		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
 		B7DBF3ED21DCDF5B00ACB218 /* UserIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */; };
 		B7DBF3F421DCE39F00ACB218 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */; };
@@ -132,6 +133,7 @@
 		B7694E7B21D121F2001181E6 /* AccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
 		B77264DB21F356C000E103BB /* Service.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Service.storyboard; sourceTree = "<group>"; };
 		B77264DE21F4020900E103BB /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		B77264E121F4024700E103BB /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIndexTableViewCell.swift; sourceTree = "<group>"; };
 		B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				B7DBF3F721DD1F6B00ACB218 /* Face */,
 				B743020521C4ADB5006572F1 /* Home */,
 				B74EA30621C3A29500224050 /* Main */,
+				B77264E021F4022D00E103BB /* Tutorial */,
 				B74EA2EE21C3A24000224050 /* AppDelegate.swift */,
 				B751893B21E94E9300919E65 /* Alert.swift */,
 			);
@@ -394,6 +397,15 @@
 				B77264DE21F4020900E103BB /* Tutorial.storyboard */,
 			);
 			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		B77264E021F4022D00E103BB /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				B77264E121F4024700E103BB /* TutorialViewController.swift */,
+			);
+			name = Tutorial;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		B7DBF3EB21DCDF4400ACB218 /* Cell */ = {
@@ -711,6 +723,7 @@
 				B7DBF41F21DF9C0C00ACB218 /* AgeSectionHeaderView.temp_caseinsensitive_rename.swift in Sources */,
 				B74EA30A21C3A2B700224050 /* AppColor.swift in Sources */,
 				B7DBF43821DFEB2A00ACB218 /* InputView.swift in Sources */,
+				B77264E221F4024700E103BB /* TutorialViewController.swift in Sources */,
 				B74EA30E21C3A2EF00224050 /* UIColor+Hex.swift in Sources */,
 				B751893E21E952F200919E65 /* Storyboards.swift in Sources */,
 				B7E67F6F21D0072C00527DC5 /* APIRequest.swift in Sources */,
