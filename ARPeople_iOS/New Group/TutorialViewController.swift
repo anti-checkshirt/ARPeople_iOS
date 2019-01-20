@@ -21,6 +21,8 @@ class TutorialViewController: BaseViewController {
 
         setLayout()
         closeButton.rx.tap.subscribe(onNext: { _ in
+            if self.baseScrollView.currentPage == self.pageControl.numberOfPages { return }
+            self.baseScrollView.nextMove()
             if self.baseScrollView.currentPage == 3 {
                 self.closeLabel.text = "閉じる"
             } else {
@@ -60,5 +62,10 @@ class TutorialViewController: BaseViewController {
 extension TutorialViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl.currentPage = scrollView.currentPage - 1
+        if scrollView.currentPage == pageControl.numberOfPages {
+            closeLabel.text = "閉じる"
+        } else {
+            closeLabel.text = "次へ"
+        }
     }
 }

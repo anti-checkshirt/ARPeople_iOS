@@ -12,4 +12,16 @@ extension UIScrollView {
     var currentPage: Int {
         return Int((self.contentOffset.x + (0.5 * self.bounds.width)) / self.bounds.width) + 1
     }
+    
+    func nextMove() {
+        UIView.animate(withDuration: 0.3) {
+            self.contentOffset.x += self.frame.width
+        }
+    }
+    
+    func previousMove() {
+        UIView.animate(withDuration: 0.3) {
+            self.contentOffset.x -= self.frame.width
+        }
+    }
 }
