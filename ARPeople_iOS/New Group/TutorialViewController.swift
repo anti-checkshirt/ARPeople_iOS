@@ -8,17 +8,25 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+class TutorialViewController: BaseViewController {
     
     @IBOutlet private weak var baseScrollView: UIScrollView!
     @IBOutlet private weak var baseView: UIView!
     @IBOutlet private weak var pageControl: UIPageControl!
     @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var closeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setLayout()
+        closeButton.rx.tap.subscribe(onNext: { _ in
+            if self.baseScrollView.currentPage == 3 {
+                self.closeLabel.text = "閉じる"
+            } else {
+                self.closeLabel.text = "次へ"
+            }
+        }).disposed(by: self.disposeBag)
     }
     
     private func setLayout() {

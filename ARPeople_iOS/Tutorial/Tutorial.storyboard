@@ -52,7 +52,7 @@
                                     <constraint firstAttribute="height" constant="70" id="WmY-qw-WSI"/>
                                 </constraints>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="閉じる" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeS-Fy-MUN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="次へ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeS-Fy-MUN">
                                 <rect key="frame" x="0.0" y="742" width="375" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,6 +93,7 @@
                         <outlet property="baseScrollView" destination="sEa-hg-vh3" id="IqQ-oX-egA"/>
                         <outlet property="baseView" destination="i7y-Ml-ao8" id="WWC-Y7-RJx"/>
                         <outlet property="closeButton" destination="Heg-jV-LHL" id="bFb-8H-VVZ"/>
+                        <outlet property="closeLabel" destination="QeS-Fy-MUN" id="jUZ-rQ-5Ju"/>
                         <outlet property="pageControl" destination="mGb-x1-vYJ" id="tTU-Pk-RSi"/>
                     </connections>
                 </viewController>
