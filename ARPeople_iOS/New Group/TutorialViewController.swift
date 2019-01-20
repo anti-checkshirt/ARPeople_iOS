@@ -21,14 +21,18 @@ class TutorialViewController: BaseViewController {
 
         setLayout()
         closeButton.rx.tap.subscribe(onNext: { _ in
-            if self.baseScrollView.currentPage == self.pageControl.numberOfPages { return }
-            self.baseScrollView.nextMove()
-            if self.baseScrollView.currentPage == 3 {
-                self.closeLabel.text = "閉じる"
-            } else {
-                self.closeLabel.text = "次へ"
-            }
+            self.closeTappend()
         }).disposed(by: self.disposeBag)
+    }
+    
+    private func closeTappend() {
+        if self.baseScrollView.currentPage == self.pageControl.numberOfPages { return }
+        self.baseScrollView.nextMove()
+        if self.baseScrollView.currentPage == 3 {
+            self.closeLabel.text = "閉じる"
+        } else {
+            self.closeLabel.text = "次へ"
+        }
     }
     
     private func setLayout() {
