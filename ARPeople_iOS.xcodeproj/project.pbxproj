@@ -42,7 +42,7 @@
 		B77264DC21F356C000E103BB /* Service.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77264DB21F356C000E103BB /* Service.storyboard */; };
 		B77264DF21F4020900E103BB /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77264DE21F4020900E103BB /* Tutorial.storyboard */; };
 		B77264E221F4024700E103BB /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E121F4024700E103BB /* TutorialViewController.swift */; };
-		B77264E421F4072700E103BB /* Tutorial1.xib in Resources */ = {isa = PBXBuildFile; fileRef = B77264E321F4072700E103BB /* Tutorial1.xib */; };
+		B77264E421F4072700E103BB /* Tutorial.xib in Resources */ = {isa = PBXBuildFile; fileRef = B77264E321F4072700E103BB /* Tutorial.xib */; };
 		B77264E621F4084F00E103BB /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E521F4084F00E103BB /* TutorialView.swift */; };
 		B77264E821F408FA00E103BB /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E721F408FA00E103BB /* UIScrollView+Extension.swift */; };
 		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
@@ -137,7 +137,7 @@
 		B77264DB21F356C000E103BB /* Service.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Service.storyboard; sourceTree = "<group>"; };
 		B77264DE21F4020900E103BB /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		B77264E121F4024700E103BB /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		B77264E321F4072700E103BB /* Tutorial1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tutorial1.xib; sourceTree = "<group>"; };
+		B77264E321F4072700E103BB /* Tutorial.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tutorial.xib; sourceTree = "<group>"; };
 		B77264E521F4084F00E103BB /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		B77264E721F408FA00E103BB /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
@@ -402,7 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				B77264DE21F4020900E103BB /* Tutorial.storyboard */,
-				B77264E321F4072700E103BB /* Tutorial1.xib */,
+				B77264E321F4072700E103BB /* Tutorial.xib */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -605,7 +605,7 @@
 				B7DBF42521DFCA1C00ACB218 /* Info.storyboard in Resources */,
 				B7DBF41B21DE949500ACB218 /* Setting.storyboard in Resources */,
 				B7DBF3F621DCE42A00ACB218 /* Face.storyboard in Resources */,
-				B77264E421F4072700E103BB /* Tutorial1.xib in Resources */,
+				B77264E421F4072700E103BB /* Tutorial.xib in Resources */,
 				B77264DF21F4020900E103BB /* Tutorial.storyboard in Resources */,
 				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
 				B7DBF41721DE760B00ACB218 /* User.storyboard in Resources */,

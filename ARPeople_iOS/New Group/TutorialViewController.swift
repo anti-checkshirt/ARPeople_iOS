@@ -56,7 +56,7 @@ class TutorialViewController: BaseViewController {
     }
     
     private func toView(tutorial: Tutorial) -> UIView {
-        let nibView = UINib(nibName: "Tutorial1", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! TutorialView
+        let nibView = UINib(nibName: "Tutorial", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! TutorialView
         nibView.setUp(tutorial: tutorial)
         self.baseView.addSubview(nibView)
         return nibView
