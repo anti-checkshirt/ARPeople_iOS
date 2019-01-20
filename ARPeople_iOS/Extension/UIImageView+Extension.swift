@@ -7,17 +7,11 @@
 //
 
 import UIKit
-import Alamofire
+import Nuke
 
 extension UIImageView {
     func setImage(url: String) {
-        Alamofire.request(url).responseData { response in
-            switch response.result {
-            case .success(let data):
-                self.image = UIImage(data: data)
-            case .failure:
-                self.image = UIImage()
-            }
-        }
+        guard let url = URL(string: url) else { return }
+        Nuke.loadImage(with: url, into: self)
     }
 }

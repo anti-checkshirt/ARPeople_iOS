@@ -1,9 +1,9 @@
 github "ReactiveX/RxSwift" ~> 4.0
 github "SnapKit/SnapKit" ~> 4.0.0
 github "Alamofire/Alamofire"
-github "Alamofire/AlamofireImage" ~> 3.5
 github "radex/SwiftyUserDefaults" "4.0.0-alpha.1"
 github "Ekhoo/Device" ~> 3.1.2
 github "zhangao0086/DKImagePickerController"
 github "kishikawakatsumi/KeychainAccess"
 github "jrsaruo/SwiftyTable"
+github "kean/Nuke"

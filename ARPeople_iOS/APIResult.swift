@@ -8,12 +8,12 @@
 
 enum APIResult {
     case success
-    case failure(Error, statusCode: Int?)
+    case failure(Error, statusCode: error)
 }
 
 enum APIDecodingResult<Decoded: Decodable> {
     case success(Decoded)
-    case failure(Error, statusCode: Int?)
+    case failure(Error, statusCode: error)
     
     func concealingDecodedValue(afterHandlingBy decodedValueHandler: (Decoded) -> Void) -> APIResult {
         switch self {

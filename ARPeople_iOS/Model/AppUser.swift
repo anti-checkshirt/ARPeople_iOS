@@ -45,6 +45,12 @@ struct AppUser {
     static var stagingURL: String {
         return Defaults[.staging]
     }
+    
+    /// ユーザーレベル
+    static var userLevel: UserLevel {
+        get { return Defaults[.userLevel] }
+        set { Defaults[.userLevel] = newValue }
+    }
 }
 
 extension AppUser {
@@ -89,4 +95,6 @@ private extension DefaultsKeys {
     static let job = DefaultsKey<String>("job", defaultValue: "")
     static let profileMessage = DefaultsKey<String>("profile_message", defaultValue: "")
     static let phoneNumber = DefaultsKey<String>("phone_number", defaultValue: "")
+    
+    static let userLevel = DefaultsKey<UserLevel>("user_level", defaultValue: .unregistered)
 }

@@ -70,11 +70,10 @@ class RegisterViewController: BaseViewController {
         UserAPI.fetchRegister(name, email, password) { (result) in
             switch result {
             case .success(let decoded):
-                print(decoded)
                 AppUser.saveUser(user: decoded)
                 self.performSegue(withIdentifier: "toSettingUser", sender: nil)
-            case .failure(let error, let statusCode):
-                print(error); print(statusCode)
+            case .failure(_, let statusCode):
+                Alert().error(statusCode)
             }
         }
     }

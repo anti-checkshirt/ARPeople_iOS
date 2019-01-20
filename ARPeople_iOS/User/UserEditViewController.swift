@@ -12,8 +12,8 @@ import DKImagePickerController
 class UserEditViewController: BaseViewController {
     
     @IBOutlet private weak var baseScrollView: UIScrollView!
-    @IBOutlet private weak var headerImageView: UIImageView!
-    @IBOutlet private weak var userImageView: UserImageView!
+    @IBOutlet private weak var headerImageView: EditImageView!
+    @IBOutlet private weak var userImageView: EditUserImageView!
     @IBOutlet private weak var nameInputField: InputField!
     @IBOutlet private weak var jobInputField: InputField!
     @IBOutlet private weak var profileTextField: InputView!
@@ -26,8 +26,7 @@ class UserEditViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        selectImage()
+
         showRequest()
         nameInputField.delegate = self
         jobInputField.delegate = self
@@ -37,7 +36,6 @@ class UserEditViewController: BaseViewController {
         ageInputField.dateFormat = "yyyy年MM月dd日"
 
         headerImageView.setImage(url: "https://pbs.twimg.com/profile_banners/764414957920276480/1543038909/1500x500")
-        userImageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
         
         profileTextField.placeholder = "プロフィール文章"
         
@@ -47,21 +45,6 @@ class UserEditViewController: BaseViewController {
             target: self,
             action: #selector(self.tapped))
         baseScrollView.addGestureRecognizer(tapGesture)
-    }
-    
-    private func selectImage(){
-        let pickerController = DKImagePickerController()
-        pickerController.maxSelectableCount = 10
-        pickerController.didSelectAssets = { [self] (assets: [DKAsset]) in
-            for asset in assets {
-                asset.fetchFullScreenImage(completeBlock: { (image, info) in
-                    guard let image = image else { return }
-                    guard let imageData = image.jpegData(compressionQuality: 1.0) else { return }
-                    ImageRequest.send(imageData, to: "\(AppUser.stagingURL)/user_image")
-                })
-            }
-        }
-        self.present(pickerController, animated: true)
     }
     
     private func setNav() {
@@ -80,6 +63,7 @@ class UserEditViewController: BaseViewController {
         UserAPI.fetchGetUser { (result) in
             switch result {
             case .success(let decoded):
+                self.userImageView.setImage(url: decoded.imageURL)
                 self.nameInputField.text = decoded.name
                 self.jobInputField.text = decoded.job
                 self.profileTextField.text = decoded.profileMessage
@@ -87,7 +71,7 @@ class UserEditViewController: BaseViewController {
                 self.githubInputField.text = decoded.github
                 self.ageInputField.text = decoded.age
             case .failure(_, let statusCode):
-                print(statusCode ?? "")
+                Alert().error(statusCode)
             }
         }
     }
@@ -115,7 +99,7 @@ extension UserEditViewController: DoneBarButtonViewDelegate {
                     print(decoded)
                     AppUser.saveUser(user: decoded)
                 case .failure(_, let statusCode):
-                    print(statusCode ?? "")
+                    Alert().error(statusCode)
                 }
             }
 

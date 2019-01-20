@@ -32,7 +32,7 @@ class InputView: UITextView {
     
     private func setUp() {
         self.layer.cornerRadius = 5
-        self.backgroundColor = AppColor.bgGlay
+        self.backgroundColor = AppColor.bg
         self.delegate = self
         
         placeHolderLabel.numberOfLines = 0

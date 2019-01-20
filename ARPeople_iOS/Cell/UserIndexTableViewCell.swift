@@ -61,9 +61,16 @@ class UserIndexTableViewCell: UITableViewCell {
     }
     
     func setUp() {
-        nameLabel.text = "築山朋紀"
-        jobLabel.text = "フリーランス/iOSエンジニア"
-        userImageView.setImage(url: "https://pbs.twimg.com/profile_images/1061520538386915329/ExNUPGbF_400x400.jpg")
+        UserAPI.fetchGetUser { (result) in
+            switch result {
+            case .success(let decoded):
+                self.nameLabel.text = decoded.name
+                self.jobLabel.text = decoded.job
+                self.userImageView.setImage(url: decoded.imageURL)
+            case .failure(_, let statusCode):
+                Alert().error(statusCode)
+            }
+        }
     }
 
 }

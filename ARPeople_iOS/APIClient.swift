@@ -18,6 +18,7 @@ struct APIClient {
                                           completion: @escaping (APIResult) -> Void) {
         request.alamofireRequest
             .responseString { response in
+                let statusCode = status(response.response?.statusCode)
                 let result: APIResult
                 defer { completion(result) }
                 
@@ -26,7 +27,7 @@ struct APIClient {
                     preprocessOnSuccess()
                     result = .success
                 case .failure(let error):
-                    result = .failure(error, statusCode: response.response?.statusCode)
+                    result = .failure(error, statusCode: statusCode)
                 }
         }
     }
@@ -39,7 +40,7 @@ struct APIClient {
                 let result: APIDecodingResult<Request.Decoded>
                 defer { decodingCompletion(result) }
                 
-                let statusCode = response.response?.statusCode
+                let statusCode = status(response.response?.statusCode)
                 switch response.result {
                 case .success:
                     guard let data = response.data else {
@@ -61,6 +62,24 @@ struct APIClient {
                     print("ERROR:", "\(type(of: Request.Decoded.self))型へ変換するJSONが取得できませんでした")
                     result = .failure(error, statusCode: statusCode)
                 }
+        }
+    }
+    
+    private static func status(_ statusCode: Int?) -> error {
+        guard let code = statusCode else { return error.none }
+        switch code {
+        case 400:
+            return error.badRequest
+        case 401:
+            return error.unauthorized
+        case 404:
+            return error.notFound
+        case 409:
+            return error.conflict
+        case 500:
+            return error.internalServerError
+        default:
+            return error.none
         }
     }
 }

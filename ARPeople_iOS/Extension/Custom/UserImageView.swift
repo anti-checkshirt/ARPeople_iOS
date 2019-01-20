@@ -35,3 +35,60 @@ class UserImageView: UIImageView {
         self.layer.borderColor = UIColor.white.cgColor
     }
 }
+
+class EditImageView: UIImageView {
+    private let button: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor(hex: "000000", alpha: 0.3)
+        return button
+    }()
+    
+    init() {
+        super.init(frame: .zero)
+        
+        setUp()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        setUp()
+    }
+    
+    private func setUp() {
+        self.addSubview(button)
+        button.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+}
+
+class EditUserImageView: UserImageView {
+    
+    private let button: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor(hex: "000000", alpha: 0.3)
+        button.layer.cornerRadius = 50
+        return button
+    }()
+
+    override init() {
+        super.init(frame: .zero)
+        
+        setUp()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        setUp()
+    }
+    
+    private func setUp() {
+        self.addSubview(button)
+        button.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+}

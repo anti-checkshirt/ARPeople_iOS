@@ -109,11 +109,13 @@ class UserViewController: BaseViewController {
         UserAPI.fetchGetUser { (result) in
             switch result {
             case .success(let decoded):
+                self.userImageView.setImage(url: decoded.imageURL)
+                print(decoded.imageURL)
                 self.nameLabel.text = decoded.name
                 self.jobLabel.text = decoded.job
                 self.profileMessage.text = decoded.profileMessage
             case .failure(_, let statusCode):
-                print(statusCode ?? "")
+                Alert().error(statusCode)
             }
         }
     }
