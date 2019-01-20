@@ -43,7 +43,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="c1m-sA-IFH"/>
                                 </constraints>
-                                <state key="normal" title="新登録"/>
+                                <state key="normal" title="新規登録"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

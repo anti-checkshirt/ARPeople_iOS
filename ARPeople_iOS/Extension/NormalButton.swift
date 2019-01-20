@@ -15,7 +15,7 @@ import UIKit
         
         self.layer.cornerRadius = 20
         self.layer.shadowColor = AppColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: -1)
+        self.layer.shadowOffset = CGSize(width: 0, height: 1)
         self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 2
         self.setTitleColor(AppColor.dark, for: .normal)
