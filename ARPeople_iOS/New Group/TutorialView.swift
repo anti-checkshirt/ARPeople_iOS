@@ -8,7 +8,24 @@
 
 import UIKit
 
+enum Tutorial {
+    case first
+    case second
+    case thaad
+}
+
 class TutorialView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    func setUp(tutorial: Tutorial) {
+        switch tutorial {
+        case .first:
+            imageView.image = UIImage(named: "tutorial1")
+        case .second:
+            imageView.image = UIImage(named: "tutorial2")
+        case .thaad:
+            imageView.image = UIImage(named: "tutorial3")
+        }
+    }
 }

@@ -18,18 +18,41 @@ class TutorialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setLayout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setLayout() {
+        let tutorial1 = toView(tutorial: .first)
+        self.baseView.addSubview(tutorial1)
+        tutorial1.snp.makeConstraints { make in
+            make.top.left.bottom.equalToSuperview()
+            make.width.equalTo(baseScrollView)
+        }
+        let tutorial2 = toView(tutorial: .second)
+        self.baseView.addSubview(tutorial2)
+        tutorial2.snp.makeConstraints { make in
+            make.left.equalTo(tutorial1.snp.right)
+            make.top.bottom.equalToSuperview()
+            make.width.equalTo(baseScrollView)
+        }
+        let tutorial3 = toView(tutorial: .thaad)
+        self.baseView.addSubview(tutorial3)
+        tutorial3.snp.makeConstraints { make in
+            make.left.equalTo(tutorial2.snp.right)
+            make.top.bottom.equalToSuperview()
+            make.width.equalTo(baseScrollView)
+        }
     }
-    */
+    
+    private func toView(tutorial: Tutorial) -> UIView {
+        let nibView = UINib(nibName: "Tutorial1", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! TutorialView
+        nibView.setUp(tutorial: tutorial)
+        return nibView
+    }
+}
 
+extension TutorialViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        pageControl.currentPage = scrollView.currentPage - 1
+    }
 }

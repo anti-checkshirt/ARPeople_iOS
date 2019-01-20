@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3zY-nH-GBL">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,23 +24,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEa-hg-vh3">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEa-hg-vh3">
                                 <rect key="frame" x="0.0" y="85.666666666666686" width="375" height="400"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsf-A2-xpm">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7y-Ml-ao8">
                                         <rect key="frame" x="0.0" y="0.0" width="1125" height="400"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="wsf-A2-xpm" firstAttribute="height" secondItem="sEa-hg-vh3" secondAttribute="height" id="1Nj-bW-qhi"/>
-                                    <constraint firstAttribute="bottom" secondItem="wsf-A2-xpm" secondAttribute="bottom" id="25Y-f9-ARP"/>
-                                    <constraint firstItem="wsf-A2-xpm" firstAttribute="width" secondItem="sEa-hg-vh3" secondAttribute="width" multiplier="3" id="KU6-Rm-om6"/>
-                                    <constraint firstAttribute="trailing" secondItem="wsf-A2-xpm" secondAttribute="trailing" id="afg-uL-JQ1"/>
+                                    <constraint firstItem="i7y-Ml-ao8" firstAttribute="height" secondItem="sEa-hg-vh3" secondAttribute="height" id="1EZ-tc-cm1"/>
+                                    <constraint firstItem="i7y-Ml-ao8" firstAttribute="top" secondItem="sEa-hg-vh3" secondAttribute="top" id="3eN-cn-zCv"/>
+                                    <constraint firstItem="i7y-Ml-ao8" firstAttribute="leading" secondItem="sEa-hg-vh3" secondAttribute="leading" id="Ph1-Ib-oQc"/>
+                                    <constraint firstAttribute="trailing" secondItem="i7y-Ml-ao8" secondAttribute="trailing" id="WhZ-DA-AdD"/>
+                                    <constraint firstItem="i7y-Ml-ao8" firstAttribute="width" secondItem="sEa-hg-vh3" secondAttribute="width" multiplier="3" id="gUt-aB-0b9"/>
+                                    <constraint firstAttribute="bottom" secondItem="i7y-Ml-ao8" secondAttribute="bottom" id="gkO-CD-egm"/>
                                     <constraint firstAttribute="height" constant="400" id="okE-xO-bya"/>
-                                    <constraint firstItem="wsf-A2-xpm" firstAttribute="leading" secondItem="sEa-hg-vh3" secondAttribute="leading" id="tJs-Oc-Gi4"/>
-                                    <constraint firstItem="wsf-A2-xpm" firstAttribute="top" secondItem="sEa-hg-vh3" secondAttribute="top" id="yWD-X1-h4Y"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="3zY-nH-GBL" id="tay-1K-wfY"/>
+                                </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-jV-LHL">
                                 <rect key="frame" x="0.0" y="742" width="375" height="70"/>
@@ -56,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mGb-x1-vYJ">
-                                <rect key="frame" x="0.0" y="722" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="485.66666666666669" width="375" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="tgL-37-GbQ"/>
                                 </constraints>
@@ -66,6 +69,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mGb-x1-vYJ" firstAttribute="top" secondItem="sEa-hg-vh3" secondAttribute="bottom" id="6vS-QF-4ea"/>
                             <constraint firstItem="JrJ-Pa-eyf" firstAttribute="trailing" secondItem="qdO-7Z-ptQ" secondAttribute="trailing" constant="26" id="ANZ-ML-rID"/>
                             <constraint firstItem="JrJ-Pa-eyf" firstAttribute="trailing" secondItem="QeS-Fy-MUN" secondAttribute="trailing" id="C4u-3a-E4J"/>
                             <constraint firstAttribute="bottom" secondItem="Heg-jV-LHL" secondAttribute="bottom" id="FLr-GF-bSd"/>
@@ -74,7 +78,6 @@
                             <constraint firstItem="sEa-hg-vh3" firstAttribute="leading" secondItem="JrJ-Pa-eyf" secondAttribute="leading" id="Lkz-ok-nnS"/>
                             <constraint firstItem="JrJ-Pa-eyf" firstAttribute="trailing" secondItem="Heg-jV-LHL" secondAttribute="trailing" id="OLt-aN-XEw"/>
                             <constraint firstItem="Heg-jV-LHL" firstAttribute="leading" secondItem="JrJ-Pa-eyf" secondAttribute="leading" id="OUp-1F-htA"/>
-                            <constraint firstItem="Heg-jV-LHL" firstAttribute="top" secondItem="mGb-x1-vYJ" secondAttribute="bottom" id="aLE-1V-dJZ"/>
                             <constraint firstItem="qdO-7Z-ptQ" firstAttribute="leading" secondItem="JrJ-Pa-eyf" secondAttribute="leading" constant="26" id="dEM-UK-R6y"/>
                             <constraint firstItem="mGb-x1-vYJ" firstAttribute="leading" secondItem="JrJ-Pa-eyf" secondAttribute="leading" id="fc6-TR-83T"/>
                             <constraint firstItem="QeS-Fy-MUN" firstAttribute="leading" secondItem="JrJ-Pa-eyf" secondAttribute="leading" id="ing-21-PKl"/>
@@ -88,7 +91,7 @@
                     </view>
                     <connections>
                         <outlet property="baseScrollView" destination="sEa-hg-vh3" id="IqQ-oX-egA"/>
-                        <outlet property="baseView" destination="wsf-A2-xpm" id="M2e-Yx-WyA"/>
+                        <outlet property="baseView" destination="i7y-Ml-ao8" id="WWC-Y7-RJx"/>
                         <outlet property="closeButton" destination="Heg-jV-LHL" id="bFb-8H-VVZ"/>
                         <outlet property="pageControl" destination="mGb-x1-vYJ" id="tTU-Pk-RSi"/>
                     </connections>

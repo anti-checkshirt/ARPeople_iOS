@@ -44,6 +44,7 @@
 		B77264E221F4024700E103BB /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E121F4024700E103BB /* TutorialViewController.swift */; };
 		B77264E421F4072700E103BB /* Tutorial1.xib in Resources */ = {isa = PBXBuildFile; fileRef = B77264E321F4072700E103BB /* Tutorial1.xib */; };
 		B77264E621F4084F00E103BB /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E521F4084F00E103BB /* TutorialView.swift */; };
+		B77264E821F408FA00E103BB /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E721F408FA00E103BB /* UIScrollView+Extension.swift */; };
 		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
 		B7DBF3ED21DCDF5B00ACB218 /* UserIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */; };
 		B7DBF3F421DCE39F00ACB218 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */; };
@@ -138,6 +139,7 @@
 		B77264E121F4024700E103BB /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		B77264E321F4072700E103BB /* Tutorial1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tutorial1.xib; sourceTree = "<group>"; };
 		B77264E521F4084F00E103BB /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		B77264E721F408FA00E103BB /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIndexTableViewCell.swift; sourceTree = "<group>"; };
 		B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				B73B4FB521C566F2009C13E5 /* UIView+Extension.swift */,
 				B7694E7921D10678001181E6 /* Notification+Extension.swift */,
 				B7DBF41021DE6CBA00ACB218 /* UIImageView+Extension.swift */,
+				B77264E721F408FA00E103BB /* UIScrollView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 				B7E67F7121D00A3B00527DC5 /* APIResult.swift in Sources */,
 				B74EA2EF21C3A24000224050 /* AppDelegate.swift in Sources */,
 				B7694E7821D0F9F7001181E6 /* ValidatorFactory.swift in Sources */,
+				B77264E821F408FA00E103BB /* UIScrollView+Extension.swift in Sources */,
 				B7694E7A21D10678001181E6 /* Notification+Extension.swift in Sources */,
 				B7694E7621D0F0CA001181E6 /* UserAPI.swift in Sources */,
 				B7DBF42921DFCF1100ACB218 /* AppRequest.swift in Sources */,
