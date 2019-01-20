@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TutorialView" customModule="ARPeople_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial1" translatesAutoresizingMaskIntoConstraints="NO" id="9X3-Uw-Uae">
+                    <rect key="frame" x="16" y="100" width="343" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="4Iw-MH-qhQ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giv-H1-yM5">
+                    <rect key="frame" x="16" y="16" width="343" height="68"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="giv-H1-yM5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="2d1-PM-weT"/>
+                <constraint firstItem="giv-H1-yM5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="4Qe-xv-ERf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="giv-H1-yM5" secondAttribute="trailing" constant="16" id="4o0-kf-IND"/>
+                <constraint firstItem="9X3-Uw-Uae" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5H6-rO-LQf"/>
+                <constraint firstItem="9X3-Uw-Uae" firstAttribute="top" secondItem="giv-H1-yM5" secondAttribute="bottom" constant="16" id="AJd-1K-cCc"/>
+                <constraint firstItem="9X3-Uw-Uae" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="KzC-hF-FAx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9X3-Uw-Uae" secondAttribute="trailing" constant="16" id="dl8-Bc-3nO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9X3-Uw-Uae" secondAttribute="bottom" id="vnZ-tK-60Q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageView" destination="9X3-Uw-Uae" id="ASN-it-nHZ"/>
+                <outlet property="titleLabel" destination="giv-H1-yM5" id="Jez-kB-Irb"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="tutorial1" width="320" height="300"/>
+    </resources>
+</document>

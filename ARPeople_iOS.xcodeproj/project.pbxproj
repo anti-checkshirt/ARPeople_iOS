@@ -42,6 +42,8 @@
 		B77264DC21F356C000E103BB /* Service.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77264DB21F356C000E103BB /* Service.storyboard */; };
 		B77264DF21F4020900E103BB /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77264DE21F4020900E103BB /* Tutorial.storyboard */; };
 		B77264E221F4024700E103BB /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E121F4024700E103BB /* TutorialViewController.swift */; };
+		B77264E421F4072700E103BB /* Tutorial1.xib in Resources */ = {isa = PBXBuildFile; fileRef = B77264E321F4072700E103BB /* Tutorial1.xib */; };
+		B77264E621F4084F00E103BB /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E521F4084F00E103BB /* TutorialView.swift */; };
 		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
 		B7DBF3ED21DCDF5B00ACB218 /* UserIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */; };
 		B7DBF3F421DCE39F00ACB218 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */; };
@@ -134,6 +136,8 @@
 		B77264DB21F356C000E103BB /* Service.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Service.storyboard; sourceTree = "<group>"; };
 		B77264DE21F4020900E103BB /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		B77264E121F4024700E103BB /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		B77264E321F4072700E103BB /* Tutorial1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tutorial1.xib; sourceTree = "<group>"; };
+		B77264E521F4084F00E103BB /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIndexTableViewCell.swift; sourceTree = "<group>"; };
 		B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -395,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				B77264DE21F4020900E103BB /* Tutorial.storyboard */,
+				B77264E321F4072700E103BB /* Tutorial1.xib */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				B77264E121F4024700E103BB /* TutorialViewController.swift */,
+				B77264E521F4084F00E103BB /* TutorialView.swift */,
 			);
 			name = Tutorial;
 			path = "New Group";
@@ -596,6 +602,7 @@
 				B7DBF42521DFCA1C00ACB218 /* Info.storyboard in Resources */,
 				B7DBF41B21DE949500ACB218 /* Setting.storyboard in Resources */,
 				B7DBF3F621DCE42A00ACB218 /* Face.storyboard in Resources */,
+				B77264E421F4072700E103BB /* Tutorial1.xib in Resources */,
 				B77264DF21F4020900E103BB /* Tutorial.storyboard in Resources */,
 				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
 				B7DBF41721DE760B00ACB218 /* User.storyboard in Resources */,
@@ -718,6 +725,7 @@
 				B751893A21E94B8B00919E65 /* statusCode.swift in Sources */,
 				B7DBF42B21DFD18B00ACB218 /* AppAPI.swift in Sources */,
 				B7E562E521C505A400F86BDC /* UserModel.swift in Sources */,
+				B77264E621F4084F00E103BB /* TutorialView.swift in Sources */,
 				B7694E7C21D121F2001181E6 /* AccessTokenModel.swift in Sources */,
 				B7DBF43621DFE7E200ACB218 /* UserImageView.swift in Sources */,
 				B7DBF41F21DF9C0C00ACB218 /* AgeSectionHeaderView.temp_caseinsensitive_rename.swift in Sources */,
