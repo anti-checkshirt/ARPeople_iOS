@@ -22,10 +22,13 @@ class TutorialView: UIView {
         switch tutorial {
         case .first:
             imageView.image = UIImage(named: "tutorial1")
+            titleLabel.text = "自分の顔写真を登録する"
         case .second:
             imageView.image = UIImage(named: "tutorial2")
+            titleLabel.text = "検索したい人の顔を写す"
         case .thaad:
             imageView.image = UIImage(named: "tutorial3")
+            titleLabel.text = "検索した人の情報が表示されます"
         }
     }
 }
