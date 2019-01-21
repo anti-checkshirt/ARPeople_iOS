@@ -6,44 +6,35 @@ $ git clone https://github.com/anti-checkshirt/ARPeople_iOS.git
 
 # インストール
 
-ライブラリの管理はCocoaPodsで行います。
+アプリで使用するライブラリは`Carthage`と`CocoaPods`で管理しています。
 
-CocoaPodsを入れてない場合はインストールしましょう。
+これらをインストールしていない場合は以下に沿ってインストールしてください。
 
-入ってる場合は飛ばしてください
-
-- CocoaPodsインストール
+- Carthageのインストール
 
 ```bash
-$ sudo gem install cocoapods
+$ brew install carthage
+```
+
+- CocoaPodsのインストール
+
+```bash
+$ brew install cocoapods
 $ pod setup
 ```
 
-- すでにインストールしてる場合はこちらを
+`Carthage`と`CocoaPods`のインストールが完了したら、プロジェクトのルートディレクトリに移動して以下を実行してください。
 
 ```bash
+$ carthage bootstrap --platform iOS
 $ pod install
 ```
 
-
-
-# 画像アップロードの手順
-
-
-
-- Wi-Fiに鯖を作る
-- Swiftの画像アップロード時のURLを変更
-- Xcodeをビルド
-- 写真を10枚選択する(この時動画を含んでると落ちる)
-- これでおそらくRailsとSwift両方にログが出るはず
-- Railsは書き換えても問題ないが、iOSは再びテストするとき再度ビルドし直してください
+以上が終わると`ARPeople_iOS.xcworkspace`ファイルが生成されるので、**`ARPeople_iOS.xcodeproj`ではなく`ARPeople_iOS.xcworkspace`を**開いてビルドしてください。
 
 
 
-# Branch
+# ENV
 
+envファイルに記述する文言は@tomoki69386に聞いてください
 
-
-Developはハッカソンのデモで使ったBranch
-
-masterはRailsに画像をアップロードするロジックを含んだBranch
