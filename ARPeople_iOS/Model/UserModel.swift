@@ -6,10 +6,6 @@
 //  Copyright © 2018 tomoki. All rights reserved.
 //
 
-import Foundation
-
-//{"id":3,"name":"test_user","email":"aaagehogehoe@example.com","password_digest":"Abcd1234","access_token":"edANwvgNJG9Z3kHkRbFw75bF","uuid":"CZRQiCCrh6s1YQ","twitter_id":null,"github_id":null,"person_id":null,"created_at":"2018-12-24T18:19:50.618Z","updated_at":"2018-12-24T18:19:50.618Z","age":"100","user_image_url":null}
-
 struct UserModel: Codable {
     
     /// name
