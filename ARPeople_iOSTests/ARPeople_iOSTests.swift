@@ -2,8 +2,8 @@
 //  ARPeople_iOSTests.swift
 //  ARPeople_iOSTests
 //
-//  Created by 築山朋紀 on 2018/12/26.
-//  Copyright © 2018 tomoki. All rights reserved.
+//  Created by 築山朋紀 on 2019/01/23.
+//  Copyright © 2019 tomoki. All rights reserved.
 //
 
 import XCTest

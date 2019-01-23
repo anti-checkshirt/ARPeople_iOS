@@ -45,6 +45,8 @@
 		B77264E421F4072700E103BB /* Tutorial.xib in Resources */ = {isa = PBXBuildFile; fileRef = B77264E321F4072700E103BB /* Tutorial.xib */; };
 		B77264E621F4084F00E103BB /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E521F4084F00E103BB /* TutorialView.swift */; };
 		B77264E821F408FA00E103BB /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264E721F408FA00E103BB /* UIScrollView+Extension.swift */; };
+		B77264F821F82C0300E103BB /* ARPeople_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77264F721F82C0300E103BB /* ARPeople_iOSTests.swift */; };
+		B772650621F82C1A00E103BB /* ARPeople_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772650521F82C1A00E103BB /* ARPeople_iOSUITests.swift */; };
 		B780945621C93CB9007B063F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780945521C93CB9007B063F /* ValidationResult.swift */; };
 		B7DBF3ED21DCDF5B00ACB218 /* UserIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */; };
 		B7DBF3F421DCE39F00ACB218 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */; };
@@ -91,6 +93,23 @@
 		B7E67F9321D0CE3E00527DC5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E67F9221D0CE3E00527DC5 /* BaseViewController.swift */; };
 		B7E67F9721D0EF1B00527DC5 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E67F9621D0EF1B00527DC5 /* UserRequest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B77264FA21F82C0300E103BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B74EA2E321C3A24000224050 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B74EA2EA21C3A24000224050;
+			remoteInfo = ARPeople_iOS;
+		};
+		B772650821F82C1A00E103BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B74EA2E321C3A24000224050 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B74EA2EA21C3A24000224050;
+			remoteInfo = ARPeople_iOS;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		25C9D66221C4CF4800FD2EDB /* SettingUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingUser.storyboard; sourceTree = "<group>"; };
@@ -140,6 +159,12 @@
 		B77264E321F4072700E103BB /* Tutorial.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tutorial.xib; sourceTree = "<group>"; };
 		B77264E521F4084F00E103BB /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		B77264E721F408FA00E103BB /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		B77264F521F82C0300E103BB /* ARPeople_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARPeople_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B77264F721F82C0300E103BB /* ARPeople_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPeople_iOSTests.swift; sourceTree = "<group>"; };
+		B77264F921F82C0300E103BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B772650321F82C1A00E103BB /* ARPeople_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARPeople_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B772650521F82C1A00E103BB /* ARPeople_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPeople_iOSUITests.swift; sourceTree = "<group>"; };
+		B772650721F82C1A00E103BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B780945521C93CB9007B063F /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		B7DBF3EC21DCDF5B00ACB218 /* UserIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIndexTableViewCell.swift; sourceTree = "<group>"; };
 		B7DBF3F321DCE39F00ACB218 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -205,6 +230,20 @@
 				B7DBF3FC21DE536D00ACB218 /* SnapKit.framework in Frameworks */,
 				B7DBF3FD21DE536D00ACB218 /* SwiftyUserDefaults.framework in Frameworks */,
 				931582D1BFAC496BCDD1D5F1 /* Pods_ARPeople_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B77264F221F82C0300E103BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B772650021F82C1A00E103BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +314,8 @@
 			isa = PBXGroup;
 			children = (
 				B74EA2ED21C3A24000224050 /* ARPeople_iOS */,
+				B77264F621F82C0300E103BB /* ARPeople_iOSTests */,
+				B772650421F82C1A00E103BB /* ARPeople_iOSUITests */,
 				B74EA2EC21C3A24000224050 /* Products */,
 				B74301E821C4AC96006572F1 /* Frameworks */,
 				62664F08489092014B531C57 /* Pods */,
@@ -285,6 +326,8 @@
 			isa = PBXGroup;
 			children = (
 				B74EA2EB21C3A24000224050 /* ARPeople_iOS.app */,
+				B77264F521F82C0300E103BB /* ARPeople_iOSTests.xctest */,
+				B772650321F82C1A00E103BB /* ARPeople_iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -417,6 +460,24 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		B77264F621F82C0300E103BB /* ARPeople_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				B77264F721F82C0300E103BB /* ARPeople_iOSTests.swift */,
+				B77264F921F82C0300E103BB /* Info.plist */,
+			);
+			path = ARPeople_iOSTests;
+			sourceTree = "<group>";
+		};
+		B772650421F82C1A00E103BB /* ARPeople_iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B772650521F82C1A00E103BB /* ARPeople_iOSUITests.swift */,
+				B772650721F82C1A00E103BB /* Info.plist */,
+			);
+			path = ARPeople_iOSUITests;
+			sourceTree = "<group>";
+		};
 		B7DBF3EB21DCDF4400ACB218 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -547,6 +608,42 @@
 			productReference = B74EA2EB21C3A24000224050 /* ARPeople_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B77264F421F82C0300E103BB /* ARPeople_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B77264FC21F82C0300E103BB /* Build configuration list for PBXNativeTarget "ARPeople_iOSTests" */;
+			buildPhases = (
+				B77264F121F82C0300E103BB /* Sources */,
+				B77264F221F82C0300E103BB /* Frameworks */,
+				B77264F321F82C0300E103BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B77264FB21F82C0300E103BB /* PBXTargetDependency */,
+			);
+			name = ARPeople_iOSTests;
+			productName = ARPeople_iOSTests;
+			productReference = B77264F521F82C0300E103BB /* ARPeople_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B772650221F82C1A00E103BB /* ARPeople_iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B772650A21F82C1A00E103BB /* Build configuration list for PBXNativeTarget "ARPeople_iOSUITests" */;
+			buildPhases = (
+				B77264FF21F82C1A00E103BB /* Sources */,
+				B772650021F82C1A00E103BB /* Frameworks */,
+				B772650121F82C1A00E103BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B772650921F82C1A00E103BB /* PBXTargetDependency */,
+			);
+			name = ARPeople_iOSUITests;
+			productName = ARPeople_iOSUITests;
+			productReference = B772650321F82C1A00E103BB /* ARPeople_iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -565,6 +662,14 @@
 							};
 						};
 					};
+					B77264F421F82C0300E103BB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B74EA2EA21C3A24000224050;
+					};
+					B772650221F82C1A00E103BB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B74EA2EA21C3A24000224050;
+					};
 				};
 			};
 			buildConfigurationList = B74EA2E621C3A24000224050 /* Build configuration list for PBXProject "ARPeople_iOS" */;
@@ -581,6 +686,8 @@
 			projectRoot = "";
 			targets = (
 				B74EA2EA21C3A24000224050 /* ARPeople_iOS */,
+				B77264F421F82C0300E103BB /* ARPeople_iOSTests */,
+				B772650221F82C1A00E103BB /* ARPeople_iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -610,6 +717,20 @@
 				B74301FD21C4AD8B006572F1 /* Register.storyboard in Resources */,
 				B7DBF41721DE760B00ACB218 /* User.storyboard in Resources */,
 				25C9D66321C4CF4800FD2EDB /* SettingUser.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B77264F321F82C0300E103BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B772650121F82C1A00E103BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,7 +867,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B77264F121F82C0300E103BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B77264F821F82C0300E103BB /* ARPeople_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B77264FF21F82C1A00E103BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B772650621F82C1A00E103BB /* ARPeople_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B77264FB21F82C0300E103BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B74EA2EA21C3A24000224050 /* ARPeople_iOS */;
+			targetProxy = B77264FA21F82C0300E103BB /* PBXContainerItemProxy */;
+		};
+		B772650921F82C1A00E103BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B74EA2EA21C3A24000224050 /* ARPeople_iOS */;
+			targetProxy = B772650821F82C1A00E103BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B74EA2F721C3A24200224050 /* LaunchScreen.storyboard */ = {
@@ -926,6 +1076,80 @@
 			};
 			name = Release;
 		};
+		B77264FD21F82C0300E103BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ARPeople_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomoki.ARPeople-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARPeople_iOS.app/ARPeople_iOS";
+			};
+			name = Debug;
+		};
+		B77264FE21F82C0300E103BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ARPeople_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomoki.ARPeople-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARPeople_iOS.app/ARPeople_iOS";
+			};
+			name = Release;
+		};
+		B772650B21F82C1A00E103BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ARPeople_iOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomoki.ARPeople-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARPeople_iOS;
+			};
+			name = Debug;
+		};
+		B772650C21F82C1A00E103BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ARPeople_iOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomoki.ARPeople-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARPeople_iOS;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -943,6 +1167,24 @@
 			buildConfigurations = (
 				B74EA2FE21C3A24200224050 /* Debug */,
 				B74EA2FF21C3A24200224050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B77264FC21F82C0300E103BB /* Build configuration list for PBXNativeTarget "ARPeople_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B77264FD21F82C0300E103BB /* Debug */,
+				B77264FE21F82C0300E103BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B772650A21F82C1A00E103BB /* Build configuration list for PBXNativeTarget "ARPeople_iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B772650B21F82C1A00E103BB /* Debug */,
+				B772650C21F82C1A00E103BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
